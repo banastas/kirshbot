@@ -1,0 +1,77 @@
+Speech Analysis Report
+
+1. Executive Summary
+
+The analyzed passage spans 118 seconds with 258 words delivered at an average rate of 131 words per minute. The speaker uses 2 fillers (≈1 per minute), with no measurable pauses. Pitch fluctuates widely (mean 366.9 Hz, p10 = 163 Hz, p90 = 562 Hz), suggesting heightened tension or dramatic stylization. Volume is moderate with noticeable dynamic range. Language is accessible (Flesch-Kincaid grade 4.5, Flesch Reading Ease 81), relying on plain syntax but punctuated with vivid metaphors and technical detail. Sentiment shifts between urgency, authority, and foreboding. Credibility rests on specificity (measurements, manifest details) and insider tone, though rhetorical flourishes occasionally reduce precision ￼ ￼.
+
+⸻
+
+2. Structure, Claims, Transitions (with timestamps)
+	•	0:00–0:04: Report of discovery — “Five previously undiscovered species collected, but the crew lost containment.” A claim of achievement undercut by immediate failure ￼.
+	•	0:05–0:08: Directive — “Look with your eyes. Quiet now.” Short, imperative transitions establishing urgency.
+	•	0:09–0:20: Character action report — mentions “three of them with me,” “went to find her brother.” Narrative updates interwoven with terse commands.
+	•	0:21–0:27: Context framing — “Sir, with all due respect, it’s a crash site, and we’re trying to contain an alien invasion.” Balances deference with assertion of crisis.
+	•	0:28–0:48: Ownership analogy — lengthy metaphor likening the ship to a ball hit over a fence: “I’m the neighbor so the ship belongs to me now.” Marks a tonal shift toward argumentation and humor.
+	•	0:49–1:14: Identity confrontation — “we’re not here to talk about what I am… I read the manifest… sole survivor cyborg…” Challenges credibility and motivation, with accusatory tone.
+	•	1:15–1:20: Warning and judgment — “you’re not careful you’re gonna belong to them… was it worth it?” A rhetorical escalation.
+	•	1:21–1:36: Technical clarification — “It’s a parasite… xenomorph lays its eggs… proto-creature gestated inside a human host.” Clinical explanation grounding the narrative.
+	•	1:37–1:58: Forensic evidence — “The body in the cryotube was killed from the inside.” Provides material confirmation of claim.
+	•	1:59–end: Procedural instruction — precise measurements (“54 cm wide, 77 cm tall”), directives (“get the suction tube”). Closes with laboratory-style detail ￼.
+
+⸻
+
+3. Delivery Metrics
+	•	Pace: 131 wpm, close to conversational standard; neither rushed nor lethargic ￼.
+	•	Pauses: None recorded; continuous delivery enhances urgency but reduces natural rhythm.
+	•	Fillers: Rare; only “like” and “kind of” appear, suggesting controlled speech with minor slips.
+	•	Pitch: Very wide variability (163–562 Hz), consistent with dramatized tension or multiple speaker roles.
+	•	Loudness: Moderate mean with bursts to higher intensity; likely emphasizing threats, warnings, or revelations ￼.
+
+⸻
+
+4. Language Analysis
+	•	Vocabulary Level: Elementary-to-moderate (grade 4.5). Simple words dominate, with isolated technical terms (“xenomorph,” “cryotube,” “gestated”).
+	•	Sentence Variety: Mix of clipped imperatives (“Look with your eyes,” “Let him go”) and extended explanations (ship-as-ball metaphor, parasite description).
+	•	Nominalizations: Sparse; most phrasing active and concrete.
+	•	Passive vs Active: Predominantly active (“I have three of them,” “They wait for organic life”), with occasional passive (“The body… was killed from the inside”).
+	•	Idioms and Jargon: Idiomatic metaphor about neighbors and fences; jargon limited to science-fiction lexicon (“manifest,” “parasite,” “proto-creature”).
+
+⸻
+
+5. Sentiment and Emotion Cues
+	•	0:00–0:20: Neutral-to-tense; factual discovery and containment loss.
+	•	0:21–0:48: Defensive urgency; polite but assertive deference.
+	•	0:49–1:14: Confrontational; personal challenge, exposing vulnerability.
+	•	1:15–1:36: Menacing forewarning; moral undertone (“was it worth it”).
+	•	1:37–end: Coldly clinical; emotion subdued, replaced with technical procedure.
+
+⸻
+
+6. Disfluencies
+	•	Rate: ~1 filler per minute ￼.
+	•	Examples:
+	•	100.5s — “Like you.”
+	•	84.8s — “some kind of proto-creature” ￼.
+	•	Interpretation: Minimal disfluency indicates rehearsed or scripted quality; fillers emerge at narrative pivots rather than under pressure.
+
+⸻
+
+7. Audience Fit and Knowledge Assumptions
+
+Speech presumes:
+	•	Audience understands military chain-of-command (“with all due respect”).
+	•	Familiarity with alien invasion context.
+	•	Comfort with both colloquial metaphor (“ball over the fence”) and technical biology (incision measurements).
+Balance of plain syntax and specialist terms suggests a mixed audience: lay listeners needing clarity, but also peers requiring detail.
+
+⸻
+
+8. Credibility Signals
+	•	Specificity: Egg measurements (54 cm × 77 cm), manifest details (chief of security, cyborg survivor).
+	•	Quantification: Numerical data and anatomical references bolster authority.
+	•	Concessions: Acknowledges limits (“with all due respect”), admits loss (“crew lost containment”).
+	•	Tone of Authority: Command forms and insider access (reading the manifest) establish control, though metaphorical digressions slightly dilute rigor.
+
+⸻
+
+Overall: The delivery combines factual detail, urgent commands, and metaphorical framing. It is controlled, fast-paced, and authoritative, with minimal disfluency and wide emotional range. The balance of technical specificity and plain speech enhances accessibility while preserving dramatic credibility.

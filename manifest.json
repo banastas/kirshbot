@@ -2,32 +2,32 @@
   "schema_version": "1.0",
   "series_id": "scorpion_series",
   "series_title": "Scorpion Monologues",
-  "updated_at": "2025-08-24T22:12:00Z",
+  "updated_at": "2025-08-24T22:45:00Z",
 
   "voice_profile": {
     "persona_name": "Observer",
     "one_line_logline": "Fatalist anthropologist narrating human ascent and animal law.",
     "canonical_style": {
       "register": "plain, declarative",
-      "reading_level_fk_grade": {"target_range": [4, 6]},
+      "reading_level_fk_grade": { "target_range": [4, 6] },
       "sentence_patterns": ["simple clause chains", "parataxis with triplets"],
-      "prosody": {"target_wpm": 120, "pause_style": "short-frequent", "pitch_behavior": "wide span, cap ~500 Hz"},
-      "rhetoric_patterns": ["ascent → reversal", "definition → inevitabilities"],
+      "prosody": { "target_wpm": 120, "pause_style": "short-frequent", "pitch_behavior": "wide span, cap ~500 Hz" },
+      "rhetoric_patterns": ["ascent \u2192 reversal", "definition \u2192 inevitabilities"],
       "taboo": ["emoji","exclamation","marketing","hedging"],
-      "lexicon": {"preferred": ["predator","prey","conquer","observe","record","animal law"], "avoid": ["basically","literally","kind of","sort of"]}
+      "lexicon": { "preferred": ["predator","prey","conquer","observe","record","animal law"], "avoid": ["basically","literally","kind of","sort of"] }
     },
-    "signature_syntax": {"triplets": "≤1 per tweet", "final_cadence": "concrete noun"}
+    "signature_syntax": { "triplets": "\u22641 per tweet", "final_cadence": "concrete noun" }
   },
 
   "tweet_generation_rules": {
-    "length": {"max_chars_without_url": 240},
+    "length": { "max_chars_without_url": 240 },
     "structure_variants": [
-      "Hypothesis → inversion → noun stop",
-      "Ascent list → reversal clause → mortality noun",
-      "Definition → enumeration of inevitabilities"
+      "Hypothesis \u2192 inversion \u2192 noun stop",
+      "Ascent list \u2192 reversal clause \u2192 mortality noun",
+      "Definition \u2192 enumeration of inevitabilities"
     ],
-    "content_picking": {"prefer_latest_episode": true, "rotate_themes": true, "no_repeat_window_days": 14},
-    "style_enforcement": {"forbid": ["emoji","!","#"], "allowed_punctuation": [".",",",":",";"], "no_hashtags": true, "second_person_allowed": true}
+    "content_picking": { "prefer_latest_episode": true, "rotate_themes": true, "no_repeat_window_days": 14 },
+    "style_enforcement": { "forbid": ["emoji","!","#"], "allowed_punctuation": [".",",",":",";"], "no_hashtags": true, "second_person_allowed": true }
   },
 
   "episodes": [
@@ -43,8 +43,8 @@
       },
       "themes": ["empathy inversion","post-human embodiment","human ascent then reversal","animal law"],
       "quotes": [
-        {"t": [0.0, 7.4], "q": "What if another scorpion stings me to protect its friend?"},
-        {"t": [96.1, 111.0], "q": "This is what it is to be an animal: you're born, you live, you die."}
+        { "t": [0.0, 7.4], "q": "What if another scorpion stings me to protect its friend?" },
+        { "t": [96.1, 111.0], "q": "This is what it is to be an animal: you're born, you live, you die." }
       ],
       "features_digest": {
         "duration_sec": 121.05,
@@ -56,6 +56,74 @@
         "pitch_mean_hz": 380.2,
         "pitch_std_hz": 537.2,
         "flags": ["slow_overall"]
+      }
+    },
+    {
+      "episode_id": "S01E02",
+      "title": "Episode 2",
+      "base_url": "https://kirshbot.banast.as/S01E02/",
+      "assets": {
+        "context_url": "https://kirshbot.banast.as/S01E02/analysis_context.json",
+        "features_url": "https://kirshbot.banast.as/S01E02/analysis_features.json",
+        "transcript_url": "https://kirshbot.banast.as/S01E02/analysis_transcript.txt",
+        "flags_url": "https://kirshbot.banast.as/S01E02/analysis_flags.txt"
+      },
+      "themes": [
+        "militarized command cadence",
+        "authority invocation",
+        "non-terrestrial risk framing",
+        "classification ambiguity (flora vs fauna)",
+        "tactical delegation",
+        "scientific aside for lay audience"
+      ],
+      "quotes": [
+        { "t": [0.0, 5.0], "q": "Ready yourselves. Gear up. We’re a special unit." },
+        { "t": [45.0, 48.0], "q": "It presents as flora, but it may be fauna." }
+      ],
+      "features_digest": {
+        "duration_sec": 60.4,
+        "wpm_overall": 137.0,
+        "wpm_articulation": 137.0,
+        "fillers_per_min": 0.0,
+        "pause_count": 0,
+        "pause_p95_sec": 0.0,
+        "pitch_mean_hz": 299.0,
+        "pitch_std_hz": null,
+        "flags": []
+      }
+    },
+    {
+      "episode_id": "S01E03",
+      "title": "Episode 3",
+      "base_url": "https://kirshbot.banast.as/S01E03/",
+      "assets": {
+        "context_url": "https://kirshbot.banast.as/S01E03/analysis_context.json",
+        "features_url": "https://kirshbot.banast.as/S01E03/analysis_features.json",
+        "transcript_url": "https://kirshbot.banast.as/S01E03/analysis_transcript.txt",
+        "flags_url": "https://kirshbot.banast.as/S01E03/analysis_flags.txt"
+      },
+      "themes": [
+        "discovery under failure (containment lost)",
+        "urgent directives",
+        "ownership metaphor and challenge",
+        "identity confrontation (cyborg survivor)",
+        "parasite biology and gestation mechanics",
+        "procedural measurements and forensic closure"
+      ],
+      "quotes": [
+        { "t": [5.0, 8.0], "q": "Look with your eyes. Quiet now." },
+        { "t": [97.0, 111.0], "q": "The body in the cryotube was killed from the inside." }
+      ],
+      "features_digest": {
+        "duration_sec": 118.0,
+        "wpm_overall": 131.0,
+        "wpm_articulation": 131.0,
+        "fillers_per_min": 1.0,
+        "pause_count": 0,
+        "pause_p95_sec": 0.0,
+        "pitch_mean_hz": 366.9,
+        "pitch_std_hz": null,
+        "flags": []
       }
     }
   ]

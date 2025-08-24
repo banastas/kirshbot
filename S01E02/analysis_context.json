@@ -1,0 +1,973 @@
+{
+  "transcript": "Ready yourselves. Gear up. We're a special unit. You're under orders from the founder. You don't need to know that. Do I have a medic in your unit? Hermit? Wendy? Wendy? Slightly. Go with her. The rest of you on me were moving fast. Assess the damage. Rescue survivors. I want GPS. I'm wounded. Report it back to command. Cheers for animals. You are not animals. Now move. Pass an A. Careful. This is a non-terrestrial species. We don't know what it's capable of. Curly, you're on point. Takes me nibs and sees if you can find something to capture it with. It presents as flora, but it may be fauna. Stay here and keep an eye on this. What was in the cat? It's a research vessel, deep space model. They must have been collecting specimens.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.08,
+      "text": "Ready yourselves.",
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.42,
+          "text": "Ready"
+        },
+        {
+          "start": 0.42,
+          "end": 1.08,
+          "text": "yourselves."
+        }
+      ]
+    },
+    {
+      "start": 2.82,
+      "end": 3.24,
+      "text": "Gear up.",
+      "words": [
+        {
+          "start": 2.82,
+          "end": 3.0,
+          "text": "Gear"
+        },
+        {
+          "start": 3.0,
+          "end": 3.24,
+          "text": "up."
+        }
+      ]
+    },
+    {
+      "start": 3.42,
+      "end": 4.34,
+      "text": "We're a special unit.",
+      "words": [
+        {
+          "start": 3.42,
+          "end": 3.52,
+          "text": "We're"
+        },
+        {
+          "start": 3.52,
+          "end": 3.7,
+          "text": "a"
+        },
+        {
+          "start": 3.7,
+          "end": 3.94,
+          "text": "special"
+        },
+        {
+          "start": 3.94,
+          "end": 4.34,
+          "text": "unit."
+        }
+      ]
+    },
+    {
+      "start": 4.4,
+      "end": 5.76,
+      "text": "You're under orders from the founder.",
+      "words": [
+        {
+          "start": 4.4,
+          "end": 4.7,
+          "text": "You're"
+        },
+        {
+          "start": 4.7,
+          "end": 4.84,
+          "text": "under"
+        },
+        {
+          "start": 4.84,
+          "end": 5.12,
+          "text": "orders"
+        },
+        {
+          "start": 5.12,
+          "end": 5.36,
+          "text": "from"
+        },
+        {
+          "start": 5.36,
+          "end": 5.52,
+          "text": "the"
+        },
+        {
+          "start": 5.52,
+          "end": 5.76,
+          "text": "founder."
+        }
+      ]
+    },
+    {
+      "start": 6.32,
+      "end": 7.26,
+      "text": "You don't need to know that.",
+      "words": [
+        {
+          "start": 6.32,
+          "end": 6.42,
+          "text": "You"
+        },
+        {
+          "start": 6.42,
+          "end": 6.6,
+          "text": "don't"
+        },
+        {
+          "start": 6.6,
+          "end": 6.72,
+          "text": "need"
+        },
+        {
+          "start": 6.72,
+          "end": 6.86,
+          "text": "to"
+        },
+        {
+          "start": 6.86,
+          "end": 7.02,
+          "text": "know"
+        },
+        {
+          "start": 7.02,
+          "end": 7.26,
+          "text": "that."
+        }
+      ]
+    },
+    {
+      "start": 7.4,
+      "end": 8.96,
+      "text": "Do I have a medic in your unit?",
+      "words": [
+        {
+          "start": 7.4,
+          "end": 7.44,
+          "text": "Do"
+        },
+        {
+          "start": 7.44,
+          "end": 7.52,
+          "text": "I"
+        },
+        {
+          "start": 7.52,
+          "end": 7.64,
+          "text": "have"
+        },
+        {
+          "start": 7.64,
+          "end": 7.86,
+          "text": "a"
+        },
+        {
+          "start": 7.86,
+          "end": 8.08,
+          "text": "medic"
+        },
+        {
+          "start": 8.08,
+          "end": 8.48,
+          "text": "in"
+        },
+        {
+          "start": 8.48,
+          "end": 8.62,
+          "text": "your"
+        },
+        {
+          "start": 8.62,
+          "end": 8.96,
+          "text": "unit?"
+        }
+      ]
+    },
+    {
+      "start": 9.5,
+      "end": 9.76,
+      "text": "Hermit?",
+      "words": [
+        {
+          "start": 9.5,
+          "end": 9.76,
+          "text": "Hermit?"
+        }
+      ]
+    },
+    {
+      "start": 10.22,
+      "end": 10.4,
+      "text": "Wendy?",
+      "words": [
+        {
+          "start": 10.22,
+          "end": 10.4,
+          "text": "Wendy?"
+        }
+      ]
+    },
+    {
+      "start": 11.92,
+      "end": 12.4,
+      "text": "Wendy?",
+      "words": [
+        {
+          "start": 11.92,
+          "end": 12.4,
+          "text": "Wendy?"
+        }
+      ]
+    },
+    {
+      "start": 12.94,
+      "end": 13.36,
+      "text": "Slightly.",
+      "words": [
+        {
+          "start": 12.94,
+          "end": 13.36,
+          "text": "Slightly."
+        }
+      ]
+    },
+    {
+      "start": 14.76,
+      "end": 15.4,
+      "text": "Go with her.",
+      "words": [
+        {
+          "start": 14.76,
+          "end": 15.04,
+          "text": "Go"
+        },
+        {
+          "start": 15.04,
+          "end": 15.2,
+          "text": "with"
+        },
+        {
+          "start": 15.2,
+          "end": 15.4,
+          "text": "her."
+        }
+      ]
+    },
+    {
+      "start": 16.32,
+      "end": 18.62,
+      "text": "The rest of you on me were moving fast.",
+      "words": [
+        {
+          "start": 16.32,
+          "end": 16.44,
+          "text": "The"
+        },
+        {
+          "start": 16.44,
+          "end": 16.68,
+          "text": "rest"
+        },
+        {
+          "start": 16.68,
+          "end": 16.88,
+          "text": "of"
+        },
+        {
+          "start": 16.88,
+          "end": 17.12,
+          "text": "you"
+        },
+        {
+          "start": 17.12,
+          "end": 17.42,
+          "text": "on"
+        },
+        {
+          "start": 17.42,
+          "end": 17.68,
+          "text": "me"
+        },
+        {
+          "start": 17.68,
+          "end": 17.92,
+          "text": "were"
+        },
+        {
+          "start": 17.92,
+          "end": 18.18,
+          "text": "moving"
+        },
+        {
+          "start": 18.18,
+          "end": 18.62,
+          "text": "fast."
+        }
+      ]
+    },
+    {
+      "start": 18.96,
+      "end": 19.68,
+      "text": "Assess the damage.",
+      "words": [
+        {
+          "start": 18.96,
+          "end": 19.16,
+          "text": "Assess"
+        },
+        {
+          "start": 19.16,
+          "end": 19.38,
+          "text": "the"
+        },
+        {
+          "start": 19.38,
+          "end": 19.68,
+          "text": "damage."
+        }
+      ]
+    },
+    {
+      "start": 20.04,
+      "end": 20.54,
+      "text": "Rescue survivors.",
+      "words": [
+        {
+          "start": 20.04,
+          "end": 20.06,
+          "text": "Rescue"
+        },
+        {
+          "start": 20.06,
+          "end": 20.54,
+          "text": "survivors."
+        }
+      ]
+    },
+    {
+      "start": 20.68,
+      "end": 21.12,
+      "text": "I want GPS.",
+      "words": [
+        {
+          "start": 20.68,
+          "end": 20.68,
+          "text": "I"
+        },
+        {
+          "start": 20.68,
+          "end": 20.78,
+          "text": "want"
+        },
+        {
+          "start": 20.78,
+          "end": 21.12,
+          "text": "GPS."
+        }
+      ]
+    },
+    {
+      "start": 21.28,
+      "end": 21.58,
+      "text": "I'm wounded.",
+      "words": [
+        {
+          "start": 21.28,
+          "end": 21.38,
+          "text": "I'm"
+        },
+        {
+          "start": 21.38,
+          "end": 21.58,
+          "text": "wounded."
+        }
+      ]
+    },
+    {
+      "start": 21.98,
+      "end": 22.94,
+      "text": "Report it back to command.",
+      "words": [
+        {
+          "start": 21.98,
+          "end": 22.2,
+          "text": "Report"
+        },
+        {
+          "start": 22.2,
+          "end": 22.34,
+          "text": "it"
+        },
+        {
+          "start": 22.34,
+          "end": 22.48,
+          "text": "back"
+        },
+        {
+          "start": 22.48,
+          "end": 22.66,
+          "text": "to"
+        },
+        {
+          "start": 22.66,
+          "end": 22.94,
+          "text": "command."
+        }
+      ]
+    },
+    {
+      "start": 23.38,
+      "end": 24.34,
+      "text": "Cheers for animals.",
+      "words": [
+        {
+          "start": 23.38,
+          "end": 23.66,
+          "text": "Cheers"
+        },
+        {
+          "start": 23.66,
+          "end": 23.98,
+          "text": "for"
+        },
+        {
+          "start": 23.98,
+          "end": 24.34,
+          "text": "animals."
+        }
+      ]
+    },
+    {
+      "start": 24.94,
+      "end": 25.96,
+      "text": "You are not animals.",
+      "words": [
+        {
+          "start": 24.94,
+          "end": 25.08,
+          "text": "You"
+        },
+        {
+          "start": 25.08,
+          "end": 25.22,
+          "text": "are"
+        },
+        {
+          "start": 25.22,
+          "end": 25.44,
+          "text": "not"
+        },
+        {
+          "start": 25.44,
+          "end": 25.96,
+          "text": "animals."
+        }
+      ]
+    },
+    {
+      "start": 26.56,
+      "end": 27.1,
+      "text": "Now move.",
+      "words": [
+        {
+          "start": 26.56,
+          "end": 26.66,
+          "text": "Now"
+        },
+        {
+          "start": 26.66,
+          "end": 27.1,
+          "text": "move."
+        }
+      ]
+    },
+    {
+      "start": 28.04,
+      "end": 28.58,
+      "text": "Pass an A.",
+      "words": [
+        {
+          "start": 28.04,
+          "end": 28.28,
+          "text": "Pass"
+        },
+        {
+          "start": 28.28,
+          "end": 28.48,
+          "text": "an"
+        },
+        {
+          "start": 28.48,
+          "end": 28.58,
+          "text": "A."
+        }
+      ]
+    },
+    {
+      "start": 28.58,
+      "end": 29.62,
+      "text": "Careful.",
+      "words": [
+        {
+          "start": 28.58,
+          "end": 29.62,
+          "text": "Careful."
+        }
+      ]
+    },
+    {
+      "start": 30.6,
+      "end": 33.36,
+      "text": "This is a non-terrestrial species.",
+      "words": [
+        {
+          "start": 30.6,
+          "end": 30.86,
+          "text": "This"
+        },
+        {
+          "start": 30.86,
+          "end": 31.42,
+          "text": "is"
+        },
+        {
+          "start": 31.42,
+          "end": 31.78,
+          "text": "a"
+        },
+        {
+          "start": 31.78,
+          "end": 32.06,
+          "text": "non"
+        },
+        {
+          "start": 32.06,
+          "end": 32.72,
+          "text": "-terrestrial"
+        },
+        {
+          "start": 32.72,
+          "end": 33.36,
+          "text": "species."
+        }
+      ]
+    },
+    {
+      "start": 34.08,
+      "end": 35.5,
+      "text": "We don't know what it's capable of.",
+      "words": [
+        {
+          "start": 34.08,
+          "end": 34.1,
+          "text": "We"
+        },
+        {
+          "start": 34.1,
+          "end": 34.32,
+          "text": "don't"
+        },
+        {
+          "start": 34.32,
+          "end": 34.5,
+          "text": "know"
+        },
+        {
+          "start": 34.5,
+          "end": 34.66,
+          "text": "what"
+        },
+        {
+          "start": 34.66,
+          "end": 34.9,
+          "text": "it's"
+        },
+        {
+          "start": 34.9,
+          "end": 35.14,
+          "text": "capable"
+        },
+        {
+          "start": 35.14,
+          "end": 35.5,
+          "text": "of."
+        }
+      ]
+    },
+    {
+      "start": 35.66,
+      "end": 37.4,
+      "text": "Curly, you're on point.",
+      "words": [
+        {
+          "start": 35.66,
+          "end": 36.0,
+          "text": "Curly,"
+        },
+        {
+          "start": 36.62,
+          "end": 36.82,
+          "text": "you're"
+        },
+        {
+          "start": 36.82,
+          "end": 37.02,
+          "text": "on"
+        },
+        {
+          "start": 37.02,
+          "end": 37.4,
+          "text": "point."
+        }
+      ]
+    },
+    {
+      "start": 38.16,
+      "end": 40.4,
+      "text": "Takes me nibs and",
+      "words": [
+        {
+          "start": 38.16,
+          "end": 38.76,
+          "text": "Takes"
+        },
+        {
+          "start": 38.76,
+          "end": 39.24,
+          "text": "me"
+        },
+        {
+          "start": 39.24,
+          "end": 40.04,
+          "text": "nibs"
+        },
+        {
+          "start": 40.04,
+          "end": 40.4,
+          "text": "and"
+        }
+      ]
+    },
+    {
+      "start": 40.4,
+      "end": 44.26,
+      "text": "sees if you can find something to capture it with.",
+      "words": [
+        {
+          "start": 40.4,
+          "end": 41.56,
+          "text": "sees"
+        },
+        {
+          "start": 41.56,
+          "end": 41.74,
+          "text": "if"
+        },
+        {
+          "start": 41.74,
+          "end": 41.78,
+          "text": "you"
+        },
+        {
+          "start": 41.78,
+          "end": 42.04,
+          "text": "can"
+        },
+        {
+          "start": 42.04,
+          "end": 42.72,
+          "text": "find"
+        },
+        {
+          "start": 42.72,
+          "end": 43.14,
+          "text": "something"
+        },
+        {
+          "start": 43.14,
+          "end": 43.42,
+          "text": "to"
+        },
+        {
+          "start": 43.42,
+          "end": 43.92,
+          "text": "capture"
+        },
+        {
+          "start": 43.92,
+          "end": 44.14,
+          "text": "it"
+        },
+        {
+          "start": 44.14,
+          "end": 44.26,
+          "text": "with."
+        }
+      ]
+    },
+    {
+      "start": 45.36,
+      "end": 48.04,
+      "text": "It presents as flora, but it may be fauna.",
+      "words": [
+        {
+          "start": 45.36,
+          "end": 45.74,
+          "text": "It"
+        },
+        {
+          "start": 45.74,
+          "end": 46.06,
+          "text": "presents"
+        },
+        {
+          "start": 46.06,
+          "end": 46.34,
+          "text": "as"
+        },
+        {
+          "start": 46.34,
+          "end": 46.64,
+          "text": "flora,"
+        },
+        {
+          "start": 46.86,
+          "end": 46.98,
+          "text": "but"
+        },
+        {
+          "start": 46.98,
+          "end": 47.28,
+          "text": "it"
+        },
+        {
+          "start": 47.28,
+          "end": 47.5,
+          "text": "may"
+        },
+        {
+          "start": 47.5,
+          "end": 47.74,
+          "text": "be"
+        },
+        {
+          "start": 47.74,
+          "end": 48.04,
+          "text": "fauna."
+        }
+      ]
+    },
+    {
+      "start": 48.5,
+      "end": 52.0,
+      "text": "Stay here and keep an eye on this.",
+      "words": [
+        {
+          "start": 48.5,
+          "end": 48.76,
+          "text": "Stay"
+        },
+        {
+          "start": 48.76,
+          "end": 49.2,
+          "text": "here"
+        },
+        {
+          "start": 49.2,
+          "end": 49.92,
+          "text": "and"
+        },
+        {
+          "start": 49.92,
+          "end": 51.18,
+          "text": "keep"
+        },
+        {
+          "start": 51.18,
+          "end": 51.38,
+          "text": "an"
+        },
+        {
+          "start": 51.38,
+          "end": 51.46,
+          "text": "eye"
+        },
+        {
+          "start": 51.46,
+          "end": 51.68,
+          "text": "on"
+        },
+        {
+          "start": 51.68,
+          "end": 52.0,
+          "text": "this."
+        }
+      ]
+    },
+    {
+      "start": 52.92,
+      "end": 53.96,
+      "text": "What was in the cat?",
+      "words": [
+        {
+          "start": 52.92,
+          "end": 53.18,
+          "text": "What"
+        },
+        {
+          "start": 53.18,
+          "end": 53.38,
+          "text": "was"
+        },
+        {
+          "start": 53.38,
+          "end": 53.56,
+          "text": "in"
+        },
+        {
+          "start": 53.56,
+          "end": 53.72,
+          "text": "the"
+        },
+        {
+          "start": 53.72,
+          "end": 53.96,
+          "text": "cat?"
+        }
+      ]
+    },
+    {
+      "start": 54.46,
+      "end": 57.24,
+      "text": "It's a research vessel, deep space model.",
+      "words": [
+        {
+          "start": 54.46,
+          "end": 54.94,
+          "text": "It's"
+        },
+        {
+          "start": 54.94,
+          "end": 55.12,
+          "text": "a"
+        },
+        {
+          "start": 55.12,
+          "end": 55.42,
+          "text": "research"
+        },
+        {
+          "start": 55.42,
+          "end": 55.82,
+          "text": "vessel,"
+        },
+        {
+          "start": 56.4,
+          "end": 56.54,
+          "text": "deep"
+        },
+        {
+          "start": 56.54,
+          "end": 56.76,
+          "text": "space"
+        },
+        {
+          "start": 56.76,
+          "end": 57.24,
+          "text": "model."
+        }
+      ]
+    },
+    {
+      "start": 57.24,
+      "end": 59.68,
+      "text": "They must have been collecting specimens.",
+      "words": [
+        {
+          "start": 57.24,
+          "end": 58.54,
+          "text": "They"
+        },
+        {
+          "start": 58.54,
+          "end": 58.66,
+          "text": "must"
+        },
+        {
+          "start": 58.66,
+          "end": 58.78,
+          "text": "have"
+        },
+        {
+          "start": 58.78,
+          "end": 58.88,
+          "text": "been"
+        },
+        {
+          "start": 58.88,
+          "end": 59.28,
+          "text": "collecting"
+        },
+        {
+          "start": 59.28,
+          "end": 59.68,
+          "text": "specimens."
+        }
+      ]
+    }
+  ],
+  "features": {
+    "duration_sec": 60.43,
+    "speech_time_sec": 60.43,
+    "segments": 32,
+    "words": 138,
+    "wpm_overall": 137.0,
+    "wpm_articulation": 137.0,
+    "fillers_total": 0,
+    "fillers_per_min": 0.0,
+    "fillers_by_token": {
+      "uh": 0,
+      "um": 0,
+      "er": 0,
+      "like": 0,
+      "you know": 0,
+      "kind of": 0,
+      "sort of": 0,
+      "basically": 0,
+      "actually": 0,
+      "literally": 0,
+      "i mean": 0,
+      "so yeah": 0,
+      "right": 0,
+      "okay": 0,
+      "ok": 0
+    },
+    "pause_count": 0,
+    "pause_durations_sec": {
+      "mean": 0.0,
+      "median": 0.0,
+      "p95": 0.0
+    },
+    "volume_energy_stats": {
+      "mean": 0.048266,
+      "std": 0.023074,
+      "p10": 0.01663,
+      "p50": 0.046908,
+      "p90": 0.07786
+    },
+    "pitch_stats": {
+      "mean_hz": 299.2,
+      "std_hz": 295.6,
+      "p10": 161.7,
+      "p50": 229.0,
+      "p90": 475.2
+    },
+    "reading_level": {
+      "fk_grade": 1.96,
+      "flesch_reading_ease": 88.9,
+      "words": 138,
+      "sentences": 31,
+      "syllables": 185
+    }
+  }
+}

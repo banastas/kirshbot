@@ -1,0 +1,75 @@
+Speech Analysis Report
+
+1. Executive Summary
+
+The recording spans 60.4 seconds, containing 138 words across 32 segments ￼. Delivery was highly compressed: 137 words per minute, 0 pauses, and zero fillers ￼. Mean pitch was 299 Hz with sharp variability (p10 = 161 Hz, p90 = 475 Hz), and volume levels remained moderate with limited dynamic range ￼. Language level aligns with Grade 2 reading (Flesch score 88.9: very easy to understand) ￼. The tone is directive and militarized, marked by clipped imperatives and abrupt topic shifts.
+
+⸻
+
+2. Structural Breakdown with Timestamps
+	•	0:00–0:05: Opening commands — “Ready yourselves. Gear up. We’re a special unit.” Orders establish authority and role.
+	•	0:05–0:07: Legitimacy invoked — “You’re under orders from the founder. You don’t need to know that.” Appeal to higher authority, withholding rationale.
+	•	0:07–0:13: Personnel check — direct questions (“Do I have a medic?”), repetitions of names (“Wendy?”).
+	•	0:14–0:19: Task delegation — “Go with her. The rest of you on me, we’re moving fast.” Transition to mission execution.
+	•	0:19–0:22: Immediate objectives — “Assess the damage. Rescue survivors. I want GPS.” Fragmented imperatives.
+	•	0:21–0:23: Self-disclosure — “I’m wounded.” First personal admission, urgency injected.
+	•	0:23–0:27: Morale correction — “Cheers for animals. You are not animals. Now move.” Attempted motivational reframing.
+	•	0:28–0:35: Threat definition — “Careful. This is a non-terrestrial species. We don’t know what it’s capable of.” Risk warning and epistemic concession.
+	•	0:35–0:44: Tactical orders — specific assignments: “Curly, you’re on point … capture it with.”
+	•	0:45–0:48: Classification uncertainty — “It presents as flora, but it may be fauna.” A concession on knowledge limits.
+	•	0:49–0:52: Guarding — “Stay here and keep an eye on this.”
+	•	0:53–1:00: Information assessment — query (“What was in the cat?”) followed by conclusion: “It’s a research vessel … They must have been collecting specimens.” Closure via hypothesis.
+
+⸻
+
+3. Delivery Metrics
+	•	Pace: Fast, sustained at 137 WPM ￼. No slowing for emphasis.
+	•	Pauses: None detected. Continuous speech without segmentation ￼.
+	•	Fillers: Zero (no “uh,” “um,” “like”) ￼. Suggests scripted or rehearsed quality.
+	•	Pitch: Mean 299 Hz, extremely variable (range 161–475 Hz) ￼, indicating heightened intensity and stress modulation.
+	•	Loudness: Mid-level with modest variation (p90 = 0.078 energy units) ￼. Projected but not forceful.
+
+⸻
+
+4. Language Analysis
+	•	Vocabulary: Simple, operational. Predominantly monosyllabic imperatives (“Move,” “Careful,” “Report”).
+	•	Sentence Variety: Almost all are short declaratives or imperatives. Only two interrogatives (“Do I have a medic?” “What was in the cat?”).
+	•	Nominalizations: Minimal. Example: “Assess the damage” uses abstract noun “damage.”
+	•	Passive vs Active: Overwhelmingly active voice (“Rescue survivors,” “Report it back”). No passives present.
+	•	Idioms/Jargon: Military jargon dominates (“on point,” “unit,” “command”). Scientific vocabulary appears briefly (“non-terrestrial species,” “flora/fauna,” “specimens”).
+	•	Register: Functional, command-oriented, devoid of ornamentation.
+
+⸻
+
+5. Sentiment and Emotion Cues
+	•	Opening: Authoritative, commanding.
+	•	0:21 “I’m wounded”: Vulnerability surfaces, momentary personal disclosure.
+	•	0:23–0:26 “You are not animals”: Emotional correction, almost defensive motivational push.
+	•	0:30–0:35: Fear and caution emerge — risk framing.
+	•	0:45–0:48: Ambiguity and cautionary tone with “may be fauna.”
+	•	0:57–0:59: Concluding reasoning softens tone into deduction rather than command.
+
+⸻
+
+6. Disfluencies
+	•	Disfluency rate: 0 per minute ￼.
+	•	False start: “Takes me nibs and…” (38.16s) incomplete phrase, possible error ￼.
+	•	No fillers, repetitions occur only as purposeful emphasis (“Wendy? Wendy?”).
+
+⸻
+
+7. Audience Fit and Knowledge Assumptions
+	•	Audience presumed to be a trained military or paramilitary unit. Assumed competence in following rapid commands without justification.
+	•	Scientific aside (“flora/fauna”) assumes minimal background knowledge but attempts to simplify taxonomy.
+	•	Authority invoked (“orders from the founder”) assumes obedience over comprehension.
+
+⸻
+
+8. Credibility Signals
+	•	Specificity: Direct naming (“Curly,” “Wendy”), concrete tasks (“Rescue survivors,” “Report to command”).
+	•	Quantification: Minimal. Only classification attempts (“flora” vs “fauna”).
+	•	Concessions: Multiple epistemic limits acknowledged — “You don’t need to know that,” “We don’t know what it’s capable of,” “It may be fauna.” These balance authority with realism, heightening credibility.
+
+⸻
+
+Overall: The speech is militarized, urgent, and stripped of hesitation. Delivery is rigid and unbroken, serving command hierarchy at the expense of conversational rhythm. Authority is established by brevity, specificity, and repeated appeals to higher command while conceding key unknowns.

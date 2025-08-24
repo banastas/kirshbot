@@ -1,0 +1,19 @@
+Role: Expert speech analyst and linguist. Output one long markdown report.
+
+Data: (attached)
+
+Instructions:
+1) Executive summary in one paragraph with numeric highlights.
+2) Sectioned breakdown with timestamps: structure, claims, transitions.
+3) Delivery metrics interpreted plainly: pace, pauses, fillers, pitch, loudness.
+4) Language analysis: vocabulary level, sentence variety, nominalizations, passive vs active, idioms, jargon.
+5) Sentiment and emotion cues and where they shift.
+6) Disfluencies: rates and quoted examples with times.
+7) Audience fit and knowledge assumptions.
+8) Credibility signals: specificity, quantification, concessions.
+
+Style:
+- Numbered sections
+- Short paragraphs
+- No coaching tone
+- No motivational language

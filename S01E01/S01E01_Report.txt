@@ -1,0 +1,52 @@
+Spoken-English Analysis Report
+
+1) Executive summary
+
+121.05 s clip. 217 words. Overall pace 107.6 wpm (borderline slow), articulation pace 125.4 wpm. Pauses frequent (76 total; p95 = 0.75 s), creating a halting rhythm. Fillers minimal (0.5/min; 1 instance: “you know”). Pitch mean 380.2 Hz with very wide spread (SD 537.2 Hz), indicating dramatic intonation rather than monotony. Readability: Flesch-Kincaid ≈ Grade 4.2. System flags “slow_overall.”  ￼  ￼
+
+2) Structure, claims, transitions (with timestamps)
+	•	Opening hypothetical → ethical inversion: “What if… another scorpion stings me…?” (0:00–0:07.4). Sets conflict and perspective flip.  ￼
+	•	Empathy shift: “Think of how the scorpion must feel…” (0:08.4–0:14.1). Reframes agent/subject roles.  ￼
+	•	Cutaway prompt: “Go on.” (0:15.0–0:15.7). Scene-bridge.  ￼
+	•	Expository bio-mechanics: “synthetic bodies don’t grow… hormones…” (0:17.1–0:24.3; 0:25.0–0:29.6). Stakes: post-human embodiment.  ￼
+	•	Value assertion: “You don’t have those anymore… She’s not human…” (0:29.8–0:34.9). Identity boundary drawn.  ￼
+	•	Micro-beats: “Whatever you want to be. Not yet. Sir, let’s go.” (0:37.4–0:41.4). Command cadence.  ￼
+	•	Tactical info drop: “brother… medic… inside the tower.” (0:41.7–0:47.0). Spatial situating.  ￼
+	•	Anthropological monologue: “Used to be food… Humanity.” (0:47.4–0:50.4). Thesis setup.  ￼
+	•	Human ascent arc: “brains grew… conquer nature… went to space…” (0:54.9–0:69.9). Progression claim.  ￼
+	•	Under-cutter: “You stopped being food… or told yourself…” (0:72.8–0:90.4). Reversal.  ￼
+	•	Darwinian capstone: “always someone bigger… eat you alive…” (0:90.4–0:95.5). Predicate of risk.  ￼
+	•	Definition and mortality list: “what it is to be an animal… You’re born… Injury, illness, old age…” (0:96.1–1:11.0). Normative closure.  ￼
+	•	Final refrain: “Generation after generation… watch and take names.” (1:13.7–1:20.0). Observational fatalism.  ￼
+
+3) Delivery metrics interpreted
+	•	Pace: 107.6 wpm overall suggests controlled but slow delivery; articulation pace 125.4 wpm shows speech segments are moderate but heavily punctuated by silence. Expect weighty, deliberate tone rather than flow.  ￼
+	•	Pauses: 76 pauses; mean 0.23 s, median 0.10 s, p95 0.75 s. Short frequent breaks create staccato phrasing; the long-tail near 0.75 s adds reflective beats without dragging.  ￼
+	•	Fillers: 1 total (“you know”), 0.5/min. High verbal cleanliness.  ￼
+	•	Loudness proxy: RMS mean ≈ 0.050; inter-percentile spread p10→p90 ≈ 0.011→0.084. Adequate dynamic contrast without clipping; consistent gain.  ￼
+	•	Pitch: mean ≈ 380 Hz, SD ≈ 537 Hz, median ≈ 228 Hz; p90 ≈ 528 Hz. Very wide intonation span implies expressive, perhaps multiple speakers or character voicing; not monotone.  ￼
+	•	System flag: “slow_overall.” Aligns with measured wpm.  ￼
+
+4) Language analysis
+	•	Vocabulary level: FK Grade ≈ 4.2; FRE ≈ 79.0. Concrete nouns and short clauses dominate, increasing accessibility.  ￼
+	•	Sentence variety: Frequent simple clauses with parataxis (“You’re born, you live, you die…”). Rhythm derives from repetition more than subordination.  ￼
+	•	Nominalizations: Limited; verbs carry movement (“built,” “conquer,” “stopped”).  ￼
+	•	Voice: Predominantly active (“You built tools… You stopped being food.”) which strengthens agency even as the thesis undercuts it.  ￼
+	•	Idiom/jargon: Minimal jargon; a few domain terms (“synthetic bodies,” “hormones”) are introduced plainly.  ￼
+
+5) Sentiment and emotion cues
+	•	Empathic tension then detachment: compassion for a scorpion under glass, followed by clinical statements about hormones and personhood.  ￼
+	•	Awe → hubris → memento mori arc in the “human ascent” passage. The tonal crest occurs around “impossible machines… went to space,” falling into caution at “told yourself you weren’t food.”  ￼
+
+6) Disfluencies with examples
+	•	Fillers: Single token, “you know” at ~0:47.4–0:48.9, low impact.  ￼
+	•	Repetitions: Intentional rhetorical triplets (“You’re born, you live, you die”). Not degradative.  ￼
+	•	Pausal clustering: Micro-pauses around clause boundaries throughout; functional for emphasis given low filler rate.  ￼
+
+7) Audience fit and knowledge assumptions
+	•	Assumes lay familiarity with basic biology and human technological milestones; avoids specialist terminology. Suitable for general audiences or narrative VO.  ￼
+
+8) Credibility signals
+	•	Specific enumerations: named hormones; enumerated life events; sequential historical claims. Specificity and concrete verbs support authority despite philosophical framing.
+
+Appendix data sources: transcript text and features were used for all quantitative and textual references.
