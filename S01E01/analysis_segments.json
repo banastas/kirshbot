@@ -1,0 +1,1299 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 7.42,
+      "text": "What if, while I'm squashing it, another scorpion stings me to protect its friend the same way you're trying to protect me?",
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.46,
+          "text": "What"
+        },
+        {
+          "start": 0.46,
+          "end": 0.86,
+          "text": "if,"
+        },
+        {
+          "start": 1.38,
+          "end": 1.56,
+          "text": "while"
+        },
+        {
+          "start": 1.56,
+          "end": 1.88,
+          "text": "I'm"
+        },
+        {
+          "start": 1.88,
+          "end": 2.22,
+          "text": "squashing"
+        },
+        {
+          "start": 2.22,
+          "end": 2.48,
+          "text": "it,"
+        },
+        {
+          "start": 2.72,
+          "end": 3.04,
+          "text": "another"
+        },
+        {
+          "start": 3.04,
+          "end": 3.56,
+          "text": "scorpion"
+        },
+        {
+          "start": 3.56,
+          "end": 3.94,
+          "text": "stings"
+        },
+        {
+          "start": 3.94,
+          "end": 4.28,
+          "text": "me"
+        },
+        {
+          "start": 4.28,
+          "end": 4.7,
+          "text": "to"
+        },
+        {
+          "start": 4.7,
+          "end": 5.06,
+          "text": "protect"
+        },
+        {
+          "start": 5.06,
+          "end": 5.26,
+          "text": "its"
+        },
+        {
+          "start": 5.26,
+          "end": 5.54,
+          "text": "friend"
+        },
+        {
+          "start": 5.54,
+          "end": 5.78,
+          "text": "the"
+        },
+        {
+          "start": 5.78,
+          "end": 6.02,
+          "text": "same"
+        },
+        {
+          "start": 6.02,
+          "end": 6.26,
+          "text": "way"
+        },
+        {
+          "start": 6.26,
+          "end": 6.54,
+          "text": "you're"
+        },
+        {
+          "start": 6.54,
+          "end": 6.72,
+          "text": "trying"
+        },
+        {
+          "start": 6.72,
+          "end": 6.86,
+          "text": "to"
+        },
+        {
+          "start": 6.86,
+          "end": 7.16,
+          "text": "protect"
+        },
+        {
+          "start": 7.16,
+          "end": 7.42,
+          "text": "me?"
+        }
+      ]
+    },
+    {
+      "start": 8.36,
+      "end": 14.1,
+      "text": "Think of how the scorpion must feel, trapped under glass, menaced by giants.",
+      "words": [
+        {
+          "start": 8.36,
+          "end": 8.5,
+          "text": "Think"
+        },
+        {
+          "start": 8.5,
+          "end": 8.66,
+          "text": "of"
+        },
+        {
+          "start": 8.66,
+          "end": 8.8,
+          "text": "how"
+        },
+        {
+          "start": 8.8,
+          "end": 8.98,
+          "text": "the"
+        },
+        {
+          "start": 8.98,
+          "end": 9.5,
+          "text": "scorpion"
+        },
+        {
+          "start": 9.5,
+          "end": 9.74,
+          "text": "must"
+        },
+        {
+          "start": 9.74,
+          "end": 10.24,
+          "text": "feel,"
+        },
+        {
+          "start": 10.9,
+          "end": 11.28,
+          "text": "trapped"
+        },
+        {
+          "start": 11.28,
+          "end": 11.58,
+          "text": "under"
+        },
+        {
+          "start": 11.58,
+          "end": 12.22,
+          "text": "glass,"
+        },
+        {
+          "start": 12.86,
+          "end": 13.28,
+          "text": "menaced"
+        },
+        {
+          "start": 13.28,
+          "end": 13.56,
+          "text": "by"
+        },
+        {
+          "start": 13.56,
+          "end": 14.1,
+          "text": "giants."
+        }
+      ]
+    },
+    {
+      "start": 14.96,
+      "end": 15.68,
+      "text": "Go on.",
+      "words": [
+        {
+          "start": 14.96,
+          "end": 15.12,
+          "text": "Go"
+        },
+        {
+          "start": 15.12,
+          "end": 15.68,
+          "text": "on."
+        }
+      ]
+    },
+    {
+      "start": 17.14,
+      "end": 21.16,
+      "text": "Hold me here when you wake up, because synthetic bodies don't grow.",
+      "words": [
+        {
+          "start": 17.14,
+          "end": 17.26,
+          "text": "Hold"
+        },
+        {
+          "start": 17.26,
+          "end": 17.48,
+          "text": "me"
+        },
+        {
+          "start": 17.48,
+          "end": 17.74,
+          "text": "here"
+        },
+        {
+          "start": 17.74,
+          "end": 18.04,
+          "text": "when"
+        },
+        {
+          "start": 18.04,
+          "end": 18.2,
+          "text": "you"
+        },
+        {
+          "start": 18.2,
+          "end": 18.36,
+          "text": "wake"
+        },
+        {
+          "start": 18.36,
+          "end": 19.02,
+          "text": "up,"
+        },
+        {
+          "start": 19.08,
+          "end": 19.6,
+          "text": "because"
+        },
+        {
+          "start": 19.6,
+          "end": 20.14,
+          "text": "synthetic"
+        },
+        {
+          "start": 20.14,
+          "end": 20.5,
+          "text": "bodies"
+        },
+        {
+          "start": 20.5,
+          "end": 20.86,
+          "text": "don't"
+        },
+        {
+          "start": 20.86,
+          "end": 21.16,
+          "text": "grow."
+        }
+      ]
+    },
+    {
+      "start": 21.72,
+      "end": 24.34,
+      "text": "The human body manufactures hormones.",
+      "words": [
+        {
+          "start": 21.72,
+          "end": 22.28,
+          "text": "The"
+        },
+        {
+          "start": 22.28,
+          "end": 22.56,
+          "text": "human"
+        },
+        {
+          "start": 22.56,
+          "end": 22.94,
+          "text": "body"
+        },
+        {
+          "start": 22.94,
+          "end": 23.7,
+          "text": "manufactures"
+        },
+        {
+          "start": 23.7,
+          "end": 24.34,
+          "text": "hormones."
+        }
+      ]
+    },
+    {
+      "start": 25.02,
+      "end": 27.82,
+      "text": "Dopamine, serotonin, estrogen, testosterone,",
+      "words": [
+        {
+          "start": 25.02,
+          "end": 25.4,
+          "text": "Dopamine,"
+        },
+        {
+          "start": 25.68,
+          "end": 26.2,
+          "text": "serotonin,"
+        },
+        {
+          "start": 26.54,
+          "end": 26.94,
+          "text": "estrogen,"
+        },
+        {
+          "start": 27.22,
+          "end": 27.82,
+          "text": "testosterone,"
+        }
+      ]
+    },
+    {
+      "start": 28.06,
+      "end": 29.64,
+      "text": "that create moods.",
+      "words": [
+        {
+          "start": 28.06,
+          "end": 28.3,
+          "text": "that"
+        },
+        {
+          "start": 28.3,
+          "end": 28.72,
+          "text": "create"
+        },
+        {
+          "start": 28.72,
+          "end": 29.64,
+          "text": "moods."
+        }
+      ]
+    },
+    {
+      "start": 29.8,
+      "end": 31.12,
+      "text": "You don't have those anymore.",
+      "words": [
+        {
+          "start": 29.8,
+          "end": 29.98,
+          "text": "You"
+        },
+        {
+          "start": 29.98,
+          "end": 30.16,
+          "text": "don't"
+        },
+        {
+          "start": 30.16,
+          "end": 30.4,
+          "text": "have"
+        },
+        {
+          "start": 30.4,
+          "end": 30.68,
+          "text": "those"
+        },
+        {
+          "start": 30.68,
+          "end": 31.12,
+          "text": "anymore."
+        }
+      ]
+    },
+    {
+      "start": 31.66,
+      "end": 32.72,
+      "text": "We've had this discussion.",
+      "words": [
+        {
+          "start": 31.66,
+          "end": 31.9,
+          "text": "We've"
+        },
+        {
+          "start": 31.9,
+          "end": 32.02,
+          "text": "had"
+        },
+        {
+          "start": 32.02,
+          "end": 32.22,
+          "text": "this"
+        },
+        {
+          "start": 32.22,
+          "end": 32.72,
+          "text": "discussion."
+        }
+      ]
+    },
+    {
+      "start": 33.44,
+      "end": 34.86,
+      "text": "She's not human anymore.",
+      "words": [
+        {
+          "start": 33.44,
+          "end": 33.94,
+          "text": "She's"
+        },
+        {
+          "start": 33.94,
+          "end": 34.1,
+          "text": "not"
+        },
+        {
+          "start": 34.1,
+          "end": 34.38,
+          "text": "human"
+        },
+        {
+          "start": 34.38,
+          "end": 34.86,
+          "text": "anymore."
+        }
+      ]
+    },
+    {
+      "start": 35.28,
+      "end": 36.76,
+      "text": "Why are we pretending she is?",
+      "words": [
+        {
+          "start": 35.28,
+          "end": 35.46,
+          "text": "Why"
+        },
+        {
+          "start": 35.46,
+          "end": 35.62,
+          "text": "are"
+        },
+        {
+          "start": 35.62,
+          "end": 35.72,
+          "text": "we"
+        },
+        {
+          "start": 35.72,
+          "end": 36.14,
+          "text": "pretending"
+        },
+        {
+          "start": 36.14,
+          "end": 36.44,
+          "text": "she"
+        },
+        {
+          "start": 36.44,
+          "end": 36.76,
+          "text": "is?"
+        }
+      ]
+    },
+    {
+      "start": 37.44,
+      "end": 38.84,
+      "text": "Whatever you want to be.",
+      "words": [
+        {
+          "start": 37.44,
+          "end": 37.86,
+          "text": "Whatever"
+        },
+        {
+          "start": 37.86,
+          "end": 38.12,
+          "text": "you"
+        },
+        {
+          "start": 38.12,
+          "end": 38.34,
+          "text": "want"
+        },
+        {
+          "start": 38.34,
+          "end": 38.58,
+          "text": "to"
+        },
+        {
+          "start": 38.58,
+          "end": 38.84,
+          "text": "be."
+        }
+      ]
+    },
+    {
+      "start": 39.3,
+      "end": 39.88,
+      "text": "Not yet.",
+      "words": [
+        {
+          "start": 39.3,
+          "end": 39.58,
+          "text": "Not"
+        },
+        {
+          "start": 39.58,
+          "end": 39.88,
+          "text": "yet."
+        }
+      ]
+    },
+    {
+      "start": 40.4,
+      "end": 41.38,
+      "text": "Sir, let's go.",
+      "words": [
+        {
+          "start": 40.4,
+          "end": 40.6,
+          "text": "Sir,"
+        },
+        {
+          "start": 40.94,
+          "end": 41.24,
+          "text": "let's"
+        },
+        {
+          "start": 41.24,
+          "end": 41.38,
+          "text": "go."
+        }
+      ]
+    },
+    {
+      "start": 41.66,
+      "end": 43.66,
+      "text": "The brother from her old life,",
+      "words": [
+        {
+          "start": 41.66,
+          "end": 41.78,
+          "text": "The"
+        },
+        {
+          "start": 41.78,
+          "end": 42.0,
+          "text": "brother"
+        },
+        {
+          "start": 42.0,
+          "end": 42.92,
+          "text": "from"
+        },
+        {
+          "start": 42.92,
+          "end": 43.1,
+          "text": "her"
+        },
+        {
+          "start": 43.1,
+          "end": 43.3,
+          "text": "old"
+        },
+        {
+          "start": 43.3,
+          "end": 43.66,
+          "text": "life,"
+        }
+      ]
+    },
+    {
+      "start": 43.84,
+      "end": 45.66,
+      "text": "he's a medic with the tactical unit.",
+      "words": [
+        {
+          "start": 43.84,
+          "end": 44.22,
+          "text": "he's"
+        },
+        {
+          "start": 44.22,
+          "end": 44.46,
+          "text": "a"
+        },
+        {
+          "start": 44.46,
+          "end": 44.62,
+          "text": "medic"
+        },
+        {
+          "start": 44.62,
+          "end": 44.86,
+          "text": "with"
+        },
+        {
+          "start": 44.86,
+          "end": 45.08,
+          "text": "the"
+        },
+        {
+          "start": 45.08,
+          "end": 45.26,
+          "text": "tactical"
+        },
+        {
+          "start": 45.26,
+          "end": 45.66,
+          "text": "unit."
+        }
+      ]
+    },
+    {
+      "start": 45.86,
+      "end": 47.02,
+      "text": "They're inside the tower.",
+      "words": [
+        {
+          "start": 45.86,
+          "end": 46.24,
+          "text": "They're"
+        },
+        {
+          "start": 46.24,
+          "end": 46.58,
+          "text": "inside"
+        },
+        {
+          "start": 46.58,
+          "end": 46.82,
+          "text": "the"
+        },
+        {
+          "start": 46.82,
+          "end": 47.02,
+          "text": "tower."
+        }
+      ]
+    },
+    {
+      "start": 47.38,
+      "end": 48.9,
+      "text": "Used to be food, you know.",
+      "words": [
+        {
+          "start": 47.38,
+          "end": 47.6,
+          "text": "Used"
+        },
+        {
+          "start": 47.6,
+          "end": 47.8,
+          "text": "to"
+        },
+        {
+          "start": 47.8,
+          "end": 48.0,
+          "text": "be"
+        },
+        {
+          "start": 48.0,
+          "end": 48.42,
+          "text": "food,"
+        },
+        {
+          "start": 48.5,
+          "end": 48.68,
+          "text": "you"
+        },
+        {
+          "start": 48.68,
+          "end": 48.9,
+          "text": "know."
+        }
+      ]
+    },
+    {
+      "start": 49.9,
+      "end": 50.4,
+      "text": "Humanity.",
+      "words": [
+        {
+          "start": 49.9,
+          "end": 50.4,
+          "text": "Humanity."
+        }
+      ]
+    },
+    {
+      "start": 54.9,
+      "end": 58.34,
+      "text": "Your lives were short and filled with fear.",
+      "words": [
+        {
+          "start": 54.9,
+          "end": 55.18,
+          "text": "Your"
+        },
+        {
+          "start": 55.18,
+          "end": 55.58,
+          "text": "lives"
+        },
+        {
+          "start": 55.58,
+          "end": 55.8,
+          "text": "were"
+        },
+        {
+          "start": 55.8,
+          "end": 56.3,
+          "text": "short"
+        },
+        {
+          "start": 56.3,
+          "end": 57.28,
+          "text": "and"
+        },
+        {
+          "start": 57.28,
+          "end": 57.48,
+          "text": "filled"
+        },
+        {
+          "start": 57.48,
+          "end": 57.68,
+          "text": "with"
+        },
+        {
+          "start": 57.68,
+          "end": 58.34,
+          "text": "fear."
+        }
+      ]
+    },
+    {
+      "start": 59.82,
+      "end": 61.08,
+      "text": "Then your brains grew.",
+      "words": [
+        {
+          "start": 59.82,
+          "end": 60.08,
+          "text": "Then"
+        },
+        {
+          "start": 60.08,
+          "end": 60.28,
+          "text": "your"
+        },
+        {
+          "start": 60.28,
+          "end": 60.68,
+          "text": "brains"
+        },
+        {
+          "start": 60.68,
+          "end": 61.08,
+          "text": "grew."
+        }
+      ]
+    },
+    {
+      "start": 62.12,
+      "end": 64.68,
+      "text": "You built tools and used them to conquer nature.",
+      "words": [
+        {
+          "start": 62.12,
+          "end": 62.16,
+          "text": "You"
+        },
+        {
+          "start": 62.16,
+          "end": 62.36,
+          "text": "built"
+        },
+        {
+          "start": 62.36,
+          "end": 62.84,
+          "text": "tools"
+        },
+        {
+          "start": 62.84,
+          "end": 63.2,
+          "text": "and"
+        },
+        {
+          "start": 63.2,
+          "end": 63.62,
+          "text": "used"
+        },
+        {
+          "start": 63.62,
+          "end": 63.82,
+          "text": "them"
+        },
+        {
+          "start": 63.82,
+          "end": 63.98,
+          "text": "to"
+        },
+        {
+          "start": 63.98,
+          "end": 64.26,
+          "text": "conquer"
+        },
+        {
+          "start": 64.26,
+          "end": 64.68,
+          "text": "nature."
+        }
+      ]
+    },
+    {
+      "start": 65.36,
+      "end": 69.86,
+      "text": "You built impossible machines and went to space.",
+      "words": [
+        {
+          "start": 65.36,
+          "end": 65.44,
+          "text": "You"
+        },
+        {
+          "start": 65.44,
+          "end": 65.76,
+          "text": "built"
+        },
+        {
+          "start": 65.76,
+          "end": 66.6,
+          "text": "impossible"
+        },
+        {
+          "start": 66.6,
+          "end": 67.44,
+          "text": "machines"
+        },
+        {
+          "start": 67.44,
+          "end": 67.9,
+          "text": "and"
+        },
+        {
+          "start": 67.9,
+          "end": 69.28,
+          "text": "went"
+        },
+        {
+          "start": 69.28,
+          "end": 69.44,
+          "text": "to"
+        },
+        {
+          "start": 69.44,
+          "end": 69.86,
+          "text": "space."
+        }
+      ]
+    },
+    {
+      "start": 72.82,
+      "end": 74.18,
+      "text": "You stopped being food.",
+      "words": [
+        {
+          "start": 72.5,
+          "end": 72.92,
+          "text": "You"
+        },
+        {
+          "start": 72.92,
+          "end": 73.34,
+          "text": "stopped"
+        },
+        {
+          "start": 73.34,
+          "end": 73.7,
+          "text": "being"
+        },
+        {
+          "start": 73.7,
+          "end": 74.18,
+          "text": "food."
+        }
+      ]
+    },
+    {
+      "start": 76.12,
+      "end": 90.42,
+      "text": "Or, I should say, you told yourself you weren't food anymore, but in the animal kingdom there",
+      "words": [
+        {
+          "start": 76.12,
+          "end": 76.8,
+          "text": "Or,"
+        },
+        {
+          "start": 77.44,
+          "end": 77.78,
+          "text": "I"
+        },
+        {
+          "start": 77.78,
+          "end": 78.04,
+          "text": "should"
+        },
+        {
+          "start": 78.04,
+          "end": 78.54,
+          "text": "say,"
+        },
+        {
+          "start": 79.94,
+          "end": 80.22,
+          "text": "you"
+        },
+        {
+          "start": 80.22,
+          "end": 80.5,
+          "text": "told"
+        },
+        {
+          "start": 80.5,
+          "end": 81.1,
+          "text": "yourself"
+        },
+        {
+          "start": 81.1,
+          "end": 82.72,
+          "text": "you"
+        },
+        {
+          "start": 82.72,
+          "end": 83.02,
+          "text": "weren't"
+        },
+        {
+          "start": 83.02,
+          "end": 83.38,
+          "text": "food"
+        },
+        {
+          "start": 83.38,
+          "end": 84.4,
+          "text": "anymore,"
+        },
+        {
+          "start": 86.48,
+          "end": 88.82,
+          "text": "but"
+        },
+        {
+          "start": 88.82,
+          "end": 89.26,
+          "text": "in"
+        },
+        {
+          "start": 89.26,
+          "end": 89.44,
+          "text": "the"
+        },
+        {
+          "start": 89.44,
+          "end": 89.72,
+          "text": "animal"
+        },
+        {
+          "start": 89.72,
+          "end": 90.1,
+          "text": "kingdom"
+        },
+        {
+          "start": 90.1,
+          "end": 90.42,
+          "text": "there"
+        }
+      ]
+    },
+    {
+      "start": 90.42,
+      "end": 95.54,
+      "text": "is always someone bigger or smaller who would eat you alive if they had the chance.",
+      "words": [
+        {
+          "start": 90.42,
+          "end": 90.54,
+          "text": "is"
+        },
+        {
+          "start": 90.54,
+          "end": 90.92,
+          "text": "always"
+        },
+        {
+          "start": 90.92,
+          "end": 91.32,
+          "text": "someone"
+        },
+        {
+          "start": 91.32,
+          "end": 91.74,
+          "text": "bigger"
+        },
+        {
+          "start": 91.74,
+          "end": 92.36,
+          "text": "or"
+        },
+        {
+          "start": 92.36,
+          "end": 92.8,
+          "text": "smaller"
+        },
+        {
+          "start": 92.8,
+          "end": 93.14,
+          "text": "who"
+        },
+        {
+          "start": 93.14,
+          "end": 93.4,
+          "text": "would"
+        },
+        {
+          "start": 93.4,
+          "end": 93.6,
+          "text": "eat"
+        },
+        {
+          "start": 93.6,
+          "end": 93.82,
+          "text": "you"
+        },
+        {
+          "start": 93.82,
+          "end": 94.38,
+          "text": "alive"
+        },
+        {
+          "start": 94.38,
+          "end": 94.68,
+          "text": "if"
+        },
+        {
+          "start": 94.68,
+          "end": 94.86,
+          "text": "they"
+        },
+        {
+          "start": 94.86,
+          "end": 95.04,
+          "text": "had"
+        },
+        {
+          "start": 95.04,
+          "end": 95.2,
+          "text": "the"
+        },
+        {
+          "start": 95.2,
+          "end": 95.54,
+          "text": "chance."
+        }
+      ]
+    },
+    {
+      "start": 96.06,
+      "end": 97.84,
+      "text": "That's what it is to be an animal.",
+      "words": [
+        {
+          "start": 96.06,
+          "end": 96.28,
+          "text": "That's"
+        },
+        {
+          "start": 96.28,
+          "end": 96.44,
+          "text": "what"
+        },
+        {
+          "start": 96.44,
+          "end": 96.58,
+          "text": "it"
+        },
+        {
+          "start": 96.58,
+          "end": 96.74,
+          "text": "is"
+        },
+        {
+          "start": 96.74,
+          "end": 96.96,
+          "text": "to"
+        },
+        {
+          "start": 96.96,
+          "end": 97.22,
+          "text": "be"
+        },
+        {
+          "start": 97.22,
+          "end": 97.56,
+          "text": "an"
+        },
+        {
+          "start": 97.56,
+          "end": 97.84,
+          "text": "animal."
+        }
+      ]
+    },
+    {
+      "start": 99.02,
+      "end": 105.42,
+      "text": "You're born, you live, you die, of course you will.",
+      "words": [
+        {
+          "start": 99.02,
+          "end": 99.86,
+          "text": "You're"
+        },
+        {
+          "start": 99.86,
+          "end": 100.12,
+          "text": "born,"
+        },
+        {
+          "start": 101.08,
+          "end": 101.36,
+          "text": "you"
+        },
+        {
+          "start": 101.36,
+          "end": 101.8,
+          "text": "live,"
+        },
+        {
+          "start": 102.78,
+          "end": 103.16,
+          "text": "you"
+        },
+        {
+          "start": 103.16,
+          "end": 103.64,
+          "text": "die,"
+        },
+        {
+          "start": 104.26,
+          "end": 104.52,
+          "text": "of"
+        },
+        {
+          "start": 104.52,
+          "end": 104.8,
+          "text": "course"
+        },
+        {
+          "start": 104.8,
+          "end": 104.98,
+          "text": "you"
+        },
+        {
+          "start": 104.98,
+          "end": 105.42,
+          "text": "will."
+        }
+      ]
+    },
+    {
+      "start": 106.38,
+      "end": 111.02,
+      "text": "Injury, illness, old age, they all do.",
+      "words": [
+        {
+          "start": 106.38,
+          "end": 106.82,
+          "text": "Injury,"
+        },
+        {
+          "start": 107.06,
+          "end": 107.48,
+          "text": "illness,"
+        },
+        {
+          "start": 108.7,
+          "end": 109.06,
+          "text": "old"
+        },
+        {
+          "start": 109.06,
+          "end": 109.46,
+          "text": "age,"
+        },
+        {
+          "start": 110.48,
+          "end": 110.6,
+          "text": "they"
+        },
+        {
+          "start": 110.6,
+          "end": 110.72,
+          "text": "all"
+        },
+        {
+          "start": 110.72,
+          "end": 111.02,
+          "text": "do."
+        }
+      ]
+    },
+    {
+      "start": 113.7,
+      "end": 119.96,
+      "text": "Generation after generation, all we can do is watch and take names.",
+      "words": [
+        {
+          "start": 113.7,
+          "end": 114.16,
+          "text": "Generation"
+        },
+        {
+          "start": 114.16,
+          "end": 114.66,
+          "text": "after"
+        },
+        {
+          "start": 114.66,
+          "end": 115.52,
+          "text": "generation,"
+        },
+        {
+          "start": 117.18,
+          "end": 118.06,
+          "text": "all"
+        },
+        {
+          "start": 118.06,
+          "end": 118.18,
+          "text": "we"
+        },
+        {
+          "start": 118.18,
+          "end": 118.34,
+          "text": "can"
+        },
+        {
+          "start": 118.34,
+          "end": 118.5,
+          "text": "do"
+        },
+        {
+          "start": 118.5,
+          "end": 118.66,
+          "text": "is"
+        },
+        {
+          "start": 118.66,
+          "end": 119.06,
+          "text": "watch"
+        },
+        {
+          "start": 119.06,
+          "end": 119.34,
+          "text": "and"
+        },
+        {
+          "start": 119.34,
+          "end": 119.52,
+          "text": "take"
+        },
+        {
+          "start": 119.52,
+          "end": 119.96,
+          "text": "names."
+        }
+      ]
+    }
+  ]
+}
