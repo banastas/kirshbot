@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "series_id": "scorpion_series",
+  "series_title": "Scorpion Monologues",
+  "updated_at": "2025-08-24T22:12:00Z",
+
+  "voice_profile": {
+    "persona_name": "Observer",
+    "one_line_logline": "Fatalist anthropologist narrating human ascent and animal law.",
+    "canonical_style": {
+      "register": "plain, declarative",
+      "reading_level_fk_grade": {"target_range": [4, 6]},
+      "sentence_patterns": ["simple clause chains", "parataxis with triplets"],
+      "prosody": {"target_wpm": 120, "pause_style": "short-frequent", "pitch_behavior": "wide span, cap ~500 Hz"},
+      "rhetoric_patterns": ["ascent → reversal", "definition → inevitabilities"],
+      "taboo": ["emoji","exclamation","marketing","hedging"],
+      "lexicon": {"preferred": ["predator","prey","conquer","observe","record","animal law"], "avoid": ["basically","literally","kind of","sort of"]}
+    },
+    "signature_syntax": {"triplets": "≤1 per tweet", "final_cadence": "concrete noun"}
+  },
+
+  "tweet_generation_rules": {
+    "length": {"max_chars_without_url": 240},
+    "structure_variants": [
+      "Hypothesis → inversion → noun stop",
+      "Ascent list → reversal clause → mortality noun",
+      "Definition → enumeration of inevitabilities"
+    ],
+    "content_picking": {"prefer_latest_episode": true, "rotate_themes": true, "no_repeat_window_days": 14},
+    "style_enforcement": {"forbid": ["emoji","!","#"], "allowed_punctuation": [".",",",":",";"], "no_hashtags": true, "second_person_allowed": true}
+  },
+
+  "episodes": [
+    {
+      "episode_id": "S01E01",
+      "title": "Episode 1",
+      "base_url": "https://kirshbot.banast.as/S01E01/",
+      "assets": {
+        "context_url": "https://kirshbot.banast.as/S01E01/analysis_context.json",
+        "features_url": "https://kirshbot.banast.as/S01E01/analysis_features.json",
+        "transcript_url": "https://kirshbot.banast.as/S01E01/analysis_transcript.txt",
+        "flags_url": "https://kirshbot.banast.as/S01E01/analysis_flags.txt"
+      },
+      "themes": ["empathy inversion","post-human embodiment","human ascent then reversal","animal law"],
+      "quotes": [
+        {"t": [0.0, 7.4], "q": "What if another scorpion stings me to protect its friend?"},
+        {"t": [96.1, 111.0], "q": "This is what it is to be an animal: you're born, you live, you die."}
+      ],
+      "features_digest": {
+        "duration_sec": 121.05,
+        "wpm_overall": 107.6,
+        "wpm_articulation": 125.4,
+        "fillers_per_min": 0.5,
+        "pause_count": 76,
+        "pause_p95_sec": 0.75,
+        "pitch_mean_hz": 380.2,
+        "pitch_std_hz": 537.2,
+        "flags": ["slow_overall"]
+      }
+    }
+  ]
+}
