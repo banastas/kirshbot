@@ -10,7 +10,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        960,
+        912,
         304
       ]
     },
@@ -23,7 +23,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1408,
+        1360,
         112
       ]
     },
@@ -37,7 +37,7 @@
       "type": "n8n-nodes-base.twitter",
       "typeVersion": 2,
       "position": [
-        1184,
+        1136,
         112
       ],
       "credentials": {
@@ -56,7 +56,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        960,
+        912,
         112
       ]
     },
@@ -69,7 +69,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        512,
+        464,
         208
       ]
     },
@@ -82,7 +82,7 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1,
       "position": [
-        240,
+        192,
         432
       ],
       "credentials": {
@@ -105,7 +105,7 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        160,
+        112,
         208
       ]
     },
@@ -118,7 +118,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -64,
+        -112,
         208
       ]
     },
@@ -131,7 +131,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -288,
+        -336,
         208
       ]
     },
@@ -146,7 +146,7 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 2.1,
       "position": [
-        -512,
+        -560,
         208
       ]
     },
@@ -161,7 +161,7 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 2.1,
       "position": [
-        -736,
+        -784,
         304
       ]
     },
@@ -182,7 +182,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        -960,
+        -1008,
         400
       ]
     },
@@ -203,7 +203,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        -960,
+        -1008,
         208
       ]
     },
@@ -224,7 +224,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        -736,
+        -784,
         32
       ]
     },
@@ -237,7 +237,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1184,
+        -1232,
         208
       ]
     },
@@ -258,7 +258,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        -1408,
+        -1456,
         208
       ]
     },
@@ -290,7 +290,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        736,
+        688,
         208
       ],
       "id": "94a552c4-4258-4ce9-9f18-efef94e590a1",
@@ -468,7 +468,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        1632,
+        1584,
         112
       ],
       "id": "dd33c94a-d981-49f5-8aa0-89ebb20db701",
@@ -485,10 +485,12 @@
         "rule": {
           "interval": [
             {
-              "field": "=0 0 6 * * *"
+              "field": "cronExpression",
+              "expression": "0 0 6 * * *"
             },
             {
-              "field": "=0 0 16 * * *"
+              "field": "cronExpression",
+              "expression": "0 0 16 * * *"
             }
           ]
         }
@@ -722,7 +724,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "c184f6cb-4522-4415-b40d-9b6fa15b803a",
+  "versionId": "0ee3da2a-b929-4cca-94b0-121a4b78107e",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "7cd3de1c1dd9e2a807bc76f47d3f03944d93656380c3c3fb6814b945d43d2d6c"
