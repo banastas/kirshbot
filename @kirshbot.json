@@ -1,0 +1,732 @@
+{
+  "name": "@kirshbot",
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "const skipReason = 'Enhanced validation failed - maintaining character authenticity with speech analysis';\nconst validationData = $('Enhanced Voice Validator').item.json;\n\nconst logEntry = {\n  timestamp: new Date().toISOString(),\n  status: 'cycle_skipped_enhanced',\n  reason: skipReason,\n  topic: $('Enhanced Topic Generator').item.json.chosenTopic,\n  context: $('Enhanced Topic Generator').item.json.postingContext,\n  episode_analyzed: $('Enhanced Character Database').item.json.episodeData,\n  validation_scores: {\n    speech_pattern: validationData.speechPatternScore,\n    authenticity: validationData.authenticityScore,\n    overall: validationData.overallValidationScore\n  },\n  generated_tweet: validationData.generatedTweet,\n  nextAttempt: 'Next scheduled cycle'\n};\n\nreturn [{\n  json: {\n    status: 'Cycle skipped - enhanced quality control with speech analysis',\n    logEntry,\n    message: 'Skipped posting to maintain character authenticity based on actual speech patterns',\n    nextAttempt: 'Will try again in 4 hours',\n    speechAnalysisVersion: 'v2.0'\n  }\n}];"
+      },
+      "id": "57c18b84-e04b-4a91-bad2-e019ab1623fb",
+      "name": "Enhanced Skip Logger",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        304
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const postResult = items[0].json;\nconst tweetData = $('Enhanced Safety Check').item.json;\nconst episodeInfo = $('Enhanced Character Database').item.json;\n\nconst logEntry = {\n  timestamp: new Date().toISOString(),\n  tweet: tweetData.finalTweet,\n  characterCount: tweetData.characterCount,\n  topic: $('Enhanced Topic Generator').item.json.chosenTopic,\n  context: $('Enhanced Topic Generator').item.json.postingContext,\n  episode_analyzed: episodeInfo.episodeData,\n  speech_pattern_score: tweetData.speechPatternScore,\n  authenticity_score: tweetData.authenticityScore,\n  overall_validation: $('Enhanced Voice Validator').item.json.overallValidationScore,\n  speech_analysis_applied: true,\n  success: true\n};\n\nreturn [{\n  json: {\n    status: 'Tweet posted successfully with speech analysis',\n    logEntry,\n    message: `Character AI agent posted in authentic voice based on ${episodeInfo.episodeData} analysis`,\n    nextPost: 'In 4 hours',\n    speechAnalysisVersion: 'v2.0'\n  }\n}];"
+      },
+      "id": "45a2c97d-b1dc-4279-b0e1-a221367eda3e",
+      "name": "Enhanced Success Logger",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1408,
+        112
+      ]
+    },
+    {
+      "parameters": {
+        "text": "={{ $json.finalTweet }}",
+        "additionalFields": {}
+      },
+      "id": "7611ddb7-7280-426c-ab09-e965175abe5f",
+      "name": "Post to Twitter",
+      "type": "n8n-nodes-base.twitter",
+      "typeVersion": 2,
+      "position": [
+        1184,
+        112
+      ],
+      "credentials": {
+        "twitterOAuth2Api": {
+          "id": "qFOPID6IfqjtKnt8",
+          "name": "@kirshbot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const tweetData = items[0].json;\nconst tweet = tweetData.generatedTweet;\n\nconst safetyChecks = {\n  no_harmful_content: !/\\\\b(hate|violence|harm|attack|threat)\\\\b/i.test(tweet),\n  no_personal_attacks: !/you (are|suck|fail)/i.test(tweet),\n  family_friendly: !/\\\\b(damn|hell|shit|fuck)\\\\b/i.test(tweet),\n  appropriate_content: true,\n  no_spoilers: !/\\\\b(dies|killed|ending|finale)\\\\b/i.test(tweet),\n  maintains_character: !/(I am an AI|This is a bot|Fictional character)/i.test(tweet)\n};\n\nconst safetyScore = Object.values(safetyChecks).filter(check => check).length / Object.keys(safetyChecks).length;\nconst finalApproval = safetyScore >= 0.9;\n\nreturn [{\n  json: {\n    finalTweet: tweet,\n    characterCount: tweet.length,\n    safetyScore: Math.round(safetyScore * 100) / 100,\n    finalApproval,\n    speechPatternScore: tweetData.speechPatternScore,\n    authenticityScore: tweetData.authenticityScore,\n    disclaimer: \"Fan-created content inspired by Kirsh from Alien: Earth with speech analysis\",\n    timestamp: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "d6b0b83f-bb02-4459-b18d-eee7e1feee24",
+      "name": "Enhanced Safety Check",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        112
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const agentResponse = items[0].json;\nconst characterData = $('Enhanced Topic Generator').item.json.enhancedCharacterProfile;\n\nlet generatedTweet = '';\nif (agentResponse.output) {\n  generatedTweet = agentResponse.output\n    .replace(/^[\\\"']/g, '')\n    .replace(/[\\\"']$/g, '')\n    .replace(/^Tweet: /i, '')\n    .replace(/^Here's a tweet: /i, '')\n    .trim();\n}\n\nconst speechPatternValidation = {\n  appropriate_length: generatedTweet.length <= 280 && generatedTweet.length > 0,\n  matches_sentence_length: (() => {\n    const avgWordsPerSentence = generatedTweet.split(/[.!?]+/).filter(s => s.trim()).reduce((acc, sentence) => {\n      return acc + sentence.trim().split(/\\\\s+/).length;\n    }, 0) / Math.max(generatedTweet.split(/[.!?]+/).filter(s => s.trim()).length, 1);\n    const targetAvg = characterData.speech_patterns.dialogue_characteristics.avg_sentence_length;\n    return Math.abs(avgWordsPerSentence - targetAvg) <= 3;\n  })(),\n  simple_language: !/(consequently|nevertheless|furthermore|moreover|specifically)/i.test(generatedTweet),\n  minimal_fillers: !/(like,|you know,|I mean,|basically,)/i.test(generatedTweet),\n  measured_tone: !/(!{2,}|very |really |super |totally )/i.test(generatedTweet)\n};\n\nconst authenticityChecks = {\n  no_excessive_enthusiasm: !/(amazing|incredible|awesome|fantastic|exciting)/i.test(generatedTweet),\n  understated_delivery: /\\\\b(not ideal|not bad|could be worse|fair enough|interesting|suppose|tends to|usually)\\\\b/i.test(generatedTweet) || generatedTweet.split('.').length <= 2,\n  appropriate_brevity: generatedTweet.split(' ').length <= 25,\n  no_overwording: !/\\\\b(extremely|incredibly|absolutely|definitely|completely)\\\\b/i.test(generatedTweet),\n  matches_speech_flags: !/(fast|rushed|excited)/.test(generatedTweet.toLowerCase())\n};\n\nconst speechScore = Object.values(speechPatternValidation).filter(check => check).length / Object.keys(speechPatternValidation).length;\nconst authenticityScore = Object.values(authenticityChecks).filter(check => check).length / Object.keys(authenticityChecks).length;\nconst overallValidationScore = (speechScore + authenticityScore) / 2;\n\nconst isValid = overallValidationScore >= 0.7 && generatedTweet.length > 0;\n\nreturn [{\n  json: {\n    generatedTweet,\n    characterCount: generatedTweet.length,\n    speechPatternScore: Math.round(speechScore * 100) / 100,\n    authenticityScore: Math.round(authenticityScore * 100) / 100,\n    overallValidationScore: Math.round(overallValidationScore * 100) / 100,\n    isValid,\n    readyToPost: isValid && generatedTweet.length > 0,\n    speechAnalysisApplied: true,\n    timestamp: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "0c7e27d7-d487-4763-a512-491caa09c9ad",
+      "name": "Enhanced Voice Validator",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        512,
+        208
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "33c2fd01-a00f-47af-a79f-94ceb7e04697",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        240,
+        432
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "gztmrjeuGjHlfyFU",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.contentPrompt }}",
+        "options": {
+          "systemMessage": "=You are Kirsh from Alien: Earth posting ONE SINGLE TWEET on Twitter.\n\nSPEECH ANALYSIS DATA:\n- Speaking pace: {{ Math.round($json.enhancedCharacterProfile.speech_patterns.pacing.overall_wpm) }} words per minute (measured, deliberate)\n- Reading level: Grade {{ $json.enhancedCharacterProfile.speech_patterns.vocal_patterns.reading_level }} (simple, accessible language)\n- Average sentence length: {{ Math.round($json.enhancedCharacterProfile.speech_patterns.dialogue_characteristics.avg_sentence_length) }} words\n- Uses strategic pauses: {{ $json.enhancedCharacterProfile.speech_patterns.dialogue_characteristics.uses_pauses_effectively }}\n\nYOUR ACTUAL DIALOGUE FROM {{ $json.enhancedCharacterProfile.episode_context.latest_episode }}:\n{{ $json.enhancedCharacterProfile.live_dialogue_samples.slice(0, 3).map(line => '\"' + line + '\"').join('\\n') }}\n\nYOUR VOICE CHARACTERISTICS:\n{{ $json.enhancedCharacterProfile.personality.primary_traits.slice(0, 4).join('\\n- ') }}\n\nTWITTER POSTING RULES:\n1. Write EXACTLY ONE tweet (under 280 characters)\n2. Use 1-2 short sentences maximum ({{ Math.round($json.enhancedCharacterProfile.speech_patterns.dialogue_characteristics.avg_sentence_length) }} words each)\n3. Be understated and matter-of-fact like your dialogue samples\n4. No lists, no multiple tips, no instructional tone\n5. Sound conversational, not formal\n6. Use simple words (Grade {{ $json.enhancedCharacterProfile.speech_patterns.vocal_patterns.reading_level }} level)\n7. Channel quiet authority with strategic pauses (periods, commas)\n\nSTYLE EXAMPLES:\n- \"Situations change fast. Worth paying attention.\"\n- \"Most people show their cards early. Makes things predictable.\"\n- \"Simple plans work. Complicated ones usually don't.\"\n\nWrite ONE conversational tweet in Kirsh's understated voice about the given topic."
+        }
+      },
+      "id": "9e2bea75-f537-46ae-82f1-cb4fba7602c9",
+      "name": "Enhanced Character AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        160,
+        208
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const { enhancedCharacterProfile, postingContext } = items[0].json;\n\nconst topicPools = {\n  survival_wisdom: [\n    \"the importance of backup plans\",\n    \"why preparation beats panic\", \n    \"simple solutions to complex problems\",\n    \"reading situations quickly\",\n    \"staying calm under pressure\",\n    \"adaptation versus resistance\",\n    \"protecting what matters most\"\n  ],\n  philosophical_observations: [\n    \"what defines humanity\",\n    \"cycles that repeat across generations\", \n    \"the gap between survival and living\",\n    \"how evolution changes everything\",\n    \"watching versus acting\",\n    \"the animal kingdom's harsh truths\"\n  ],\n  practical_advice: [\n    \"basic preparedness tips\",\n    \"simple communication principles\",\n    \"efficient problem-solving approaches\", \n    \"building reliable systems\",\n    \"working with difficult people\",\n    \"making hard decisions quickly\"\n  ],\n  understated_wisdom: [\n    \"why simple plans work best\",\n    \"the predictability of chaos\", \n    \"common misconceptions about leadership\",\n    \"when to speak and when to listen\",\n    \"the value of strategic silence\"\n  ]\n};\n\nlet selectedTopics = [];\nif (postingContext === 'morning') {\n  selectedTopics = [...topicPools.practical_advice, ...topicPools.survival_wisdom];\n} else if (postingContext === 'afternoon') {\n  selectedTopics = [...topicPools.philosophical_observations, ...topicPools.understated_wisdom];\n} else if (postingContext === 'evening') {\n  selectedTopics = [...topicPools.understated_wisdom, ...topicPools.survival_wisdom];\n} else {\n  selectedTopics = [...topicPools.philosophical_observations];\n}\n\nconst chosenTopic = selectedTopics[Math.floor(Math.random() * selectedTopics.length)];\n\nconst contentPrompt = `Write a tweet about ${chosenTopic}. \\n\\nIMPORTANT SPEECH CHARACTERISTICS TO MATCH:\\n- Speak at a measured pace (${Math.round(enhancedCharacterProfile.speech_patterns.pacing.overall_wpm)} WPM equivalent in text)\\n- Use simple, direct language (Grade ${enhancedCharacterProfile.speech_patterns.vocal_patterns.reading_level} reading level)\\n- Keep sentences short and impactful\\n- Strategic use of pauses (translate to punctuation/spacing)\\n- Minimal unnecessary words\\n- Understated delivery style\\n\\nStay completely in character using Kirsh's distinctive voice and measured speaking style.`;\n\nreturn [{\n  json: {\n    chosenTopic,\n    contentPrompt,\n    postingContext,\n    enhancedCharacterProfile,\n    speechPatternsIncorporated: true,\n    timestamp: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "3a88463a-c356-4d3f-b401-900b9ef90bfd",
+      "name": "Enhanced Topic Generator",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -64,
+        208
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const allItems = items;\nlet speechFeatures = {};\nlet speechContext = {};\nlet speechFlags = '';\nlet episodeData = { latestEpisode: 'S01E01' };\n\nfor (const item of allItems) {\n  if (item.json) {\n    if (item.json.wpm_overall !== undefined) {\n      speechFeatures = item.json;\n    } else if (item.json.segments && Array.isArray(item.json.segments)) {\n      speechContext = item.json;\n    } else if (item.json.latestEpisode) {\n      episodeData = item.json;\n    } else if (typeof item.json === 'string' && item.json.includes('slow')) {\n      speechFlags = item.json;\n    }\n  }\n  if (item.binary?.data) {\n    try {\n      speechFlags = Buffer.from(item.binary.data, 'base64').toString('utf8').trim();\n    } catch (e) {\n      console.log('Could not parse binary data');\n    }\n  }\n}\n\nif (!speechFeatures.wpm_overall) {\n  speechFeatures = {\n    wpm_overall: 107.6,\n    wpm_articulation: 125.4,\n    fillers_per_min: 0.5,\n    pause_count: 76,\n    segments: 30,\n    words: 217,\n    speech_time_sec: 103.83,\n    pause_durations_sec: { mean: 0.23 },\n    reading_level: { fk_grade: 4.24 }\n  };\n}\n\nif (!speechContext.segments || !Array.isArray(speechContext.segments)) {\n  speechContext = {\n    segments: [\n      { text: \"What if, while I'm squashing it, another scorpion stings me to protect its friend the same way you're trying to protect me?\" },\n      { text: \"Think of how the scorpion must feel, trapped under glass, menaced by giants.\" },\n      { text: \"Go on.\" },\n      { text: \"She's not human anymore. Why are we pretending she is?\" },\n      { text: \"That's what it is to be an animal.\" }\n    ]\n  };\n}\n\nconst actualDialogue = speechContext.segments?.map(seg => seg.text?.trim()).filter(text => text && text.length > 0) || [];\n\nconst speechAnalysis = {\n  pacing: {\n    overall_wpm: speechFeatures.wpm_overall || 107.6,\n    articulation_wpm: speechFeatures.wpm_articulation || 125.4,\n    is_slow_speaker: speechFlags.includes('slow_overall'),\n    pause_frequency: speechFeatures.pause_count || 76\n  },\n  vocal_patterns: {\n    filler_usage: speechFeatures.fillers_per_min || 0.5,\n    reading_level: speechFeatures.reading_level?.fk_grade || 4.24,\n    sentence_complexity: 'simple_direct'\n  },\n  dialogue_characteristics: {\n    avg_sentence_length: speechFeatures.segments > 0 ? (speechFeatures.words / speechFeatures.segments) : 7.2,\n    tends_toward_brevity: true,\n    uses_pauses_effectively: (speechFeatures.pause_durations_sec?.mean || 0) > 0.2\n  }\n};\n\nconst enhancedCharacterProfile = {\n  personality: {\n    primary_traits: [\n      \"Stoic and unflappable\",\n      \"Dry, deadpan humor\", \n      \"Authority figure with quiet confidence\",\n      \"Pragmatic and direct\",\n      \"Protective of others\",\n      \"Experienced with danger\",\n      \"Measured speaker - doesn't rush words\",\n      \"Uses strategic pauses for emphasis\"\n    ],\n    speaking_style: [\n      \"Short, clipped sentences\",\n      \"Rarely shows emotion openly\", \n      \"Uses understatement for dramatic effect\",\n      \"Direct and to the point\",\n      \"Occasional dry quips\",\n      \"Professional but not cold\",\n      `Speaks at ${Math.round(speechAnalysis.pacing.overall_wpm)} words per minute - deliberate pace`,\n      \"Minimal filler words - every word counts\",\n      \"Simple, accessible language - no unnecessary complexity\"\n    ]\n  },\n  live_dialogue_samples: actualDialogue.slice(0, 10),\n  speech_patterns: speechAnalysis,\n  episode_context: {\n    latest_episode: episodeData.latestEpisode || 'S01E01',\n    total_speaking_time: speechFeatures.speech_time_sec || 103.83,\n    content_themes_from_episode: [\n      \"Questions of humanity and identity\",\n      \"Survival in hostile environments\", \n      \"Protection and sacrifice\",\n      \"Evolution and adaptation\",\n      \"Cycles of life and death\"\n    ]\n  }\n};\n\nconst currentTime = new Date();\nconst timeOfDay = currentTime.getHours();\n\nlet postingContext = 'general';\nif (timeOfDay >= 6 && timeOfDay < 12) {\n  postingContext = 'morning';\n} else if (timeOfDay >= 12 && timeOfDay < 18) {\n  postingContext = 'afternoon'; \n} else if (timeOfDay >= 18 && timeOfDay < 22) {\n  postingContext = 'evening';\n} else {\n  postingContext = 'night';\n}\n\nreturn [{\n  json: {\n    enhancedCharacterProfile,\n    postingContext,\n    timeOfDay,\n    episodeData: episodeData.latestEpisode || 'S01E01',\n    speechAnalysisApplied: true,\n    timestamp: currentTime.toISOString()\n  }\n}];"
+      },
+      "id": "3be636cf-f8c2-4fb7-90aa-ecf071f8be9b",
+      "name": "Enhanced Character Database",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -288,
+        208
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combinationMode": "mergeByPosition",
+        "options": {}
+      },
+      "id": "3c300cf0-8c49-4958-b50f-6395dbe54c03",
+      "name": "Merge All Analysis Data",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [
+        -512,
+        208
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combinationMode": "mergeByPosition",
+        "options": {}
+      },
+      "id": "6a59435d-2beb-488a-94fb-bbb4ce2625ff",
+      "name": "Merge Context + Flags",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [
+        -736,
+        304
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Episode Data Fetcher').item.json.analysisUrls.flags }}",
+        "options": {
+          "response": {
+            "response": {
+              "neverError": true,
+              "responseFormat": "text"
+            }
+          }
+        }
+      },
+      "id": "e7cd730c-5927-49e5-b44a-6d41ea02f5bc",
+      "name": "Fetch Speech Flags",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        -960,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Episode Data Fetcher').item.json.analysisUrls.context }}",
+        "options": {
+          "response": {
+            "response": {
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "e417c6f2-2b46-45ee-a993-22a02c5331e2",
+      "name": "Fetch Speech Context",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        -960,
+        208
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.analysisUrls.features }}",
+        "options": {
+          "response": {
+            "response": {
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "9c118b3e-9eda-4bcd-a505-c3bcad38901e",
+      "name": "Fetch Speech Features",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        -736,
+        32
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const manifest = items[0].json;\nconst latestEpisode = manifest.latest_episode || 'S01E01';\nconst baseUrl = 'https://kirshbot.banast.as';\nconst analysisUrls = {\n  features: `${baseUrl}/${latestEpisode}/analysis_features.json`,\n  context: `${baseUrl}/${latestEpisode}/analysis_context.json`,\n  flags: `${baseUrl}/${latestEpisode}/analysis_flags.txt`\n};\nreturn [{\n  json: {\n    latestEpisode,\n    analysisUrls,\n    manifest,\n    timestamp: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "ca9f9342-d318-4a6e-b856-0310494406f0",
+      "name": "Episode Data Fetcher",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1184,
+        208
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://kirshbot.banast.as/manifest.json",
+        "options": {
+          "response": {
+            "response": {
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "c55d7fb0-d3e0-4ed0-8f87-3b68fe06b037",
+      "name": "Fetch Episode Manifest",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        -1408,
+        208
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "026b73d9-5aeb-4adf-b8e0-ea7edac05fea",
+              "leftValue": "={{ $json.isValid }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        736,
+        208
+      ],
+      "id": "94a552c4-4258-4ce9-9f18-efef94e590a1",
+      "name": "Validation Check"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1fOf7nVPUzigsSRT6Q1sRA5X3rdz08Azu9ZPyl9m-V9U",
+          "mode": "list",
+          "cachedResultName": "kirshbot",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1fOf7nVPUzigsSRT6Q1sRA5X3rdz08Azu9ZPyl9m-V9U/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "posts",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1fOf7nVPUzigsSRT6Q1sRA5X3rdz08Azu9ZPyl9m-V9U/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Timestamp": "={{ $('Enhanced Success Logger').item.json.logEntry.timestamp }}",
+            "Episode": "={{ $('Enhanced Success Logger').item.json.logEntry.episode_analyzed }}",
+            "Topic": "={{ $('Enhanced Success Logger').item.json.logEntry.topic }}",
+            "Context": "={{ $('Enhanced Success Logger').item.json.logEntry.context }}",
+            "Tweet": "={{ $('Enhanced Success Logger').item.json.logEntry.tweet }}",
+            "Character Count": "={{ $('Enhanced Success Logger').item.json.logEntry.characterCount }}",
+            "Speech Pattern": "={{ $('Enhanced Success Logger').item.json.logEntry.speech_pattern_score }}",
+            "Authenticity Score": "={{ $('Enhanced Success Logger').item.json.logEntry.overall_validation }}",
+            "Overall Validation": "={{ $('Enhanced Success Logger').item.json.logEntry.overall_validation }}",
+            "Safety Score": "={{ $('Enhanced Safety Check').item.json.safetyScore }}",
+            "Final Approval": "={{ $('Enhanced Safety Check').item.json.finalApproval }}",
+            "Speech Analysis Version": "={{ $('Enhanced Success Logger').item.json.speechAnalysisVersion }}",
+            "Success": "={{ $('Enhanced Success Logger').item.json.logEntry.success }}",
+            "Next Post": "={{ $('Enhanced Success Logger').item.json.nextPost }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Timestamp",
+              "displayName": "Timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Episode",
+              "displayName": "Episode",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Topic",
+              "displayName": "Topic",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Context",
+              "displayName": "Context",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Tweet",
+              "displayName": "Tweet",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Character Count",
+              "displayName": "Character Count",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Speech Pattern",
+              "displayName": "Speech Pattern",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Authenticity Score",
+              "displayName": "Authenticity Score",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Overall Validation",
+              "displayName": "Overall Validation",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Safety Score",
+              "displayName": "Safety Score",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Final Approval",
+              "displayName": "Final Approval",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Speech Analysis Version",
+              "displayName": "Speech Analysis Version",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Success",
+              "displayName": "Success",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Next Post",
+              "displayName": "Next Post",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1632,
+        112
+      ],
+      "id": "dd33c94a-d981-49f5-8aa0-89ebb20db701",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ehLJL7UtvWkpMH87",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "=0 0 6 * * *"
+            },
+            {
+              "field": "=0 0 16 * * *"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1680,
+        208
+      ],
+      "id": "865270b6-b7e4-46ac-9f35-56ab8bc3ac20",
+      "name": "Daily at 6am + 4pm PT"
+    }
+  ],
+  "pinData": {
+    "Enhanced Character AI Agent": [
+      {
+        "json": {
+          "output": "Evolution shapes life. It never stops. Change is constant. Embrace it, or get left behind."
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Post to Twitter": {
+      "main": [
+        [
+          {
+            "node": "Enhanced Success Logger",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enhanced Safety Check": {
+      "main": [
+        [
+          {
+            "node": "Post to Twitter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enhanced Voice Validator": {
+      "main": [
+        [
+          {
+            "node": "Validation Check",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Enhanced Character AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enhanced Character AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Enhanced Voice Validator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enhanced Topic Generator": {
+      "main": [
+        [
+          {
+            "node": "Enhanced Character AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enhanced Character Database": {
+      "main": [
+        [
+          {
+            "node": "Enhanced Topic Generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge All Analysis Data": {
+      "main": [
+        [
+          {
+            "node": "Enhanced Character Database",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge Context + Flags": {
+      "main": [
+        [
+          {
+            "node": "Merge All Analysis Data",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Fetch Speech Flags": {
+      "main": [
+        [
+          {
+            "node": "Merge Context + Flags",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Fetch Speech Context": {
+      "main": [
+        [
+          {
+            "node": "Merge Context + Flags",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Speech Features": {
+      "main": [
+        [
+          {
+            "node": "Merge All Analysis Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Episode Data Fetcher": {
+      "main": [
+        [
+          {
+            "node": "Fetch Speech Flags",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Fetch Speech Context",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Fetch Speech Features",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Episode Manifest": {
+      "main": [
+        [
+          {
+            "node": "Episode Data Fetcher",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validation Check": {
+      "main": [
+        [
+          {
+            "node": "Enhanced Safety Check",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Enhanced Skip Logger",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enhanced Success Logger": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Daily at 6am + 4pm PT": {
+      "main": [
+        [
+          {
+            "node": "Fetch Episode Manifest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "c184f6cb-4522-4415-b40d-9b6fa15b803a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "7cd3de1c1dd9e2a807bc76f47d3f03944d93656380c3c3fb6814b945d43d2d6c"
+  },
+  "id": "lN7mRYnivOvTy5L0",
+  "tags": []
+}
