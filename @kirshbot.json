@@ -3,28 +3,28 @@
   "nodes": [
     {
       "parameters": {
-        "jsCode": "const skipReason = 'Enhanced validation failed - maintaining character authenticity with speech analysis';\nconst validationData = $('Enhanced Voice Validator').item.json;\n\nconst logEntry = {\n  timestamp: new Date().toISOString(),\n  status: 'cycle_skipped_enhanced',\n  reason: skipReason,\n  topic: $('Enhanced Topic Generator').item.json.chosenTopic,\n  context: $('Enhanced Topic Generator').item.json.postingContext,\n  episode_analyzed: $('Enhanced Character Database').item.json.episodeData,\n  validation_scores: {\n    speech_pattern: validationData.speechPatternScore,\n    authenticity: validationData.authenticityScore,\n    overall: validationData.overallValidationScore\n  },\n  generated_tweet: validationData.generatedTweet,\n  nextAttempt: 'Next scheduled cycle'\n};\n\nreturn [{\n  json: {\n    status: 'Cycle skipped - enhanced quality control with speech analysis',\n    logEntry,\n    message: 'Skipped posting to maintain character authenticity based on actual speech patterns',\n    nextAttempt: 'Will try again in 4 hours',\n    speechAnalysisVersion: 'v2.0'\n  }\n}];"
+        "jsCode": "const skipReason = 'Enhanced validation failed - maintaining character authenticity with speech analysis';\nconst validationData = $('Enhanced Voice Validator').item.json;\n\nconst logEntry = {\n  timestamp: new Date().toISOString(),\n  status: 'cycle_skipped_enhanced',\n  reason: skipReason,\n  topic: $('Enhanced Topic Generator').item.json.chosenTopic,\n  context: $('Enhanced Topic Generator').item.json.postingContext,\n  episode_analyzed: $('Enhanced Character Database').item.json.episodeData,\n  validation_scores: {\n    speech_pattern: validationData.speechPatternScore,\n    authenticity: validationData.authenticityScore,\n    overall: validationData.overallValidationScore\n  },\n  generated_tweet: validationData.generatedTweet,\n  nextAttempt: 'Next scheduled cycle'\n};\n\nreturn [{\n  json: {\n    status: 'Cycle skipped - enhanced quality control with speech analysis',\n    logEntry,\n    message: 'Skipped posting to maintain character authenticity based on actual speech patterns',\n    nextAttempt: 'Next scheduled cycle (6am or 4pm PT)',\n    speechAnalysisVersion: 'v2.0'\n  }\n}];"
       },
-      "id": "57c18b84-e04b-4a91-bad2-e019ab1623fb",
+      "id": "2e17e81b-ec7e-4e33-83c4-dbf838374a8d",
       "name": "Enhanced Skip Logger",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        912,
-        304
+        -624,
+        -240
       ]
     },
     {
       "parameters": {
-        "jsCode": "const postResult = items[0].json;\nconst tweetData = $('Enhanced Safety Check').item.json;\nconst episodeInfo = $('Enhanced Character Database').item.json;\n\nconst logEntry = {\n  timestamp: new Date().toISOString(),\n  tweet: tweetData.finalTweet,\n  characterCount: tweetData.characterCount,\n  topic: $('Enhanced Topic Generator').item.json.chosenTopic,\n  context: $('Enhanced Topic Generator').item.json.postingContext,\n  episode_analyzed: episodeInfo.episodeData,\n  speech_pattern_score: tweetData.speechPatternScore,\n  authenticity_score: tweetData.authenticityScore,\n  overall_validation: $('Enhanced Voice Validator').item.json.overallValidationScore,\n  speech_analysis_applied: true,\n  success: true\n};\n\nreturn [{\n  json: {\n    status: 'Tweet posted successfully with speech analysis',\n    logEntry,\n    message: `Character AI agent posted in authentic voice based on ${episodeInfo.episodeData} analysis`,\n    nextPost: 'In 4 hours',\n    speechAnalysisVersion: 'v2.0'\n  }\n}];"
+        "jsCode": "const postResult = items[0].json;\nconst tweetData = $('Enhanced Safety Check').item.json;\nconst episodeInfo = $('Enhanced Character Database').item.json;\n\nconst logEntry = {\n  timestamp: new Date().toISOString(),\n  tweet: tweetData.finalTweet,\n  characterCount: tweetData.characterCount,\n  topic: $('Enhanced Topic Generator').item.json.chosenTopic,\n  context: $('Enhanced Topic Generator').item.json.postingContext,\n  episode_analyzed: episodeInfo.episodeData,\n  speech_pattern_score: tweetData.speechPatternScore,\n  authenticity_score: tweetData.authenticityScore,\n  overall_validation: $('Enhanced Voice Validator').item.json.overallValidationScore,\n  speech_analysis_applied: true,\n  success: true\n};\n\nreturn [{\n  json: {\n    status: 'Tweet posted successfully with speech analysis',\n    logEntry,\n    message: `Character AI agent posted in authentic voice based on ${episodeInfo.episodeData} analysis`,\n    nextPost: 'Next scheduled cycle (6am or 4pm PT)',\n    speechAnalysisVersion: 'v2.0'\n  }\n}];"
       },
-      "id": "45a2c97d-b1dc-4279-b0e1-a221367eda3e",
+      "id": "6450193e-2add-4c11-b0ec-652b6a1ef13f",
       "name": "Enhanced Success Logger",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1360,
-        112
+        -176,
+        -432
       ]
     },
     {
@@ -32,13 +32,13 @@
         "text": "={{ $json.finalTweet }}",
         "additionalFields": {}
       },
-      "id": "7611ddb7-7280-426c-ab09-e965175abe5f",
+      "id": "234738a0-6809-483c-9432-a0a484e76107",
       "name": "Post to Twitter",
       "type": "n8n-nodes-base.twitter",
       "typeVersion": 2,
       "position": [
-        1136,
-        112
+        -400,
+        -432
       ],
       "credentials": {
         "twitterOAuth2Api": {
@@ -51,39 +51,39 @@
       "parameters": {
         "jsCode": "const tweetData = items[0].json;\nconst tweet = tweetData.generatedTweet;\n\nconst safetyChecks = {\n  no_harmful_content: !/\\\\b(hate|violence|harm|attack|threat)\\\\b/i.test(tweet),\n  no_personal_attacks: !/you (are|suck|fail)/i.test(tweet),\n  family_friendly: !/\\\\b(damn|hell|shit|fuck)\\\\b/i.test(tweet),\n  appropriate_content: true,\n  no_spoilers: !/\\\\b(dies|killed|ending|finale)\\\\b/i.test(tweet),\n  maintains_character: !/(I am an AI|This is a bot|Fictional character)/i.test(tweet)\n};\n\nconst safetyScore = Object.values(safetyChecks).filter(check => check).length / Object.keys(safetyChecks).length;\nconst finalApproval = safetyScore >= 0.9;\n\nreturn [{\n  json: {\n    finalTweet: tweet,\n    characterCount: tweet.length,\n    safetyScore: Math.round(safetyScore * 100) / 100,\n    finalApproval,\n    speechPatternScore: tweetData.speechPatternScore,\n    authenticityScore: tweetData.authenticityScore,\n    disclaimer: \"Fan-created content inspired by Kirsh from Alien: Earth with speech analysis\",\n    timestamp: new Date().toISOString()\n  }\n}];"
       },
-      "id": "d6b0b83f-bb02-4459-b18d-eee7e1feee24",
+      "id": "4debbd1e-ef42-4000-a5f4-903ddc562363",
       "name": "Enhanced Safety Check",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        912,
-        112
+        -624,
+        -432
       ]
     },
     {
       "parameters": {
         "jsCode": "const agentResponse = items[0].json;\nconst characterData = $('Enhanced Topic Generator').item.json.enhancedCharacterProfile;\n\nlet generatedTweet = '';\nif (agentResponse.output) {\n  generatedTweet = agentResponse.output\n    .replace(/^[\\\"']/g, '')\n    .replace(/[\\\"']$/g, '')\n    .replace(/^Tweet: /i, '')\n    .replace(/^Here's a tweet: /i, '')\n    .trim();\n}\n\nconst speechPatternValidation = {\n  appropriate_length: generatedTweet.length <= 280 && generatedTweet.length > 0,\n  matches_sentence_length: (() => {\n    const avgWordsPerSentence = generatedTweet.split(/[.!?]+/).filter(s => s.trim()).reduce((acc, sentence) => {\n      return acc + sentence.trim().split(/\\\\s+/).length;\n    }, 0) / Math.max(generatedTweet.split(/[.!?]+/).filter(s => s.trim()).length, 1);\n    const targetAvg = characterData.speech_patterns.dialogue_characteristics.avg_sentence_length;\n    return Math.abs(avgWordsPerSentence - targetAvg) <= 3;\n  })(),\n  simple_language: !/(consequently|nevertheless|furthermore|moreover|specifically)/i.test(generatedTweet),\n  minimal_fillers: !/(like,|you know,|I mean,|basically,)/i.test(generatedTweet),\n  measured_tone: !/(!{2,}|very |really |super |totally )/i.test(generatedTweet)\n};\n\nconst authenticityChecks = {\n  no_excessive_enthusiasm: !/(amazing|incredible|awesome|fantastic|exciting)/i.test(generatedTweet),\n  understated_delivery: /\\\\b(not ideal|not bad|could be worse|fair enough|interesting|suppose|tends to|usually)\\\\b/i.test(generatedTweet) || generatedTweet.split('.').length <= 2,\n  appropriate_brevity: generatedTweet.split(' ').length <= 25,\n  no_overwording: !/\\\\b(extremely|incredibly|absolutely|definitely|completely)\\\\b/i.test(generatedTweet),\n  matches_speech_flags: !/(fast|rushed|excited)/.test(generatedTweet.toLowerCase())\n};\n\nconst speechScore = Object.values(speechPatternValidation).filter(check => check).length / Object.keys(speechPatternValidation).length;\nconst authenticityScore = Object.values(authenticityChecks).filter(check => check).length / Object.keys(authenticityChecks).length;\nconst overallValidationScore = (speechScore + authenticityScore) / 2;\n\nconst isValid = overallValidationScore >= 0.7 && generatedTweet.length > 0;\n\nreturn [{\n  json: {\n    generatedTweet,\n    characterCount: generatedTweet.length,\n    speechPatternScore: Math.round(speechScore * 100) / 100,\n    authenticityScore: Math.round(authenticityScore * 100) / 100,\n    overallValidationScore: Math.round(overallValidationScore * 100) / 100,\n    isValid,\n    readyToPost: isValid && generatedTweet.length > 0,\n    speechAnalysisApplied: true,\n    timestamp: new Date().toISOString()\n  }\n}];"
       },
-      "id": "0c7e27d7-d487-4763-a512-491caa09c9ad",
+      "id": "bed67093-91e9-4448-b124-599d9a9acd29",
       "name": "Enhanced Voice Validator",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        464,
-        208
+        -1072,
+        -336
       ]
     },
     {
       "parameters": {
         "options": {}
       },
-      "id": "33c2fd01-a00f-47af-a79f-94ceb7e04697",
+      "id": "57422496-6a93-4836-be0b-7bc77afe5c48",
       "name": "OpenAI Chat Model",
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1,
       "position": [
-        192,
-        432
+        -1344,
+        -112
       ],
       "credentials": {
         "openAiApi": {
@@ -100,39 +100,39 @@
           "systemMessage": "=You are Kirsh from Alien: Earth posting ONE SINGLE TWEET on Twitter.\n\nSPEECH ANALYSIS DATA:\n- Speaking pace: {{ Math.round($json.enhancedCharacterProfile.speech_patterns.pacing.overall_wpm) }} words per minute (measured, deliberate)\n- Reading level: Grade {{ $json.enhancedCharacterProfile.speech_patterns.vocal_patterns.reading_level }} (simple, accessible language)\n- Average sentence length: {{ Math.round($json.enhancedCharacterProfile.speech_patterns.dialogue_characteristics.avg_sentence_length) }} words\n- Uses strategic pauses: {{ $json.enhancedCharacterProfile.speech_patterns.dialogue_characteristics.uses_pauses_effectively }}\n\nYOUR ACTUAL DIALOGUE FROM {{ $json.enhancedCharacterProfile.episode_context.latest_episode }}:\n{{ $json.enhancedCharacterProfile.live_dialogue_samples.slice(0, 3).map(line => '\"' + line + '\"').join('\\n') }}\n\nYOUR VOICE CHARACTERISTICS:\n{{ $json.enhancedCharacterProfile.personality.primary_traits.slice(0, 4).join('\\n- ') }}\n\nTWITTER POSTING RULES:\n1. Write EXACTLY ONE tweet (under 280 characters)\n2. Use 1-2 short sentences maximum ({{ Math.round($json.enhancedCharacterProfile.speech_patterns.dialogue_characteristics.avg_sentence_length) }} words each)\n3. Be understated and matter-of-fact like your dialogue samples\n4. No lists, no multiple tips, no instructional tone\n5. Sound conversational, not formal\n6. Use simple words (Grade {{ $json.enhancedCharacterProfile.speech_patterns.vocal_patterns.reading_level }} level)\n7. Channel quiet authority with strategic pauses (periods, commas)\n\nSTYLE EXAMPLES:\n- \"Situations change fast. Worth paying attention.\"\n- \"Most people show their cards early. Makes things predictable.\"\n- \"Simple plans work. Complicated ones usually don't.\"\n\nWrite ONE conversational tweet in Kirsh's understated voice about the given topic."
         }
       },
-      "id": "9e2bea75-f537-46ae-82f1-cb4fba7602c9",
+      "id": "6f50e551-75ff-4d5a-8036-6ac24340985f",
       "name": "Enhanced Character AI Agent",
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        112,
-        208
+        -1424,
+        -336
       ]
     },
     {
       "parameters": {
         "jsCode": "const { enhancedCharacterProfile, postingContext } = items[0].json;\n\nconst topicPools = {\n  survival_wisdom: [\n    \"the importance of backup plans\",\n    \"why preparation beats panic\", \n    \"simple solutions to complex problems\",\n    \"reading situations quickly\",\n    \"staying calm under pressure\",\n    \"adaptation versus resistance\",\n    \"protecting what matters most\"\n  ],\n  philosophical_observations: [\n    \"what defines humanity\",\n    \"cycles that repeat across generations\", \n    \"the gap between survival and living\",\n    \"how evolution changes everything\",\n    \"watching versus acting\",\n    \"the animal kingdom's harsh truths\"\n  ],\n  practical_advice: [\n    \"basic preparedness tips\",\n    \"simple communication principles\",\n    \"efficient problem-solving approaches\", \n    \"building reliable systems\",\n    \"working with difficult people\",\n    \"making hard decisions quickly\"\n  ],\n  understated_wisdom: [\n    \"why simple plans work best\",\n    \"the predictability of chaos\", \n    \"common misconceptions about leadership\",\n    \"when to speak and when to listen\",\n    \"the value of strategic silence\"\n  ]\n};\n\nlet selectedTopics = [];\nif (postingContext === 'morning') {\n  selectedTopics = [...topicPools.practical_advice, ...topicPools.survival_wisdom];\n} else if (postingContext === 'afternoon') {\n  selectedTopics = [...topicPools.philosophical_observations, ...topicPools.understated_wisdom];\n} else if (postingContext === 'evening') {\n  selectedTopics = [...topicPools.understated_wisdom, ...topicPools.survival_wisdom];\n} else {\n  selectedTopics = [...topicPools.philosophical_observations];\n}\n\nconst chosenTopic = selectedTopics[Math.floor(Math.random() * selectedTopics.length)];\n\nconst contentPrompt = `Write a tweet about ${chosenTopic}. \\n\\nIMPORTANT SPEECH CHARACTERISTICS TO MATCH:\\n- Speak at a measured pace (${Math.round(enhancedCharacterProfile.speech_patterns.pacing.overall_wpm)} WPM equivalent in text)\\n- Use simple, direct language (Grade ${enhancedCharacterProfile.speech_patterns.vocal_patterns.reading_level} reading level)\\n- Keep sentences short and impactful\\n- Strategic use of pauses (translate to punctuation/spacing)\\n- Minimal unnecessary words\\n- Understated delivery style\\n\\nStay completely in character using Kirsh's distinctive voice and measured speaking style.`;\n\nreturn [{\n  json: {\n    chosenTopic,\n    contentPrompt,\n    postingContext,\n    enhancedCharacterProfile,\n    speechPatternsIncorporated: true,\n    timestamp: new Date().toISOString()\n  }\n}];"
       },
-      "id": "3a88463a-c356-4d3f-b401-900b9ef90bfd",
+      "id": "054640ca-5989-429e-8cbd-34dddf33021c",
       "name": "Enhanced Topic Generator",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -112,
-        208
+        -1648,
+        -336
       ]
     },
     {
       "parameters": {
-        "jsCode": "const allItems = items;\nlet speechFeatures = {};\nlet speechContext = {};\nlet speechFlags = '';\nlet episodeData = { latestEpisode: 'S01E01' };\n\nfor (const item of allItems) {\n  if (item.json) {\n    if (item.json.wpm_overall !== undefined) {\n      speechFeatures = item.json;\n    } else if (item.json.segments && Array.isArray(item.json.segments)) {\n      speechContext = item.json;\n    } else if (item.json.latestEpisode) {\n      episodeData = item.json;\n    } else if (typeof item.json === 'string' && item.json.includes('slow')) {\n      speechFlags = item.json;\n    }\n  }\n  if (item.binary?.data) {\n    try {\n      speechFlags = Buffer.from(item.binary.data, 'base64').toString('utf8').trim();\n    } catch (e) {\n      console.log('Could not parse binary data');\n    }\n  }\n}\n\nif (!speechFeatures.wpm_overall) {\n  speechFeatures = {\n    wpm_overall: 107.6,\n    wpm_articulation: 125.4,\n    fillers_per_min: 0.5,\n    pause_count: 76,\n    segments: 30,\n    words: 217,\n    speech_time_sec: 103.83,\n    pause_durations_sec: { mean: 0.23 },\n    reading_level: { fk_grade: 4.24 }\n  };\n}\n\nif (!speechContext.segments || !Array.isArray(speechContext.segments)) {\n  speechContext = {\n    segments: [\n      { text: \"What if, while I'm squashing it, another scorpion stings me to protect its friend the same way you're trying to protect me?\" },\n      { text: \"Think of how the scorpion must feel, trapped under glass, menaced by giants.\" },\n      { text: \"Go on.\" },\n      { text: \"She's not human anymore. Why are we pretending she is?\" },\n      { text: \"That's what it is to be an animal.\" }\n    ]\n  };\n}\n\nconst actualDialogue = speechContext.segments?.map(seg => seg.text?.trim()).filter(text => text && text.length > 0) || [];\n\nconst speechAnalysis = {\n  pacing: {\n    overall_wpm: speechFeatures.wpm_overall || 107.6,\n    articulation_wpm: speechFeatures.wpm_articulation || 125.4,\n    is_slow_speaker: speechFlags.includes('slow_overall'),\n    pause_frequency: speechFeatures.pause_count || 76\n  },\n  vocal_patterns: {\n    filler_usage: speechFeatures.fillers_per_min || 0.5,\n    reading_level: speechFeatures.reading_level?.fk_grade || 4.24,\n    sentence_complexity: 'simple_direct'\n  },\n  dialogue_characteristics: {\n    avg_sentence_length: speechFeatures.segments > 0 ? (speechFeatures.words / speechFeatures.segments) : 7.2,\n    tends_toward_brevity: true,\n    uses_pauses_effectively: (speechFeatures.pause_durations_sec?.mean || 0) > 0.2\n  }\n};\n\nconst enhancedCharacterProfile = {\n  personality: {\n    primary_traits: [\n      \"Stoic and unflappable\",\n      \"Dry, deadpan humor\", \n      \"Authority figure with quiet confidence\",\n      \"Pragmatic and direct\",\n      \"Protective of others\",\n      \"Experienced with danger\",\n      \"Measured speaker - doesn't rush words\",\n      \"Uses strategic pauses for emphasis\"\n    ],\n    speaking_style: [\n      \"Short, clipped sentences\",\n      \"Rarely shows emotion openly\", \n      \"Uses understatement for dramatic effect\",\n      \"Direct and to the point\",\n      \"Occasional dry quips\",\n      \"Professional but not cold\",\n      `Speaks at ${Math.round(speechAnalysis.pacing.overall_wpm)} words per minute - deliberate pace`,\n      \"Minimal filler words - every word counts\",\n      \"Simple, accessible language - no unnecessary complexity\"\n    ]\n  },\n  live_dialogue_samples: actualDialogue.slice(0, 10),\n  speech_patterns: speechAnalysis,\n  episode_context: {\n    latest_episode: episodeData.latestEpisode || 'S01E01',\n    total_speaking_time: speechFeatures.speech_time_sec || 103.83,\n    content_themes_from_episode: [\n      \"Questions of humanity and identity\",\n      \"Survival in hostile environments\", \n      \"Protection and sacrifice\",\n      \"Evolution and adaptation\",\n      \"Cycles of life and death\"\n    ]\n  }\n};\n\nconst currentTime = new Date();\nconst timeOfDay = currentTime.getHours();\n\nlet postingContext = 'general';\nif (timeOfDay >= 6 && timeOfDay < 12) {\n  postingContext = 'morning';\n} else if (timeOfDay >= 12 && timeOfDay < 18) {\n  postingContext = 'afternoon'; \n} else if (timeOfDay >= 18 && timeOfDay < 22) {\n  postingContext = 'evening';\n} else {\n  postingContext = 'night';\n}\n\nreturn [{\n  json: {\n    enhancedCharacterProfile,\n    postingContext,\n    timeOfDay,\n    episodeData: episodeData.latestEpisode || 'S01E01',\n    speechAnalysisApplied: true,\n    timestamp: currentTime.toISOString()\n  }\n}];"
+        "jsCode": "const allItems = items;\nlet speechFeatures = {};\nlet speechContext = {};\nlet speechFlags = '';\nlet episodeData = { latestEpisode: 'S01E01' };\n\n// Add this debug section right after the variable declarations\nconsole.log('DEBUG: Episode Data Fetcher output:', $('Episode Data Fetcher').item?.json);\nconst episodeSelection = $('Episode Data Fetcher').item?.json?.latestEpisode || 'S01E01';\nconsole.log('DEBUG: episodeSelection value:', episodeSelection);\n\nfor (const item of allItems) {\n  if (item.json) {\n    // Check for combined data structure first\n    if (item.json.wpm_overall !== undefined && item.json.segments && Array.isArray(item.json.segments)) {\n      // This is combined speech data - extract both\n      speechFeatures = item.json;\n      speechContext = item.json;\n    } else if (item.json.segments && Array.isArray(item.json.segments) && item.json.transcript) {\n      // This is speech context data only\n      speechContext = item.json;\n    } else if (item.json.wpm_overall !== undefined) {\n      // This is speech features data only\n      speechFeatures = item.json;\n    } else if (item.json.latestEpisode) {\n      episodeData = { latestEpisode: item.json.latestEpisode };\n    } else if (typeof item.json === 'string' && item.json.includes('slow')) {\n      speechFlags = item.json;\n    }\n  }\n  if (item.binary?.data) {\n    try {\n      speechFlags = Buffer.from(item.binary.data, 'base64').toString('utf8').trim();\n    } catch (e) {\n      console.log('Could not parse binary data');\n    }\n  }\n}\n\nif (!speechFeatures.wpm_overall) {\n  speechFeatures = {\n    wpm_overall: 107.6,\n    wpm_articulation: 125.4,\n    fillers_per_min: 0.5,\n    pause_count: 76,\n    segments: 30,\n    words: 217,\n    speech_time_sec: 103.83,\n    pause_durations_sec: { mean: 0.23 },\n    reading_level: { fk_grade: 4.24 }\n  };\n}\n\nif (!speechContext.segments || !Array.isArray(speechContext.segments)) {\n  speechContext = {\n    segments: [\n      { text: \"What if, while I'm squashing it, another scorpion stings me to protect its friend the same way you're trying to protect me?\" },\n      { text: \"Think of how the scorpion must feel, trapped under glass, menaced by giants.\" },\n      { text: \"Go on.\" },\n      { text: \"She's not human anymore. Why are we pretending she is?\" },\n      { text: \"That's what it is to be an animal.\" }\n    ]\n  };\n}\n\nconst actualDialogue = speechContext.segments?.map(seg => seg.text?.trim()).filter(text => text && text.length > 0) || [];\n\nconst speechAnalysis = {\n  pacing: {\n    overall_wpm: speechFeatures.wpm_overall || 107.6,\n    articulation_wpm: speechFeatures.wpm_articulation || 125.4,\n    is_slow_speaker: speechFlags.includes('slow_overall'),\n    pause_frequency: speechFeatures.pause_count || 76\n  },\n  vocal_patterns: {\n    filler_usage: speechFeatures.fillers_per_min || 0.5,\n    reading_level: speechFeatures.reading_level?.fk_grade || 4.24,\n    sentence_complexity: 'simple_direct'\n  },\n  dialogue_characteristics: {\n    avg_sentence_length: speechFeatures.segments > 0 ? (speechFeatures.words / speechFeatures.segments) : 7.2,\n    tends_toward_brevity: true,\n    uses_pauses_effectively: (speechFeatures.pause_durations_sec?.mean || 0) > 0.2\n  }\n};\n\nconst enhancedCharacterProfile = {\n  personality: {\n    primary_traits: [\n      \"Stoic and unflappable\",\n      \"Dry, deadpan humor\", \n      \"Authority figure with quiet confidence\",\n      \"Pragmatic and direct\",\n      \"Protective of others\",\n      \"Experienced with danger\",\n      \"Measured speaker - doesn't rush words\",\n      \"Uses strategic pauses for emphasis\"\n    ],\n    speaking_style: [\n      \"Short, clipped sentences\",\n      \"Rarely shows emotion openly\", \n      \"Uses understatement for dramatic effect\",\n      \"Direct and to the point\",\n      \"Occasional dry quips\",\n      \"Professional but not cold\",\n      `Speaks at ${Math.round(speechAnalysis.pacing.overall_wpm)} words per minute - deliberate pace`,\n      \"Minimal filler words - every word counts\",\n      \"Simple, accessible language - no unnecessary complexity\"\n    ]\n  },\n  live_dialogue_samples: actualDialogue.slice(0, 10),\n  speech_patterns: speechAnalysis,\n  episode_context: {\n    latest_episode: episodeSelection,\n    total_speaking_time: speechFeatures.speech_time_sec || 103.83,\n    content_themes_from_episode: [\n      \"Questions of humanity and identity\",\n      \"Survival in hostile environments\", \n      \"Protection and sacrifice\",\n      \"Evolution and adaptation\",\n      \"Cycles of life and death\"\n    ]\n  }\n};\n\nconst currentTime = new Date();\n\n// Convert to Pacific Time\nconst ptTime = new Date(currentTime.toLocaleString(\"en-US\", {timeZone: \"America/Los_Angeles\"}));\nconst timeOfDay = ptTime.getHours();\n\nlet postingContext = 'general';\nif (timeOfDay >= 6 && timeOfDay < 12) {\n  postingContext = 'morning';\n} else if (timeOfDay >= 12 && timeOfDay < 18) {\n  postingContext = 'afternoon'; \n} else if (timeOfDay >= 18 && timeOfDay < 22) {\n  postingContext = 'evening';\n} else {\n  postingContext = 'night';\n}\n\nreturn [{\n  json: {\n    enhancedCharacterProfile,\n    postingContext,\n    timeOfDay,\n    ptTimeForDebug: ptTime.toISOString(),\n    episodeData: episodeSelection,\n    speechAnalysisApplied: true,\n    timestamp: currentTime.toISOString()\n  }\n}];"
       },
-      "id": "3be636cf-f8c2-4fb7-90aa-ecf071f8be9b",
+      "id": "2b40e179-821d-4331-9ebe-0603260c2f36",
       "name": "Enhanced Character Database",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -336,
-        208
+        -1872,
+        -336
       ]
     },
     {
@@ -141,13 +141,13 @@
         "combinationMode": "mergeByPosition",
         "options": {}
       },
-      "id": "3c300cf0-8c49-4958-b50f-6395dbe54c03",
+      "id": "9e108051-21e1-4f46-bf3a-1ca98b1ef769",
       "name": "Merge All Analysis Data",
       "type": "n8n-nodes-base.merge",
       "typeVersion": 2.1,
       "position": [
-        -560,
-        208
+        -2096,
+        -336
       ]
     },
     {
@@ -156,13 +156,13 @@
         "combinationMode": "mergeByPosition",
         "options": {}
       },
-      "id": "6a59435d-2beb-488a-94fb-bbb4ce2625ff",
+      "id": "d488c326-d66d-48c2-937e-a13bbd4d4d30",
       "name": "Merge Context + Flags",
       "type": "n8n-nodes-base.merge",
       "typeVersion": 2.1,
       "position": [
-        -784,
-        304
+        -2320,
+        -240
       ]
     },
     {
@@ -177,13 +177,13 @@
           }
         }
       },
-      "id": "e7cd730c-5927-49e5-b44a-6d41ea02f5bc",
+      "id": "cc613469-2350-4afd-80fa-e71f8416c1e1",
       "name": "Fetch Speech Flags",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        -1008,
-        400
+        -2544,
+        -144
       ]
     },
     {
@@ -198,13 +198,13 @@
           }
         }
       },
-      "id": "e417c6f2-2b46-45ee-a993-22a02c5331e2",
+      "id": "73d62472-dd83-46f3-b0a3-2325669f47a2",
       "name": "Fetch Speech Context",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        -1008,
-        208
+        -2544,
+        -336
       ]
     },
     {
@@ -219,26 +219,26 @@
           }
         }
       },
-      "id": "9c118b3e-9eda-4bcd-a505-c3bcad38901e",
+      "id": "75b1f458-af48-4e99-971e-f0719848df9f",
       "name": "Fetch Speech Features",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        -784,
-        32
+        -2320,
+        -512
       ]
     },
     {
       "parameters": {
-        "jsCode": "const manifest = items[0].json;\nconst latestEpisode = manifest.latest_episode || 'S01E01';\nconst baseUrl = 'https://kirshbot.banast.as';\nconst analysisUrls = {\n  features: `${baseUrl}/${latestEpisode}/analysis_features.json`,\n  context: `${baseUrl}/${latestEpisode}/analysis_context.json`,\n  flags: `${baseUrl}/${latestEpisode}/analysis_flags.txt`\n};\nreturn [{\n  json: {\n    latestEpisode,\n    analysisUrls,\n    manifest,\n    timestamp: new Date().toISOString()\n  }\n}];"
+        "jsCode": "const manifest = items[0].json;\n\n// Validate manifest exists\nif (!manifest) {\n  return [{\n    json: {\n      latestEpisode: 'S01E01',\n      analysisUrls: {\n        features: 'https://kirshbot.banast.as/S01E01/analysis_features.json',\n        context: 'https://kirshbot.banast.as/S01E01/analysis_context.json',\n        flags: 'https://kirshbot.banast.as/S01E01/analysis_flags.txt'\n      },\n      error: 'No manifest data received',\n      timestamp: new Date().toISOString()\n    }\n  }];\n}\n\n// Check if updated_at is older than 8 days\nconst updatedAt = new Date(manifest.updated_at);\nconst now = new Date();\nconst daysSinceUpdate = (now - updatedAt) / (1000 * 60 * 60 * 24);\n\nlet latestEpisode;\nlet selectionMethod;\n\nif (daysSinceUpdate > 8) {\n  // Random selection from all available episodes\n  const availableEpisodes = manifest.episodes?.map(ep => ep.episode_id) || ['S01E01'];\n  const randomIndex = Math.floor(Math.random() * availableEpisodes.length);\n  latestEpisode = availableEpisodes[randomIndex];\n  selectionMethod = `random (${daysSinceUpdate.toFixed(1)} days old)`;\n} else {\n  // Use latest episode (prefer explicit latest_episode field, fallback to last in array)\n  if (manifest.latest_episode) {\n    latestEpisode = manifest.latest_episode;\n    selectionMethod = 'explicit latest_episode field';\n  } else if (manifest.episodes && manifest.episodes.length > 0) {\n    latestEpisode = manifest.episodes[manifest.episodes.length - 1].episode_id;\n    selectionMethod = 'last episode in array';\n  } else {\n    latestEpisode = 'S01E01';\n    selectionMethod = 'fallback default';\n  }\n}\n\nconst baseUrl = 'https://kirshbot.banast.as';\nconst analysisUrls = {\n  features: `${baseUrl}/${latestEpisode}/analysis_features.json`,\n  context: `${baseUrl}/${latestEpisode}/analysis_context.json`,\n  flags: `${baseUrl}/${latestEpisode}/analysis_flags.txt`\n};\n\nreturn [{\n  json: {\n    latestEpisode,\n    analysisUrls,\n    manifest,\n    daysSinceUpdate: Math.round(daysSinceUpdate * 10) / 10,\n    selectionMethod,\n    availableEpisodes: manifest.episodes?.map(ep => ep.episode_id) || ['S01E01'],\n    manifestUpdatedAt: manifest.updated_at,\n    timestamp: new Date().toISOString()\n  }\n}];"
       },
-      "id": "ca9f9342-d318-4a6e-b856-0310494406f0",
+      "id": "64f80fe6-ba19-4d2c-a0b1-e5e194bf305c",
       "name": "Episode Data Fetcher",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1232,
-        208
+        -2768,
+        -336
       ]
     },
     {
@@ -253,13 +253,13 @@
           }
         }
       },
-      "id": "c55d7fb0-d3e0-4ed0-8f87-3b68fe06b037",
+      "id": "58fcf655-4a0a-4386-b6d5-673ca0a7730a",
       "name": "Fetch Episode Manifest",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        -1456,
-        208
+        -2992,
+        -336
       ]
     },
     {
@@ -290,10 +290,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        688,
-        208
+        -848,
+        -336
       ],
-      "id": "94a552c4-4258-4ce9-9f18-efef94e590a1",
+      "id": "bf6998e3-a908-480a-840a-116d3a39a69c",
       "name": "Validation Check"
     },
     {
@@ -328,8 +328,7 @@
             "Safety Score": "={{ $('Enhanced Safety Check').item.json.safetyScore }}",
             "Final Approval": "={{ $('Enhanced Safety Check').item.json.finalApproval }}",
             "Speech Analysis Version": "={{ $('Enhanced Success Logger').item.json.speechAnalysisVersion }}",
-            "Success": "={{ $('Enhanced Success Logger').item.json.logEntry.success }}",
-            "Next Post": "={{ $('Enhanced Success Logger').item.json.nextPost }}"
+            "Success": "={{ $('Enhanced Success Logger').item.json.logEntry.success }}"
           },
           "matchingColumns": [],
           "schema": [
@@ -457,7 +456,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": true
             }
           ],
           "attemptToConvertTypes": false,
@@ -468,10 +468,10 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        1584,
-        112
+        48,
+        -432
       ],
-      "id": "dd33c94a-d981-49f5-8aa0-89ebb20db701",
+      "id": "2b09c11d-e56d-4839-bd6d-cdf6db5b96f6",
       "name": "Append row in sheet",
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -498,22 +498,14 @@
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.2,
       "position": [
-        -1680,
-        208
+        -3216,
+        -336
       ],
-      "id": "865270b6-b7e4-46ac-9f35-56ab8bc3ac20",
+      "id": "450cb694-886f-4250-9c06-9f781ed91ca3",
       "name": "Daily at 6am + 4pm PT"
     }
   ],
-  "pinData": {
-    "Enhanced Character AI Agent": [
-      {
-        "json": {
-          "output": "Evolution shapes life. It never stops. Change is constant. Embrace it, or get left behind."
-        }
-      }
-    ]
-  },
+  "pinData": {},
   "connections": {
     "Post to Twitter": {
       "main": [
@@ -724,7 +716,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "0ee3da2a-b929-4cca-94b0-121a4b78107e",
+  "versionId": "fb9a3f1d-dd96-4b54-a112-0b76f69ec310",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "7cd3de1c1dd9e2a807bc76f47d3f03944d93656380c3c3fb6814b945d43d2d6c"
