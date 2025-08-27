@@ -1,0 +1,81 @@
+Speech Analysis Report
+
+Executive Summary
+
+The analyzed passage runs 84.9 seconds, with 180 words across 28 sentences. Delivery is fast but steady at 127 words per minute, with no long pauses and only 5 filler tokens (≈3.5 per minute). Pitch spans broadly (166–470 Hz), with a mean around 358 Hz, producing a dynamic, somewhat elevated voice quality. Volume levels are moderate with clear variation, supporting emphasis. Reading level measures at grade 3.7, suggesting accessibility. Structurally, the discourse moves from observation to metaphor, then to ethical questioning, and closes with identification. The voice projects authority and curiosity, alternating between didactic explanation and probing interrogation.
+
+⸻
+
+1. Quantified Delivery
+	•	Duration: 84.9 sec, 180 words ￼
+	•	WPM overall/articulation: 127.2 ￼
+	•	Fillers: 5 total (“like,” “you know” ×2, “right,” “okay”) ￼
+	•	Pause count: 0 meaningful pauses ￼
+	•	Pitch: mean 357.6 Hz, wide range (p10 = 166 Hz, p90 = 470 Hz) ￼
+	•	Volume: moderate, mean normalized energy 0.036, peaks at 0.075 ￼
+
+⸻
+
+2. Voice Quality and Prosody
+
+Pitch variation is strong, creating emphasis in rhetorical questions (e.g., “Do you know why there are three monkeys on your wall?” at 14.82s ￼). Loudness builds during explanatory sections about gamma waves (66.52s–70.02s ￼). Tempo is brisk but consistent, articulation clear.
+
+⸻
+
+3. Discourse Structure
+	•	Opening observation (0–9s): sounds, embryo reference.
+	•	Clarification (9–13s): “No, just one species.”
+	•	Philosophical frame (14–37s): proverb of three monkeys.
+	•	Ethical interrogation (38–54s): hypothetical “evil” acts.
+	•	Reframing adulthood (55–60s).
+	•	Observational science (66–74s): gamma waves, intelligence.
+	•	Closing (78–84s): naming, “Isaac Newton.”
+
+⸻
+
+4. Rhetorical Devices
+	•	Metaphor: monkeys as moral symbols (18–31s).
+	•	Anecdote: lab extraction (6.84s–9.42s).
+	•	Intensifiers: “highly intelligent” (71.28s–72.72s).
+	•	Hypotheticals: “If I did something evil…” (38.78s–42.66s).
+	•	Direct address: repeated “Do you know” (14.82s, 36.4s).
+
+⸻
+
+5. Language Analysis
+	•	Reading level: grade 3.7, Flesch 79.9 ￼.
+	•	Sentences: mostly short, averaging 6.4 words.
+	•	Active voice dominates.
+	•	Idioms/jargon: “gamma waves,” “xenomorph.”
+	•	Limited nominalization.
+
+⸻
+
+6. Sentiment and Emotion
+
+Curiosity and instruction early. Moral testing shifts tone to accusatory seriousness (38–54s). Wonder re-emerges in “Fascinating… highly intelligent” (64–72s). Closing is gentle, reflective.
+
+⸻
+
+7. Disfluencies
+	•	5 fillers across 85s, ≈3.5/min ￼.
+	•	Examples: “like” at 80.04s ￼, “okay?” at 55.46s ￼.
+	•	No long pauses; rhythm is continuous.
+
+⸻
+
+8. Clarity and Audience Fit
+
+Target audience seems mixed: lay listener for moral questions, technical peers for EEG reference (“gamma waves”). Shifts risk confusing a general audience but enhance depth.
+
+⸻
+
+9. Credibility Signals
+	•	Cites Buddhist teaching explicitly (25.86s–31.32s ￼).
+	•	Specific terms: “gamma waves,” “embryo.”
+	•	Uses quantification: “three monkeys.”
+	•	Concessions: “Of course” (13.02s) marks agreement and confidence.
+
+⸻
+
+Overall: The passage blends ethical philosophy, scientific observation, and narrative anecdote, delivered with high prosodic variation, minimal hesitation, and a didactic, questioning tone.

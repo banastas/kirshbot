@@ -1,0 +1,5 @@
+# ffmpeg -f concat -safe 0 -i list.txt -c copy S01E04.wavfile 'POD00001.WAV'
+file 'POD00002.WAV'
+file 'POD00003.WAV'
+file 'POD00004.WAV'
+file 'POD00005.WAV'

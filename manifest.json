@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "series_id": "scorpion_series",
   "series_title": "Scorpion Monologues",
-  "updated_at": "2025-08-24T22:45:00Z",
+  "updated_at": "2025-08-26T18:00:00Z",
 
   "voice_profile": {
     "persona_name": "Observer",
@@ -122,6 +122,39 @@
         "pause_count": 0,
         "pause_p95_sec": 0.0,
         "pitch_mean_hz": 366.9,
+        "pitch_std_hz": null,
+        "flags": []
+      }
+    },
+    {
+      "episode_id": "S01E04",
+      "title": "Episode 4",
+      "base_url": "https://kirshbot.banast.as/S01E04/",
+      "assets": {
+        "context_url": "https://kirshbot.banast.as/S01E04/analysis_context.json",
+        "features_url": "https://kirshbot.banast.as/S01E04/analysis_features.json",
+        "transcript_url": "https://kirshbot.banast.as/S01E04/analysis_transcript.txt",
+        "flags_url": "https://kirshbot.banast.as/S01E04/analysis_flags.txt"
+      },
+      "themes": [
+        "three-monkeys moral metaphor",
+        "ethical interrogation and culpability",
+        "scientific observation (gamma waves)",
+        "naming and identification",
+        "mixed-audience register (lay ethics + EEG reference)"
+      ],
+      "quotes": [
+        { "t": [14.8, 18.0], "q": "Do you know why there are three monkeys on your wall?" },
+        { "t": [38.78, 42.66], "q": "If I did something evil…" }
+      ],
+      "features_digest": {
+        "duration_sec": 84.9,
+        "wpm_overall": 127.2,
+        "wpm_articulation": 127.2,
+        "fillers_per_min": 3.5,
+        "pause_count": 0,
+        "pause_p95_sec": 0.0,
+        "pitch_mean_hz": 357.6,
         "pitch_std_hz": null,
         "flags": []
       }
