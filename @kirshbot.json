@@ -10,8 +10,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -624,
-        -240
+        -176,
+        -248
       ]
     },
     {
@@ -23,8 +23,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -176,
-        -432
+        272,
+        -440
       ]
     },
     {
@@ -37,8 +37,8 @@
       "type": "n8n-nodes-base.twitter",
       "typeVersion": 2,
       "position": [
-        -400,
-        -432
+        48,
+        -440
       ],
       "credentials": {
         "twitterOAuth2Api": {
@@ -56,8 +56,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -624,
-        -432
+        -176,
+        -440
       ]
     },
     {
@@ -69,8 +69,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1072,
-        -336
+        -624,
+        -344
       ]
     },
     {
@@ -82,8 +82,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1,
       "position": [
-        -1344,
-        -112
+        -904,
+        -120
       ],
       "credentials": {
         "openAiApi": {
@@ -105,21 +105,21 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.7,
       "position": [
-        -1424,
-        -336
+        -976,
+        -344
       ]
     },
     {
       "parameters": {
-        "jsCode": "const { enhancedCharacterProfile, postingContext } = items[0].json;\n\nconst topicPools = {\n  survival_wisdom: [\n    \"the importance of backup plans\",\n    \"why preparation beats panic\", \n    \"simple solutions to complex problems\",\n    \"reading situations quickly\",\n    \"staying calm under pressure\",\n    \"adaptation versus resistance\",\n    \"protecting what matters most\"\n  ],\n  philosophical_observations: [\n    \"what defines humanity\",\n    \"cycles that repeat across generations\", \n    \"the gap between survival and living\",\n    \"how evolution changes everything\",\n    \"watching versus acting\",\n    \"the animal kingdom's harsh truths\"\n  ],\n  practical_advice: [\n    \"basic preparedness tips\",\n    \"simple communication principles\",\n    \"efficient problem-solving approaches\", \n    \"building reliable systems\",\n    \"working with difficult people\",\n    \"making hard decisions quickly\"\n  ],\n  understated_wisdom: [\n    \"why simple plans work best\",\n    \"the predictability of chaos\", \n    \"common misconceptions about leadership\",\n    \"when to speak and when to listen\",\n    \"the value of strategic silence\"\n  ]\n};\n\nlet selectedTopics = [];\nif (postingContext === 'morning') {\n  selectedTopics = [...topicPools.practical_advice, ...topicPools.survival_wisdom];\n} else if (postingContext === 'afternoon') {\n  selectedTopics = [...topicPools.philosophical_observations, ...topicPools.understated_wisdom];\n} else if (postingContext === 'evening') {\n  selectedTopics = [...topicPools.understated_wisdom, ...topicPools.survival_wisdom];\n} else {\n  selectedTopics = [...topicPools.philosophical_observations];\n}\n\nconst chosenTopic = selectedTopics[Math.floor(Math.random() * selectedTopics.length)];\n\nconst contentPrompt = `Write a tweet about ${chosenTopic}. \\n\\nIMPORTANT SPEECH CHARACTERISTICS TO MATCH:\\n- Speak at a measured pace (${Math.round(enhancedCharacterProfile.speech_patterns.pacing.overall_wpm)} WPM equivalent in text)\\n- Use simple, direct language (Grade ${enhancedCharacterProfile.speech_patterns.vocal_patterns.reading_level} reading level)\\n- Keep sentences short and impactful\\n- Strategic use of pauses (translate to punctuation/spacing)\\n- Minimal unnecessary words\\n- Understated delivery style\\n\\nStay completely in character using Kirsh's distinctive voice and measured speaking style.`;\n\nreturn [{\n  json: {\n    chosenTopic,\n    contentPrompt,\n    postingContext,\n    enhancedCharacterProfile,\n    speechPatternsIncorporated: true,\n    timestamp: new Date().toISOString()\n  }\n}];"
+        "jsCode": "const avoidanceData = $('Analyze Recent Content').item.json;\nconst avoidanceRules = avoidanceData.avoidanceRules || [];\nconst recentTopics = avoidanceData.recentTopics || [];\n\nconst { enhancedCharacterProfile, postingContext } = items[0].json;\n\nconst topicPools = {\n  survival_wisdom: [\n    \"why most people miss obvious warning signs\",\n    \"the difference between being prepared and being paranoid\", \n    \"how panic spreads faster than actual danger\",\n    \"recognizing when situations are about to change\",\n    \"what separates survivors from casualties\",\n    \"reading body language in tense situations\"\n  ],\n  philosophical_observations: [\n    \"what humans tell themselves about being civilized\",\n    \"why every generation thinks they are different\", \n    \"the gap between what people say and what they do\",\n    \"patterns that repeat regardless of technology\",\n    \"how fear changes decision making\",\n    \"the animal instincts that never leave us\"\n  ],\n  practical_advice: [\n    \"when to trust your gut versus logic\",\n    \"building systems that work under pressure\",\n    \"efficient communication in chaos\", \n    \"working with unreliable people\",\n    \"making decisions with incomplete information\",\n    \"the value of redundant backups\"\n  ],\n  understated_wisdom: [\n    \"why most advice is situational\",\n    \"the predictability of unpredictable people\", \n    \"common misconceptions about strength\",\n    \"when silence is more powerful than words\",\n    \"the cost of being right all the time\",\n    \"what experience actually teaches you\"\n  ]\n};\n\nlet selectedTopics = [];\nif (postingContext === 'morning') {\n  selectedTopics = [...topicPools.practical_advice, ...topicPools.survival_wisdom];\n} else if (postingContext === 'afternoon') {\n  selectedTopics = [...topicPools.philosophical_observations, ...topicPools.understated_wisdom];\n} else if (postingContext === 'evening') {\n  selectedTopics = [...topicPools.understated_wisdom, ...topicPools.survival_wisdom];\n} else {\n  selectedTopics = [...topicPools.philosophical_observations];\n}\n\n// Filter out recently used topics\nconst filteredTopics = selectedTopics.filter(topic => {\n  const lowerTopic = topic.toLowerCase();\n  return !recentTopics.some(recentTopic => \n    lowerTopic.includes(recentTopic.toLowerCase()) ||\n    (recentTopic === 'planning' && lowerTopic.includes('plan')) ||\n    (recentTopic === 'simplicity' && (lowerTopic.includes('simple') || lowerTopic.includes('basic'))) ||\n    (recentTopic === 'leadership' && lowerTopic.includes('leader'))\n  );\n});\n\n// Use filtered topics, fall back to original if empty\nconst finalTopics = filteredTopics.length > 0 ? filteredTopics : selectedTopics;\nconst chosenTopic = finalTopics[Math.floor(Math.random() * finalTopics.length)];\n\n// Create strong avoidance prompt\nconst avoidancePrompt = avoidanceRules.length > 0 ? \n  `\\n\\nCRITICAL AVOIDANCE RULES - DO NOT IGNORE:\\n${avoidanceRules.map(rule => `• ${rule}`).join('\\n')}\\n\\nRecently covered topics to AVOID: ${recentTopics.join(', ')}\\n` : '';\n\nconst contentPrompt = `Write a tweet about ${chosenTopic}.${avoidancePrompt}\n\nIMPORTANT SPEECH CHARACTERISTICS TO MATCH:\n- Speak at a measured pace (${Math.round(enhancedCharacterProfile.speech_patterns.pacing.overall_wpm)} WPM equivalent in text)\n- Use simple, direct language (Grade ${enhancedCharacterProfile.speech_patterns.vocal_patterns.reading_level} reading level)\n- Keep sentences short and impactful\n- Strategic use of pauses (translate to punctuation/spacing)\n- Minimal unnecessary words\n- Understated delivery style\n\nFRESH APPROACH REQUIRED:\n- Use completely different sentence structures\n- Avoid repetitive patterns from recent tweets\n- Focus on unique observations or questions\n- Channel Kirsh's measured, thoughtful voice\n\nStay completely in character using Kirsh's distinctive voice and measured speaking style.`;\n\nreturn [{\n  json: {\n    chosenTopic,\n    contentPrompt,\n    postingContext,\n    enhancedCharacterProfile,\n    speechPatternsIncorporated: true,\n    avoidanceRulesApplied: avoidanceRules.length,\n    topicsFiltered: selectedTopics.length - finalTopics.length,\n    availableTopics: finalTopics.length,\n    timestamp: new Date().toISOString()\n  }\n}];"
       },
       "id": "054640ca-5989-429e-8cbd-34dddf33021c",
       "name": "Enhanced Topic Generator",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1648,
-        -336
+        -1200,
+        -344
       ]
     },
     {
@@ -131,8 +131,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -1872,
-        -336
+        -1424,
+        -344
       ]
     },
     {
@@ -146,8 +146,8 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 2.1,
       "position": [
-        -2096,
-        -336
+        -1648,
+        -344
       ]
     },
     {
@@ -161,8 +161,8 @@
       "type": "n8n-nodes-base.merge",
       "typeVersion": 2.1,
       "position": [
-        -2320,
-        -240
+        -1872,
+        -248
       ]
     },
     {
@@ -182,8 +182,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        -2544,
-        -144
+        -2096,
+        -152
       ]
     },
     {
@@ -203,8 +203,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        -2544,
-        -336
+        -2096,
+        -344
       ]
     },
     {
@@ -224,7 +224,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        -2320,
+        -1872,
         -512
       ]
     },
@@ -237,8 +237,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -2768,
-        -336
+        -2320,
+        -344
       ]
     },
     {
@@ -258,8 +258,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
       "position": [
-        -2992,
-        -336
+        -2544,
+        -344
       ]
     },
     {
@@ -290,8 +290,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -848,
-        -336
+        -400,
+        -344
       ],
       "id": "bf6998e3-a908-480a-840a-116d3a39a69c",
       "name": "Validation Check"
@@ -468,8 +468,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        48,
-        -432
+        496,
+        -440
       ],
       "id": "2b09c11d-e56d-4839-bd6d-cdf6db5b96f6",
       "name": "Append row in sheet",
@@ -499,10 +499,63 @@
       "typeVersion": 1.2,
       "position": [
         -3216,
-        -336
+        -344
       ],
       "id": "450cb694-886f-4250-9c06-9f781ed91ca3",
       "name": "Daily at 6am + 4pm PT"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Handle the weird Google Sheets structure\nconst recentRows = items || [];\nconst recentTweets = recentRows\n  .map(row => {\n    // The structure shows tweets are in the second property value\n    const values = Object.values(row.json || {});\n    // Skip row_number (first value), get the second value which contains the tweet\n    return values[1] || null;\n  })\n  .filter(tweet => tweet && typeof tweet === 'string' && tweet.trim().length > 0)\n  .slice(-15); // Last 15 tweets\n\nconsole.log('Recent tweets found:', recentTweets.length);\nconsole.log('Sample tweets:', recentTweets.slice(-3));\n\n// Detect overused patterns\nconst patterns = {\n  simple_complex: recentTweets.filter(t => \n    (t.includes('simple') || t.includes('Simple')) && \n    (t.includes('complicate') || t.includes('complex') || t.includes('Complicate') || t.includes('confusion'))\n  ).length,\n  \n  three_sentence: recentTweets.filter(t => \n    t.split('.').filter(s => s.trim()).length >= 3\n  ).length,\n  \n  plans_work: recentTweets.filter(t => \n    t.includes('plan') && (t.includes('work') || t.includes('succeed') || t.includes('follow') || t.includes('clear'))\n  ).length,\n  \n  clear_direct: recentTweets.filter(t => \n    t.includes('clear') && t.includes('direct')\n  ).length,\n  \n  keep_simple: recentTweets.filter(t => \n    t.includes('Keep') && (t.includes('simple') || t.includes('straightforward') || t.includes('basic'))\n  ).length,\n  \n  x_y_format: recentTweets.filter(t => \n    t.match(/\\w+\\s+(succeed|are clear|work).*\\w+\\s+(create confusion|confuse|invite mistakes)/i)\n  ).length\n};\n\n// Create avoidance rules based on actual patterns\nconst avoidanceRules = [];\nif (patterns.simple_complex >= 2) {\n  avoidanceRules.push('CRITICAL: Stop using simple vs complicated comparisons - heavily overused');\n}\nif (patterns.plans_work >= 2) {\n  avoidanceRules.push('AVOID all planning/strategy topics - already covered multiple times');\n}\nif (patterns.clear_direct >= 1) {\n  avoidanceRules.push('Do not use clear and direct phrasing - just used');\n}\nif (patterns.keep_simple >= 1) {\n  avoidanceRules.push('Avoid Keep it simple/straightforward advice - just posted');\n}\nif (patterns.x_y_format >= 2) {\n  avoidanceRules.push('STOP using X succeeds/works, Y creates confusion format - overused pattern');\n}\n\n// Extract topics from actual tweets\nconst recentTopics = [];\nrecentTweets.forEach(tweet => {\n  const lowerTweet = tweet.toLowerCase();\n  if (lowerTweet.includes('plan')) recentTopics.push('planning');\n  if (lowerTweet.includes('simple') || lowerTweet.includes('basic') || lowerTweet.includes('straightforward')) recentTopics.push('simplicity');\n  if (lowerTweet.includes('clear') || lowerTweet.includes('direct')) recentTopics.push('clarity');\n  if (lowerTweet.includes('leadership') || lowerTweet.includes('leader')) recentTopics.push('leadership');\n  if (lowerTweet.includes('evolution') || lowerTweet.includes('change')) recentTopics.push('evolution');\n  if (lowerTweet.includes('history') || lowerTweet.includes('repeat')) recentTopics.push('history');\n  if (lowerTweet.includes('patience') || lowerTweet.includes('difficult people')) recentTopics.push('patience');\n});\n\nreturn [{\n  json: {\n    recentTweets: recentTweets,\n    avoidanceRules,\n    recentTopics: [...new Set(recentTopics)],\n    patternCounts: patterns,\n    totalRecentTweets: recentTweets.length,\n    analysisTimestamp: new Date().toISOString(),\n    debugInfo: {\n      sampleStructure: recentRows[0]?.json || {},\n      extractedSample: recentTweets.slice(-2)\n    }\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -2768,
+        -344
+      ],
+      "id": "86e1369f-15f1-4f1b-adbc-b3a63efd33e6",
+      "name": "Analyze Recent Content"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1fOf7nVPUzigsSRT6Q1sRA5X3rdz08Azu9ZPyl9m-V9U",
+          "mode": "list",
+          "cachedResultName": "kirshbot",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1fOf7nVPUzigsSRT6Q1sRA5X3rdz08Azu9ZPyl9m-V9U/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "posts",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1fOf7nVPUzigsSRT6Q1sRA5X3rdz08Azu9ZPyl9m-V9U/edit#gid=0"
+        },
+        "options": {
+          "dataLocationOnSheet": {
+            "values": {
+              "rangeDefinition": "specifyRangeA1",
+              "range": "E2:E"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -2992,
+        -344
+      ],
+      "id": "631a6df4-c8ac-47f5-9e23-99bf0ead366b",
+      "name": "Fetch Recent Tweets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ehLJL7UtvWkpMH87",
+          "name": "Google Sheets account"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -704,7 +757,29 @@
       "main": [
         [
           {
+            "node": "Fetch Recent Tweets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Analyze Recent Content": {
+      "main": [
+        [
+          {
             "node": "Fetch Episode Manifest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Recent Tweets": {
+      "main": [
+        [
+          {
+            "node": "Analyze Recent Content",
             "type": "main",
             "index": 0
           }
@@ -716,7 +791,7 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "3a552bbb-9d6b-4b0b-a3ec-206bb5f40696",
+  "versionId": "c1ad7fb6-5aac-4b54-a69e-2781b06f255b",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "7cd3de1c1dd9e2a807bc76f47d3f03944d93656380c3c3fb6814b945d43d2d6c"
