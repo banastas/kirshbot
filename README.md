@@ -56,8 +56,7 @@ kirshbot/
 │   ├── analysis_segments.json       # Segmented dialogue data
 │   ├── analysis_context.json        # Complete episode context
 │   ├── analysis_flags.txt           # Speech pattern flags
-│   └── S01E01_16k.json             # Whisper transcription
-├── @kirshbot.json                   # n8n workflow configuration
+│   └── S01E01_16k.json              # Whisper transcription
 ├── manifest.json                    # Episode manifest and metadata
 └── README.md                        # Project documentation
 ```
