@@ -1,214 +1,112 @@
 # <a href="https://x.com/kirshbot">@kirshbot</a>
 
-<img src="https://kirshbot.banast.as/assets/hero-image.fill.size_1248x702.v1755690341.jpg" alt="Kirshbot Hero Image">
+<img src="https://kirshbot.banast.as/assets/hero-image.fill.size_1248x702.v1755690341.jpg">
 
-An AI character bot that authentically recreates the voice and personality of Kirsh from "Alien: Earth" using advanced speech analysis and natural language processing.
+## Overview
 
-## Project Overview
+@kirshbot is an AI character agent that embodies Kirsh from *Alien: Earth*, posting authentic tweets twice daily at 6am and 4pm PT. The bot leverages comprehensive speech pattern analysis from multiple episodes to maintain character consistency and authentic voice delivery.
 
-@kirshbot is a sophisticated character AI that analyzes actual dialogue from the TV series to understand and replicate Kirsh's unique speaking patterns, personality traits, and communication style. The bot uses real speech data to generate authentic social media content that stays true to the character's voice.
+## Architecture
 
-## Key Features
+### Multi-Episode Speech Analysis System
+- **Comprehensive Character Profiling**: Analyzes dialogue patterns across all available episodes (`S01E01`, `S01E02`, etc.)
+- **Speech Pattern Recognition**: Measures speaking pace (~108 WPM), reading level (Grade 4.24), and strategic pause usage
+- **Dialogue Repository**: Maintains 25+ unique dialogue samples with episode attribution for authentic voice reference
 
-### Advanced Speech Analysis
-- **Real-time Voice Processing**: Analyzes actual dialogue from episodes using librosa and webrtcvad
-- **Speaking Pattern Recognition**: Measures WPM, pause patterns, sentence structure, and vocal characteristics
-- **Authenticity Scoring**: Validates generated content against actual speech patterns
-- **Multi-episode Support**: Can analyze and switch between different episodes for variety
+### Intelligent Content Generation
+- **Context-Aware Topics**: 60+ curated topics across 6 categories (survival wisdom, human nature observations, tactical insights, philosophical depth, practical leadership, meta-commentary)
+- **Time-Based Selection**: Morning posts focus on practical/tactical content, evening posts lean philosophical
+- **Anti-Repetition System**: Analyzes recent posts to avoid overused patterns and topic repetition
 
-### Character Intelligence
-- **Personality Modeling**: Deep character profiling based on actual dialogue samples
-- **Context-aware Posting**: Adapts content based on time of day and situational context
-- **Speech Pattern Matching**: Ensures generated text matches character's measured speaking pace (107.6 WPM)
-- **Understated Voice**: Maintains Kirsh's characteristic dry, matter-of-fact delivery style
+### Quality Assurance Pipeline
+- **Enhanced Voice Validation**: Multi-layered authenticity scoring based on speech patterns, sentence structure, and tone
+- **Safety Checks**: Family-friendly content filtering, appropriate length validation, substance verification
+- **Character Consistency**: Ensures posts match the measured, strategic communication style observed in source material
 
-### Quality Control
-- **Multi-layer Validation**: Speech pattern validation, authenticity scoring, and safety checks
-- **Content Filtering**: Prevents harmful, inappropriate, or out-of-character content
-- **Automated Logging**: Comprehensive tracking of performance metrics and posting history
+## Technical Stack
 
-### Automated Workflows
-- **Scheduled Posting**: Automated tweets at 6am and 4pm PT
-- **Dynamic Episode Selection**: Randomly selects episodes if no new content is available for 8+ days
-- **Fallback Systems**: Robust error handling and default configurations
+### N8N Workflow Components
+1. **Daily at 6am + 4pm PT** - Scheduled trigger
+2. **Fetch Recent Tweets** - Google Sheets integration for history analysis
+3. **Analyze Recent Content** - Pattern detection and avoidance rule generation
+4. **Fetch Episode Manifest** - Dynamic episode discovery from hosted analysis files
+5. **Multi-Episode Data Aggregator** - Parallel fetching of speech analysis data
+6. **Enhanced Character Database** - Comprehensive profile building from all episodes
+7. **Enhanced Topic Generator** - Context-aware content planning
+8. **Enhanced Character AI Agent** - OpenAI-powered content generation with character constraints
+9. **Enhanced Voice Validator** - Multi-metric authenticity scoring
+10. **Enhanced Safety Check** - Content safety and quality verification
+11. **Post to Twitter** - Final posting with success logging
 
-## Technical Architecture
+### Data Sources
+- **Episode Analysis Files**: Hosted at `https://kirshbot.banast.as/`
+  - `analysis_features.json` - Speech metrics, reading level, timing data
+  - `analysis_context.json` - Dialogue segments with word-level timestamps  
+  - `analysis_flags.txt` - Speech characteristic flags
+- **Google Sheets**: Tweet history tracking and analytics
+- **Dynamic Manifest**: Auto-discovery of new episodes as they become available
 
-### Speech Analysis Pipeline
-```
-Audio Input → Whisper Transcription → Speech Analysis → Character Modeling → Content Generation
-```
+### Speech Analysis Metrics
+- **Words Per Minute**: 107.6 overall, 125.4 articulation rate
+- **Reading Level**: Flesch-Kincaid Grade 4.24 (accessible but authoritative)
+- **Pause Patterns**: 76 strategic pauses, median 0.1s duration
+- **Filler Usage**: Minimal (0.5 per minute, primarily "you know")
+- **Sentence Structure**: ~8-word average, measured delivery style
 
-### Core Components
-- **Speech Analyzer**: Python script using librosa, webrtcvad, and spaCy
-- **Character Database**: Dynamic character profiling with speech pattern integration
-- **Content Generator**: OpenAI-powered agent with character-specific prompting
-- **Validation System**: Multi-stage authenticity and safety validation
-- **Automation Framework**: n8n workflow for scheduling and orchestration
+## Character Voice Characteristics
 
-## Project Structure
+### Core Traits
+- Accumulated tactical wisdom from proven field experience
+- Pattern recognition specialist across different survival contexts
+- Measured, strategic communicator who weighs words carefully
+- Authority built on demonstrated competence, not position
+- Keen observer of human nature under extreme stress
 
-```
-kirshbot/
-├── S01E01/                          # Episode-specific analysis
-│   ├── analyze_whisper_output.py    # Speech analysis script
-│   ├── analysis_features.json       # Extracted speech features
-│   ├── analysis_segments.json       # Segmented dialogue data
-│   ├── analysis_context.json        # Complete episode context
-│   ├── analysis_flags.txt           # Speech pattern flags
-│   └── S01E01_16k.json              # Whisper transcription
-├── manifest.json                    # Episode manifest and metadata
-└── README.md                        # Project documentation
-```
+### Speech Patterns
+- Strategic brevity with maximum impact per word
+- Consistently grounds philosophical observations in practical reality
+- References universal patterns without becoming preachy
+- Uses concrete examples from diverse scenarios
+- Maintains Grade 4+ accessibility while demonstrating expertise
 
-## Speech Analysis Features
-
-### Measured Characteristics
-- **Speaking Pace**: 107.6 WPM overall, 125.4 WPM articulation rate
-- **Pause Patterns**: 76 pauses with 0.23s average duration
-- **Language Complexity**: Grade 4.24 reading level (accessible language)
-- **Filler Usage**: Minimal at 0.5 per minute
-- **Sentence Structure**: Average 7.2 words per sentence
-
-### Voice Authenticity Metrics
-- **Speech Pattern Score**: Validates sentence length and language complexity
-- **Authenticity Score**: Checks for understated delivery and appropriate brevity
-- **Overall Validation**: Combined score ensuring character consistency
-
-## Getting Started
-
-### Prerequisites
-```bash
-# Python dependencies
-pip install librosa soundfile webrtcvad spacy numpy
-python -m spacy download en_core_web_sm
-
-# Optional for enhanced analysis
-pip install papaparse  # For CSV processing if needed
-```
-
-### Speech Analysis Usage
-```bash
-python analyze_whisper_output.py \
-  --audio S01E01_16k.wav \
-  --json S01E01_16k.json \
-  --out_prefix analysis
-```
-
-This generates:
-- `analysis_features.json` - Quantified speech metrics
-- `analysis_segments.json` - Timestamped dialogue segments  
-- `analysis_context.json` - Complete episode analysis
-- `analysis_flags.txt` - Speech pattern classifications
-
-### Character Profile Integration
-The system automatically processes speech analysis data to create enhanced character profiles including:
-- Real dialogue samples from episodes
-- Measured speaking characteristics
-- Personality trait modeling
-- Context-appropriate content generation
-
-## Content Generation Examples
-
-### Character Voice Samples
-Based on actual dialogue analysis:
-- *"What if, while I'm squashing it, another scorpion stings me to protect its friend?"*
-- *"Think of how the scorpion must feel, trapped under glass, menaced by giants."*
-- *"She's not human anymore. Why are we pretending she is?"*
-
-### Generated Content Style
-- **Measured Pace**: Reflects 107.6 WPM speaking rate in text structure
-- **Strategic Pauses**: Uses punctuation to mirror speech patterns
-- **Simple Language**: Maintains Grade 4.24 reading level
-- **Understated Delivery**: Avoids excessive enthusiasm or overwording
+### Topic Categories
+- **Survival Wisdom**: Reading warning signs, backup plans, resource allocation
+- **Human Nature**: Stress responses, group dynamics, behavioral patterns  
+- **Tactical Insights**: Strategic positioning, timing, controlled unpredictability
+- **Philosophy**: Cycles, adaptation, evolution, universal truths
+- **Leadership**: Authority without position, decision-making under pressure
+- **Meta-Commentary**: Expertise visibility, experience vs. records, pattern recognition
 
 ## Quality Metrics
 
-### Validation Thresholds
-- **Speech Pattern Matching**: ≥70% similarity to analyzed patterns
-- **Authenticity Score**: ≥70% character consistency
-- **Safety Score**: ≥90% content appropriateness
-- **Character Count**: ≤280 characters for platform compliance
+### Validation Scoring
+- **Speech Pattern Score**: Sentence length, structure, filler usage alignment
+- **Authenticity Score**: Tone consistency, understated delivery, natural flow
+- **Overall Validation**: Combined score requiring 70%+ for posting approval
+- **Safety Score**: Content appropriateness, length guidelines, substance requirements
 
-### Performance Tracking
-- Comprehensive logging of all posts and validation scores
-- Episode usage tracking and rotation
-- Speech analysis version control
-- Automated quality reporting
+### Success Criteria
+- Character count: 80-240 characters optimal
+- Word count: 15-35 words per tweet
+- Multiple sentence validation when appropriate
+- Strategic pause simulation through punctuation
+- Consistent voice across all posting contexts
 
-## Configuration
+## Deployment & Monitoring
 
-### Episode Management
-```json
-{
-  "latest_episode": "S01E01",
-  "episodes": [
-    {
-      "episode_id": "S01E01",
-      "analyzed": true,
-      "speech_data_available": true
-    }
-  ],
-  "updated_at": "2025-01-XX"
-}
-```
+### Automated Posting
+- **Schedule**: Twice daily at 6am and 4pm Pacific Time
+- **Retry Logic**: Single retry with fresh topic on validation failure
+- **Skip Protection**: Quality control override prevents poor content posting
+- **Success Logging**: Comprehensive metrics tracking in Google Sheets
 
-### Speech Analysis Flags
-- `slow_overall`: Indicates measured, deliberate speaking pace
-- `high_fillers`: Detects excessive filler usage (rarely triggered for Kirsh)
-- `long_pauses`: Identifies strategic pause usage
-- `monotone_pitch_loud_variance`: Advanced vocal pattern analysis
-
-## Automation Workflow
-
-### Posting Schedule
-- **6:00 AM PT**: Morning practical wisdom and survival advice
-- **4:00 PM PT**: Afternoon philosophical observations and understated insights
-
-### Content Categorization
-- **Survival Wisdom**: Backup plans, preparation, adaptation
-- **Philosophical Observations**: Humanity, evolution, cycles of life
-- **Practical Advice**: Problem-solving, communication, decision-making
-- **Understated Wisdom**: Leadership insights, strategic silence
-
-## Advanced Features
-
-### Dynamic Episode Selection
-- Uses latest episode when available
-- Falls back to random selection after 8 days without updates
-- Maintains variety while preserving character consistency
-
-### Multi-layered Safety
-- Content filtering for harmful or inappropriate material
-- Character consistency validation
-- Platform compliance checking
-- Family-friendly content assurance
-
-### Comprehensive Logging
-- Google Sheets integration for performance tracking
-- Detailed metrics on speech pattern adherence
-- Success/failure analysis with improvement recommendations
-- Version control for analysis algorithms
-
-## Technical Requirements
-
-### Core Dependencies
-- **Python 3.8+**: Core speech analysis
-- **librosa**: Audio processing and feature extraction
-- **webrtcvad**: Voice activity detection
-- **spaCy**: Natural language processing
-- **OpenAI API**: Content generation
-- **n8n**: Workflow automation
-
-### External Services
-- **Twitter API**: Social media posting
-- **Google Sheets API**: Logging and analytics
-- **File hosting**: Speech analysis data distribution
-
-## License & Usage
-
-This is a fan-created project inspired by "Alien: Earth". All character references and dialogue samples are used for educational and entertainment purposes in accordance with fair use principles.
+### Analytics Dashboard
+- Real-time posting success rates
+- Speech pattern adherence metrics
+- Topic diversity tracking
+- Character authenticity scoring trends
+- Safety validation statistics
 
 ---
 
-**Follow [@kirshbot](https://x.com/kirshbot)** for authentic character AI content powered by advanced speech analysis.
+**Disclaimer**: Fan-created content inspired by Kirsh from *Alien: Earth* with comprehensive speech pattern analysis for authentic character representation.
