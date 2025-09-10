@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "series_id": "scorpion_series",
   "series_title": "Scorpion Monologues",
-  "updated_at": "2025-08-26T18:00:00Z",
+  "updated_at": "2025-09-09T22:00:00Z",
 
   "voice_profile": {
     "persona_name": "Observer",
@@ -12,19 +12,19 @@
       "reading_level_fk_grade": { "target_range": [4, 6] },
       "sentence_patterns": ["simple clause chains", "parataxis with triplets"],
       "prosody": { "target_wpm": 120, "pause_style": "short-frequent", "pitch_behavior": "wide span, cap ~500 Hz" },
-      "rhetoric_patterns": ["ascent \u2192 reversal", "definition \u2192 inevitabilities"],
+      "rhetoric_patterns": ["ascent → reversal", "definition → inevitabilities"],
       "taboo": ["emoji","exclamation","marketing","hedging"],
       "lexicon": { "preferred": ["predator","prey","conquer","observe","record","animal law"], "avoid": ["basically","literally","kind of","sort of"] }
     },
-    "signature_syntax": { "triplets": "\u22641 per tweet", "final_cadence": "concrete noun" }
+    "signature_syntax": { "triplets": "≤1 per tweet", "final_cadence": "concrete noun" }
   },
 
   "tweet_generation_rules": {
     "length": { "max_chars_without_url": 240 },
     "structure_variants": [
-      "Hypothesis \u2192 inversion \u2192 noun stop",
-      "Ascent list \u2192 reversal clause \u2192 mortality noun",
-      "Definition \u2192 enumeration of inevitabilities"
+      "Hypothesis → inversion → noun stop",
+      "Ascent list → reversal clause → mortality noun",
+      "Definition → enumeration of inevitabilities"
     ],
     "content_picking": { "prefer_latest_episode": true, "rotate_themes": true, "no_repeat_window_days": 14 },
     "style_enforcement": { "forbid": ["emoji","!","#"], "allowed_punctuation": [".",",",":",";"], "no_hashtags": true, "second_person_allowed": true }
@@ -156,6 +156,40 @@
         "pause_p95_sec": 0.0,
         "pitch_mean_hz": 357.6,
         "pitch_std_hz": null,
+        "flags": []
+      }
+    },
+    {
+      "episode_id": "S01E06",
+      "title": "Episode 6",
+      "base_url": "https://kirshbot.banast.as/S01E06/",
+      "assets": {
+        "context_url": "https://kirshbot.banast.as/S01E06/analysis_context.json",
+        "features_url": "https://kirshbot.banast.as/S01E06/analysis_features.json",
+        "transcript_url": "https://kirshbot.banast.as/S01E06/analysis_transcript.txt",
+        "flags_url": "https://kirshbot.banast.as/S01E06/analysis_flags.txt"
+      },
+      "themes": [
+        "identity confrontation",
+        "family vs cosmic purpose",
+        "metaphor of onion and star",
+        "violence as proof of humanity",
+        "procedural science authority"
+      ],
+      "quotes": [
+        { "t": [14.8, 18.4], "q": "That's like an onion asking, how do I take care of a star?" },
+        { "t": [70.7, 74.1], "q": "That moment when you realize you're not a machine after all." },
+        { "t": [104.0, 106.9], "q": "The scientific method is a method, not a suggestion box." }
+      ],
+      "features_digest": {
+        "duration_sec": 108.6,
+        "wpm_overall": 121.0,
+        "wpm_articulation": 121.0,
+        "fillers_per_min": 0.55,
+        "pause_count": 0,
+        "pause_p95_sec": 0.0,
+        "pitch_mean_hz": 282.0,
+        "pitch_std_hz": 374.6,
         "flags": []
       }
     }
