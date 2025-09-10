@@ -4,17 +4,17 @@
 
 ## Overview
 
-@kirshbot is an AI character agent that embodies Kirsh from *Alien: Earth*, posting authentic tweets twice daily at 6am and 4pm PT. The bot leverages comprehensive speech pattern analysis from multiple episodes to maintain character consistency and authentic voice delivery.
+@kirshbot is an AI character agent that embodies the Observer from *Scorpion Monologues*, posting authentic tweets twice daily at 6am and 4pm PT. The bot leverages comprehensive speech pattern analysis from multiple episodes to maintain character consistency and authentic voice delivery.
 
 ## Architecture
 
 ### Multi-Episode Speech Analysis System
-- **Comprehensive Character Profiling**: Analyzes dialogue patterns across all available episodes (`S01E01`, `S01E02`, etc.)
-- **Speech Pattern Recognition**: Measures speaking pace (~108 WPM), reading level (Grade 4.24), and strategic pause usage
-- **Dialogue Repository**: Maintains 25+ unique dialogue samples with episode attribution for authentic voice reference
+- **Comprehensive Character Profiling**: Analyzes dialogue patterns across all available episodes (`S01E01` through `S01E06`)
+- **Speech Pattern Recognition**: Measures speaking pace (120 WPM target), reading level (Grade 4-6), and strategic pause usage
+- **Dialogue Repository**: Maintains unique dialogue samples with episode attribution for authentic voice reference
 
 ### Intelligent Content Generation
-- **Context-Aware Topics**: 60+ curated topics across 6 categories (survival wisdom, human nature observations, tactical insights, philosophical depth, practical leadership, meta-commentary)
+- **Context-Aware Topics**: Curated themes across episodes including empathy inversion, post-human embodiment, militarized command, ethical interrogation, and identity confrontation
 - **Time-Based Selection**: Morning posts focus on practical/tactical content, evening posts lean philosophical
 - **Anti-Repetition System**: Analyzes recent posts to avoid overused patterns and topic repetition
 
@@ -47,49 +47,49 @@
 - **Dynamic Manifest**: Auto-discovery of new episodes as they become available
 
 ### Speech Analysis Metrics
-- **Words Per Minute**: 107.6 overall, 125.4 articulation rate
-- **Reading Level**: Flesch-Kincaid Grade 4.24 (accessible but authoritative)
-- **Pause Patterns**: 76 strategic pauses, median 0.1s duration
-- **Filler Usage**: Minimal (0.5 per minute, primarily "you know")
-- **Sentence Structure**: ~8-word average, measured delivery style
+- **Words Per Minute**: 120 target WPM, ranging 107-137 across episodes
+- **Reading Level**: Flesch-Kincaid Grade 4-6 (accessible but authoritative)
+- **Pause Patterns**: Short-frequent style with strategic timing
+- **Filler Usage**: Minimal (0-3.5 per minute across episodes)
+- **Sentence Structure**: Simple clause chains with parataxis and triplets
 
 ## Character Voice Characteristics
 
 ### Core Traits
-- Accumulated tactical wisdom from proven field experience
+- Fatalist anthropologist narrating human ascent and animal law
+- Plain, declarative register with wide pitch span (cap ~500 Hz)
 - Pattern recognition specialist across different survival contexts
 - Measured, strategic communicator who weighs words carefully
-- Authority built on demonstrated competence, not position
-- Keen observer of human nature under extreme stress
+- Keen observer of human nature and cosmic purpose
 
 ### Speech Patterns
+- Simple clause chains with parataxis and triplets (≤1 per tweet)
+- Ascent → reversal and definition → inevitabilities rhetoric patterns
 - Strategic brevity with maximum impact per word
-- Consistently grounds philosophical observations in practical reality
-- References universal patterns without becoming preachy
-- Uses concrete examples from diverse scenarios
-- Maintains Grade 4+ accessibility while demonstrating expertise
+- Final cadence ending with concrete nouns
+- Maintains Grade 4-6 accessibility while demonstrating expertise
 
 ### Topic Categories
-- **Survival Wisdom**: Reading warning signs, backup plans, resource allocation
-- **Human Nature**: Stress responses, group dynamics, behavioral patterns  
-- **Tactical Insights**: Strategic positioning, timing, controlled unpredictability
-- **Philosophy**: Cycles, adaptation, evolution, universal truths
-- **Leadership**: Authority without position, decision-making under pressure
-- **Meta-Commentary**: Expertise visibility, experience vs. records, pattern recognition
+- **Empathy Inversion**: Post-human embodiment and human ascent then reversal
+- **Animal Law**: Predator-prey dynamics and natural order observations
+- **Militarized Command**: Authority invocation and tactical delegation
+- **Ethical Interrogation**: Moral metaphor and culpability questions
+- **Identity Confrontation**: Family vs cosmic purpose and human vs machine
+- **Scientific Authority**: Procedural measurements and forensic analysis
 
 ## Quality Metrics
 
 ### Validation Scoring
 - **Speech Pattern Score**: Sentence length, structure, filler usage alignment
-- **Authenticity Score**: Tone consistency, understated delivery, natural flow
+- **Authenticity Score**: Tone consistency, plain declarative delivery, natural flow
 - **Overall Validation**: Combined score requiring 70%+ for posting approval
 - **Safety Score**: Content appropriateness, length guidelines, substance requirements
 
 ### Success Criteria
-- Character count: 80-240 characters optimal
-- Word count: 15-35 words per tweet
-- Multiple sentence validation when appropriate
-- Strategic pause simulation through punctuation
+- Character count: 240 characters maximum (without URL)
+- Structure variants: Hypothesis → inversion → noun stop, Ascent list → reversal clause → mortality noun
+- Forbidden elements: emoji, exclamation marks, hashtags
+- Allowed punctuation: periods, commas, colons, semicolons
 - Consistent voice across all posting contexts
 
 ## Deployment & Monitoring
@@ -109,4 +109,4 @@
 
 ---
 
-**Disclaimer**: Fan-created content inspired by Kirsh from *Alien: Earth* with comprehensive speech pattern analysis for authentic character representation.
+**Disclaimer**: Fan-created content inspired by the Observer from *Scorpion Monologues* with comprehensive speech pattern analysis for authentic character representation.
