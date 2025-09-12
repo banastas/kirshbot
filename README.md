@@ -25,6 +25,8 @@
 
 ## Technical Stack
 
+<img src="https://kirshbot.banast.as/assets/kirshbot.png">
+
 ### N8N Workflow Components
 1. **Daily at 6am + 4pm PT** - Scheduled trigger
 2. **Fetch Recent Tweets** - Google Sheets integration for history analysis
