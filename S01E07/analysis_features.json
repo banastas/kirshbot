@@ -1,0 +1,54 @@
+{
+  "duration_sec": 99.99,
+  "speech_time_sec": 99.99,
+  "segments": 35,
+  "words": 165,
+  "wpm_overall": 99.0,
+  "wpm_articulation": 99.0,
+  "fillers_total": 1,
+  "fillers_per_min": 0.6,
+  "fillers_by_token": {
+    "uh": 0,
+    "um": 0,
+    "er": 0,
+    "like": 0,
+    "you know": 0,
+    "kind of": 0,
+    "sort of": 0,
+    "basically": 0,
+    "actually": 0,
+    "literally": 0,
+    "i mean": 1,
+    "so yeah": 0,
+    "right": 0,
+    "okay": 0,
+    "ok": 0
+  },
+  "pause_count": 0,
+  "pause_durations_sec": {
+    "mean": 0.0,
+    "median": 0.0,
+    "p95": 0.0
+  },
+  "volume_energy_stats": {
+    "mean": 0.047146,
+    "std": 0.029311,
+    "p10": 0.015669,
+    "p50": 0.042884,
+    "p90": 0.084091
+  },
+  "pitch_stats": {
+    "mean_hz": 321.0,
+    "std_hz": 300.3,
+    "p10": 164.1,
+    "p50": 225.1,
+    "p90": 508.6
+  },
+  "reading_level": {
+    "fk_grade": 2.55,
+    "flesch_reading_ease": 85.15,
+    "words": 165,
+    "sentences": 35,
+    "syllables": 228
+  }
+}

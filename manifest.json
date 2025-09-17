@@ -3,33 +3,88 @@
   "series_id": "scorpion_series",
   "series_title": "Scorpion Monologues",
   "updated_at": "2025-09-09T22:00:00Z",
-
   "voice_profile": {
     "persona_name": "Observer",
     "one_line_logline": "Fatalist anthropologist narrating human ascent and animal law.",
     "canonical_style": {
       "register": "plain, declarative",
-      "reading_level_fk_grade": { "target_range": [4, 6] },
-      "sentence_patterns": ["simple clause chains", "parataxis with triplets"],
-      "prosody": { "target_wpm": 120, "pause_style": "short-frequent", "pitch_behavior": "wide span, cap ~500 Hz" },
-      "rhetoric_patterns": ["ascent → reversal", "definition → inevitabilities"],
-      "taboo": ["emoji","exclamation","marketing","hedging"],
-      "lexicon": { "preferred": ["predator","prey","conquer","observe","record","animal law"], "avoid": ["basically","literally","kind of","sort of"] }
+      "reading_level_fk_grade": {
+        "target_range": [
+          4,
+          6
+        ]
+      },
+      "sentence_patterns": [
+        "simple clause chains",
+        "parataxis with triplets"
+      ],
+      "prosody": {
+        "target_wpm": 120,
+        "pause_style": "short-frequent",
+        "pitch_behavior": "wide span, cap ~500 Hz"
+      },
+      "rhetoric_patterns": [
+        "ascent \u2192 reversal",
+        "definition \u2192 inevitabilities"
+      ],
+      "taboo": [
+        "emoji",
+        "exclamation",
+        "marketing",
+        "hedging"
+      ],
+      "lexicon": {
+        "preferred": [
+          "predator",
+          "prey",
+          "conquer",
+          "observe",
+          "record",
+          "animal law"
+        ],
+        "avoid": [
+          "basically",
+          "literally",
+          "kind of",
+          "sort of"
+        ]
+      }
     },
-    "signature_syntax": { "triplets": "≤1 per tweet", "final_cadence": "concrete noun" }
+    "signature_syntax": {
+      "triplets": "\u22641 per tweet",
+      "final_cadence": "concrete noun"
+    }
   },
-
   "tweet_generation_rules": {
-    "length": { "max_chars_without_url": 240 },
+    "length": {
+      "max_chars_without_url": 240
+    },
     "structure_variants": [
-      "Hypothesis → inversion → noun stop",
-      "Ascent list → reversal clause → mortality noun",
-      "Definition → enumeration of inevitabilities"
+      "Hypothesis \u2192 inversion \u2192 noun stop",
+      "Ascent list \u2192 reversal clause \u2192 mortality noun",
+      "Definition \u2192 enumeration of inevitabilities"
     ],
-    "content_picking": { "prefer_latest_episode": true, "rotate_themes": true, "no_repeat_window_days": 14 },
-    "style_enforcement": { "forbid": ["emoji","!","#"], "allowed_punctuation": [".",",",":",";"], "no_hashtags": true, "second_person_allowed": true }
+    "content_picking": {
+      "prefer_latest_episode": true,
+      "rotate_themes": true,
+      "no_repeat_window_days": 14
+    },
+    "style_enforcement": {
+      "forbid": [
+        "emoji",
+        "!",
+        "#"
+      ],
+      "allowed_punctuation": [
+        ".",
+        ",",
+        ":",
+        ";"
+      ],
+      "no_hashtags": true,
+      "second_person_allowed": true
+    }
   },
-
   "episodes": [
     {
       "episode_id": "S01E01",
@@ -41,10 +96,27 @@
         "transcript_url": "https://kirshbot.banast.as/S01E01/analysis_transcript.txt",
         "flags_url": "https://kirshbot.banast.as/S01E01/analysis_flags.txt"
       },
-      "themes": ["empathy inversion","post-human embodiment","human ascent then reversal","animal law"],
+      "themes": [
+        "empathy inversion",
+        "post-human embodiment",
+        "human ascent then reversal",
+        "animal law"
+      ],
       "quotes": [
-        { "t": [0.0, 7.4], "q": "What if another scorpion stings me to protect its friend?" },
-        { "t": [96.1, 111.0], "q": "This is what it is to be an animal: you're born, you live, you die." }
+        {
+          "t": [
+            0.0,
+            7.4
+          ],
+          "q": "What if another scorpion stings me to protect its friend?"
+        },
+        {
+          "t": [
+            96.1,
+            111.0
+          ],
+          "q": "This is what it is to be an animal: you're born, you live, you die."
+        }
       ],
       "features_digest": {
         "duration_sec": 121.05,
@@ -55,7 +127,9 @@
         "pause_p95_sec": 0.75,
         "pitch_mean_hz": 380.2,
         "pitch_std_hz": 537.2,
-        "flags": ["slow_overall"]
+        "flags": [
+          "slow_overall"
+        ]
       }
     },
     {
@@ -77,8 +151,20 @@
         "scientific aside for lay audience"
       ],
       "quotes": [
-        { "t": [0.0, 5.0], "q": "Ready yourselves. Gear up. We’re a special unit." },
-        { "t": [45.0, 48.0], "q": "It presents as flora, but it may be fauna." }
+        {
+          "t": [
+            0.0,
+            5.0
+          ],
+          "q": "Ready yourselves. Gear up. We\u2019re a special unit."
+        },
+        {
+          "t": [
+            45.0,
+            48.0
+          ],
+          "q": "It presents as flora, but it may be fauna."
+        }
       ],
       "features_digest": {
         "duration_sec": 60.4,
@@ -111,8 +197,20 @@
         "procedural measurements and forensic closure"
       ],
       "quotes": [
-        { "t": [5.0, 8.0], "q": "Look with your eyes. Quiet now." },
-        { "t": [97.0, 111.0], "q": "The body in the cryotube was killed from the inside." }
+        {
+          "t": [
+            5.0,
+            8.0
+          ],
+          "q": "Look with your eyes. Quiet now."
+        },
+        {
+          "t": [
+            97.0,
+            111.0
+          ],
+          "q": "The body in the cryotube was killed from the inside."
+        }
       ],
       "features_digest": {
         "duration_sec": 118.0,
@@ -144,8 +242,20 @@
         "mixed-audience register (lay ethics + EEG reference)"
       ],
       "quotes": [
-        { "t": [14.8, 18.0], "q": "Do you know why there are three monkeys on your wall?" },
-        { "t": [38.78, 42.66], "q": "If I did something evil…" }
+        {
+          "t": [
+            14.8,
+            18.0
+          ],
+          "q": "Do you know why there are three monkeys on your wall?"
+        },
+        {
+          "t": [
+            38.78,
+            42.66
+          ],
+          "q": "If I did something evil\u2026"
+        }
       ],
       "features_digest": {
         "duration_sec": 84.9,
@@ -177,9 +287,27 @@
         "procedural science authority"
       ],
       "quotes": [
-        { "t": [14.8, 18.4], "q": "That's like an onion asking, how do I take care of a star?" },
-        { "t": [70.7, 74.1], "q": "That moment when you realize you're not a machine after all." },
-        { "t": [104.0, 106.9], "q": "The scientific method is a method, not a suggestion box." }
+        {
+          "t": [
+            14.8,
+            18.4
+          ],
+          "q": "That's like an onion asking, how do I take care of a star?"
+        },
+        {
+          "t": [
+            70.7,
+            74.1
+          ],
+          "q": "That moment when you realize you're not a machine after all."
+        },
+        {
+          "t": [
+            104.0,
+            106.9
+          ],
+          "q": "The scientific method is a method, not a suggestion box."
+        }
       ],
       "features_digest": {
         "duration_sec": 108.6,
@@ -190,6 +318,66 @@
         "pause_p95_sec": 0.0,
         "pitch_mean_hz": 282.0,
         "pitch_std_hz": 374.6,
+        "flags": []
+      }
+    },
+    {
+      "episode_id": "S01E07",
+      "title": "Episode 7",
+      "base_url": "https://kirshbot.banast.as/S01E07/",
+      "assets": {
+        "context_url": "https://kirshbot.banast.as/S01E07/analysis_context.json",
+        "features_url": "https://kirshbot.banast.as/S01E07/analysis_features.json",
+        "transcript_url": "https://kirshbot.banast.as/S01E07/analysis_transcript.txt",
+        "flags_url": "https://kirshbot.banast.as/S01E07/analysis_flags.txt"
+      },
+      "themes": [
+        "containment and error (child carelessness)",
+        "biology of digestion and minerals",
+        "accident vs deliberate harm",
+        "cause-effect reasoning in animals",
+        "technology sabotage (trackers)",
+        "authority and discipline"
+      ],
+      "quotes": [
+        {
+          "t": [
+            2.6,
+            4.4
+          ],
+          "q": "You should be safe for now."
+        },
+        {
+          "t": [
+            31.3,
+            32.5
+          ],
+          "q": "This wasn't an accident."
+        },
+        {
+          "t": [
+            45.7,
+            46.8
+          ],
+          "q": "The footage confirms it."
+        },
+        {
+          "t": [
+            60.0,
+            62.0
+          ],
+          "q": "Drop your weapons. Nobody likes a sore loser."
+        }
+      ],
+      "features_digest": {
+        "duration_sec": 99.99,
+        "wpm_overall": 99.0,
+        "wpm_articulation": 99.0,
+        "fillers_per_min": 0.6,
+        "pause_count": 0,
+        "pause_p95_sec": 0.0,
+        "pitch_mean_hz": 321.0,
+        "pitch_std_hz": 300.3,
         "flags": []
       }
     }
