@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "series_id": "scorpion_series",
   "series_title": "Scorpion Monologues",
-  "updated_at": "2025-09-09T22:00:00Z",
+  "updated_at": "2025-09-23T21:00:00Z",
   "voice_profile": {
     "persona_name": "Observer",
     "one_line_logline": "Fatalist anthropologist narrating human ascent and animal law.",
@@ -10,22 +10,30 @@
       "register": "plain, declarative",
       "reading_level_fk_grade": {
         "target_range": [
-          4,
-          6
+          2,
+          5
+        ],
+        "observed_range": [
+          1.96,
+          4.49
         ]
       },
       "sentence_patterns": [
         "simple clause chains",
-        "parataxis with triplets"
+        "parataxis with triplets",
+        "imperative sequences"
       ],
       "prosody": {
         "target_wpm": 120,
-        "pause_style": "short-frequent",
-        "pitch_behavior": "wide span, cap ~500 Hz"
+        "observed_wpm_range": [99.0, 137.0],
+        "pause_style": "short-frequent to none",
+        "pitch_behavior": "wide span, 280-500 Hz mean"
       },
       "rhetoric_patterns": [
-        "ascent \u2192 reversal",
-        "definition \u2192 inevitabilities"
+        "ascent → reversal",
+        "definition → inevitabilities",
+        "command → philosophical pivot",
+        "metaphorical frameworks"
       ],
       "taboo": [
         "emoji",
@@ -40,7 +48,10 @@
           "conquer",
           "observe",
           "record",
-          "animal law"
+          "animal law",
+          "synthetic",
+          "xenomorph",
+          "containment"
         ],
         "avoid": [
           "basically",
@@ -51,8 +62,9 @@
       }
     },
     "signature_syntax": {
-      "triplets": "\u22641 per tweet",
-      "final_cadence": "concrete noun"
+      "triplets": "≤1 per tweet",
+      "final_cadence": "concrete noun",
+      "address_patterns": ["Sir", "direct names", "you-constructions"]
     }
   },
   "tweet_generation_rules": {
@@ -60,9 +72,10 @@
       "max_chars_without_url": 240
     },
     "structure_variants": [
-      "Hypothesis \u2192 inversion \u2192 noun stop",
-      "Ascent list \u2192 reversal clause \u2192 mortality noun",
-      "Definition \u2192 enumeration of inevitabilities"
+      "Hypothesis → inversion → noun stop",
+      "Ascent list → reversal clause → mortality noun",
+      "Definition → enumeration of inevitabilities",
+      "Command sequence → philosophical conclusion"
     ],
     "content_picking": {
       "prefer_latest_episode": true,
@@ -79,7 +92,8 @@
         ".",
         ",",
         ":",
-        ";"
+        ";",
+        "?"
       ],
       "no_hashtags": true,
       "second_person_allowed": true
@@ -88,34 +102,44 @@
   "episodes": [
     {
       "episode_id": "S01E01",
-      "title": "Episode 1",
+      "title": "The Scorpion's Dilemma",
       "base_url": "https://kirshbot.banast.as/S01E01/",
       "assets": {
         "context_url": "https://kirshbot.banast.as/S01E01/analysis_context.json",
         "features_url": "https://kirshbot.banast.as/S01E01/analysis_features.json",
         "transcript_url": "https://kirshbot.banast.as/S01E01/analysis_transcript.txt",
-        "flags_url": "https://kirshbot.banast.as/S01E01/analysis_flags.txt"
+        "flags_url": "https://kirshbot.banast.as/S01E01/analysis_flags.txt",
+        "speech_analysis_url": "https://kirshbot.banast.as/S01E01/speech_analysis_report.md"
       },
       "themes": [
         "empathy inversion",
         "post-human embodiment",
-        "human ascent then reversal",
+        "human evolutionary trajectory",
+        "predator-prey dynamics",
+        "consciousness vs synthetic being",
+        "mortality meditation",
         "animal law"
       ],
       "quotes": [
         {
-          "t": [
-            0.0,
-            7.4
-          ],
-          "q": "What if another scorpion stings me to protect its friend?"
+          "t": [0.0, 7.42],
+          "q": "What if, while I'm squashing it, another scorpion stings me to protect its friend the same way you're trying to protect me?"
         },
         {
-          "t": [
-            96.1,
-            111.0
-          ],
-          "q": "This is what it is to be an animal: you're born, you live, you die."
+          "t": [8.36, 14.1],
+          "q": "Think of how the scorpion must feel, trapped under glass, menaced by giants."
+        },
+        {
+          "t": [21.72, 29.64],
+          "q": "The human body manufactures hormones. Dopamine, serotonin, estrogen, testosterone, that create moods. You don't have those anymore."
+        },
+        {
+          "t": [76.12, 95.54],
+          "q": "You told yourself you weren't food anymore, but in the animal kingdom there is always someone bigger or smaller who would eat you alive if they had the chance."
+        },
+        {
+          "t": [113.7, 119.96],
+          "q": "Generation after generation, all we can do is watch and take names."
         }
       ],
       "features_digest": {
@@ -127,190 +151,223 @@
         "pause_p95_sec": 0.75,
         "pitch_mean_hz": 380.2,
         "pitch_std_hz": 537.2,
+        "fk_grade": 4.24,
+        "flesch_ease": 78.99,
         "flags": [
-          "slow_overall"
+          "slow_overall",
+          "philosophical_depth",
+          "exceptional_fluency"
         ]
       }
     },
     {
       "episode_id": "S01E02",
-      "title": "Episode 2",
+      "title": "Special Unit Commands",
       "base_url": "https://kirshbot.banast.as/S01E02/",
       "assets": {
         "context_url": "https://kirshbot.banast.as/S01E02/analysis_context.json",
         "features_url": "https://kirshbot.banast.as/S01E02/analysis_features.json",
         "transcript_url": "https://kirshbot.banast.as/S01E02/analysis_transcript.txt",
-        "flags_url": "https://kirshbot.banast.as/S01E02/analysis_flags.txt"
+        "flags_url": "https://kirshbot.banast.as/S01E02/analysis_flags.txt",
+        "speech_analysis_url": "https://kirshbot.banast.as/S01E02/speech_analysis_report.md"
       },
       "themes": [
         "militarized command cadence",
         "authority invocation",
-        "non-terrestrial risk framing",
-        "classification ambiguity (flora vs fauna)",
-        "tactical delegation",
-        "scientific aside for lay audience"
+        "non-terrestrial risk assessment",
+        "flora vs fauna classification",
+        "tactical personnel deployment",
+        "specimen collection protocols",
+        "chain of command hierarchy"
       ],
       "quotes": [
         {
-          "t": [
-            0.0,
-            5.0
-          ],
-          "q": "Ready yourselves. Gear up. We\u2019re a special unit."
+          "t": [0.0, 7.26],
+          "q": "Ready yourselves. Gear up. We're a special unit. You're under orders from the founder."
         },
         {
-          "t": [
-            45.0,
-            48.0
-          ],
+          "t": [30.6, 35.5],
+          "q": "This is a non-terrestrial species. We don't know what it's capable of."
+        },
+        {
+          "t": [45.36, 48.04],
           "q": "It presents as flora, but it may be fauna."
+        },
+        {
+          "t": [52.92, 59.68],
+          "q": "It's a research vessel, deep space model. They must have been collecting specimens."
         }
       ],
       "features_digest": {
-        "duration_sec": 60.4,
+        "duration_sec": 60.43,
         "wpm_overall": 137.0,
         "wpm_articulation": 137.0,
         "fillers_per_min": 0.0,
         "pause_count": 0,
         "pause_p95_sec": 0.0,
-        "pitch_mean_hz": 299.0,
-        "pitch_std_hz": null,
-        "flags": []
+        "pitch_mean_hz": 299.2,
+        "pitch_std_hz": 295.6,
+        "fk_grade": 1.96,
+        "flesch_ease": 88.9,
+        "flags": [
+          "perfect_fluency",
+          "military_briefing",
+          "scripted_delivery"
+        ]
       }
     },
     {
       "episode_id": "S01E03",
-      "title": "Episode 3",
+      "title": "Containment Breach",
       "base_url": "https://kirshbot.banast.as/S01E03/",
       "assets": {
         "context_url": "https://kirshbot.banast.as/S01E03/analysis_context.json",
         "features_url": "https://kirshbot.banast.as/S01E03/analysis_features.json",
         "transcript_url": "https://kirshbot.banast.as/S01E03/analysis_transcript.txt",
-        "flags_url": "https://kirshbot.banast.as/S01E03/analysis_flags.txt"
+        "flags_url": "https://kirshbot.banast.as/S01E03/analysis_flags.txt",
+        "speech_analysis_url": "https://kirshbot.banast.as/S01E03/speech_analysis_report.md"
       },
       "themes": [
-        "discovery under failure (containment lost)",
-        "urgent directives",
-        "ownership metaphor and challenge",
-        "identity confrontation (cyborg survivor)",
-        "parasite biology and gestation mechanics",
-        "procedural measurements and forensic closure"
+        "discovery under failure",
+        "species containment crisis",
+        "jurisdictional authority conflict",
+        "corporate territorial claims",
+        "cyborg identity confrontation",
+        "xenomorph parasite biology",
+        "forensic specimen analysis"
       ],
       "quotes": [
         {
-          "t": [
-            5.0,
-            8.0
-          ],
-          "q": "Look with your eyes. Quiet now."
+          "t": [0.0, 3.96],
+          "q": "Five previously undiscovered species collected, but the crew lost containment."
         },
         {
-          "t": [
-            97.0,
-            111.0
-          ],
+          "t": [21.26, 26.9],
+          "q": "Sir, with all due respect, it's a crash site, and we're trying to contain an alien invasion."
+        },
+        {
+          "t": [79.74, 86.8],
+          "q": "It's a parasite. The xenomorph lays its eggs. They wait for organic life to draw near, only to hatch some kind of proto-creature."
+        },
+        {
+          "t": [93.78, 96.72],
           "q": "The body in the cryotube was killed from the inside."
         }
       ],
       "features_digest": {
-        "duration_sec": 118.0,
-        "wpm_overall": 131.0,
-        "wpm_articulation": 131.0,
-        "fillers_per_min": 1.0,
+        "duration_sec": 118.03,
+        "wpm_overall": 131.1,
+        "wpm_articulation": 131.1,
+        "fillers_per_min": 1.02,
         "pause_count": 0,
         "pause_p95_sec": 0.0,
         "pitch_mean_hz": 366.9,
-        "pitch_std_hz": null,
-        "flags": []
+        "pitch_std_hz": 442.7,
+        "fk_grade": 4.49,
+        "flesch_ease": 81.26,
+        "flags": [
+          "multi_speaker",
+          "crisis_management",
+          "technical_precision"
+        ]
       }
     },
     {
       "episode_id": "S01E04",
-      "title": "Episode 4",
+      "title": "The Three Monkeys",
       "base_url": "https://kirshbot.banast.as/S01E04/",
       "assets": {
         "context_url": "https://kirshbot.banast.as/S01E04/analysis_context.json",
         "features_url": "https://kirshbot.banast.as/S01E04/analysis_features.json",
         "transcript_url": "https://kirshbot.banast.as/S01E04/analysis_transcript.txt",
-        "flags_url": "https://kirshbot.banast.as/S01E04/analysis_flags.txt"
+        "flags_url": "https://kirshbot.banast.as/S01E04/analysis_flags.txt",
+        "speech_analysis_url": "https://kirshbot.banast.as/S01E04/speech_analysis_report.md"
       },
       "themes": [
-        "three-monkeys moral metaphor",
-        "ethical interrogation and culpability",
-        "scientific observation (gamma waves)",
-        "naming and identification",
-        "mixed-audience register (lay ethics + EEG reference)"
+        "Buddhist moral philosophy",
+        "three wise monkeys allegory",
+        "ethical responsibility testing",
+        "adult moral development",
+        "gamma wave intelligence",
+        "creature consciousness observation",
+        "identity formation and naming"
       ],
       "quotes": [
         {
-          "t": [
-            14.8,
-            18.0
-          ],
-          "q": "Do you know why there are three monkeys on your wall?"
+          "t": [14.82, 31.32],
+          "q": "Do you know why there are three monkeys on your wall? Mizaru sees no evil. Kikizaru hears no evil. Iwazaru speaks no evil."
         },
         {
-          "t": [
-            38.78,
-            42.66
-          ],
-          "q": "If I did something evil\u2026"
+          "t": [38.78, 50.22],
+          "q": "If I did something evil, would you report me? If I hurt or caused others to be hurt, would you do something to stop me?"
+        },
+        {
+          "t": [54.28, 55.96],
+          "q": "That's what being an adult is. A constant test."
+        },
+        {
+          "t": [66.52, 74.7],
+          "q": "Those are gamma waves. Problem-solving concentration. This creature is highly intelligent."
         }
       ],
       "features_digest": {
-        "duration_sec": 84.9,
+        "duration_sec": 84.89,
         "wpm_overall": 127.2,
         "wpm_articulation": 127.2,
-        "fillers_per_min": 3.5,
+        "fillers_per_min": 3.53,
         "pause_count": 0,
         "pause_p95_sec": 0.0,
         "pitch_mean_hz": 357.6,
-        "pitch_std_hz": null,
-        "flags": []
+        "pitch_std_hz": 543.8,
+        "fk_grade": 3.7,
+        "flesch_ease": 79.99,
+        "flags": [
+          "philosophical_instruction",
+          "moral_testing",
+          "cultural_references"
+        ]
       }
     },
     {
       "episode_id": "S01E06",
-      "title": "Episode 6",
+      "title": "Onions and Stars",
       "base_url": "https://kirshbot.banast.as/S01E06/",
       "assets": {
         "context_url": "https://kirshbot.banast.as/S01E06/analysis_context.json",
         "features_url": "https://kirshbot.banast.as/S01E06/analysis_features.json",
         "transcript_url": "https://kirshbot.banast.as/S01E06/analysis_transcript.txt",
-        "flags_url": "https://kirshbot.banast.as/S01E06/analysis_flags.txt"
+        "flags_url": "https://kirshbot.banast.as/S01E06/analysis_flags.txt",
+        "speech_analysis_url": "https://kirshbot.banast.as/S01E06/speech_analysis_report.md"
       },
       "themes": [
-        "identity confrontation",
-        "family vs cosmic purpose",
-        "metaphor of onion and star",
-        "violence as proof of humanity",
-        "procedural science authority"
+        "scale impossibility metaphor",
+        "artificial vs human identity",
+        "cosmic potential vs family desire",
+        "self-hating machine confrontation",
+        "pain as proof of humanity",
+        "scientific methodology authority",
+        "faster-than-light travel ambition"
       ],
       "quotes": [
         {
-          "t": [
-            14.8,
-            18.4
-          ],
+          "t": [14.82, 18.42],
           "q": "That's like an onion asking, how do I take care of a star?"
         },
         {
-          "t": [
-            70.7,
-            74.1
-          ],
-          "q": "That moment when you realize you're not a machine after all."
+          "t": [43.24, 50.82],
+          "q": "Look at you, the almost-human, self-hating machine."
         },
         {
-          "t": [
-            104.0,
-            106.9
-          ],
+          "t": [64.12, 74.16],
+          "q": "I would imagine it's the pain that makes it satisfying. That moment when you realize you're not a machine after all."
+        },
+        {
+          "t": [104.06, 106.94],
           "q": "The scientific method is a method, not a suggestion box."
         }
       ],
       "features_digest": {
-        "duration_sec": 108.6,
+        "duration_sec": 108.63,
         "wpm_overall": 121.0,
         "wpm_articulation": 121.0,
         "fillers_per_min": 0.55,
@@ -318,55 +375,51 @@
         "pause_p95_sec": 0.0,
         "pitch_mean_hz": 282.0,
         "pitch_std_hz": 374.6,
-        "flags": []
+        "fk_grade": 3.36,
+        "flesch_ease": 84.94,
+        "flags": [
+          "identity_confrontation",
+          "philosophical_depth",
+          "controlled_delivery"
+        ]
       }
     },
     {
       "episode_id": "S01E07",
-      "title": "Episode 7",
+      "title": "Footage Confirms It",
       "base_url": "https://kirshbot.banast.as/S01E07/",
       "assets": {
         "context_url": "https://kirshbot.banast.as/S01E07/analysis_context.json",
         "features_url": "https://kirshbot.banast.as/S01E07/analysis_features.json",
         "transcript_url": "https://kirshbot.banast.as/S01E07/analysis_transcript.txt",
-        "flags_url": "https://kirshbot.banast.as/S01E07/analysis_flags.txt"
+        "flags_url": "https://kirshbot.banast.as/S01E07/analysis_flags.txt",
+        "speech_analysis_url": "https://kirshbot.banast.as/S01E07/speech_analysis_report.md"
       },
       "themes": [
-        "containment and error (child carelessness)",
-        "biology of digestion and minerals",
-        "accident vs deliberate harm",
-        "cause-effect reasoning in animals",
-        "technology sabotage (trackers)",
-        "authority and discipline"
+        "containment protocols",
+        "biological digestion mechanics",
+        "accident vs deliberate sabotage",
+        "animal cause-effect cognition",
+        "surveillance and tracking",
+        "navigation urgency",
+        "authority and punishment"
       ],
       "quotes": [
         {
-          "t": [
-            2.6,
-            4.4
-          ],
-          "q": "You should be safe for now."
+          "t": [0.0, 7.1],
+          "q": "Collect the hybrid, put the fly back in its cage. You should be safe for now."
         },
         {
-          "t": [
-            31.3,
-            32.5
-          ],
-          "q": "This wasn't an accident."
+          "t": [13.24, 23.34],
+          "q": "Yes, they digest their food outside their bodies. Organic matter must have been scarce in their world, so they eat mostly minerals."
         },
         {
-          "t": [
-            45.7,
-            46.8
-          ],
-          "q": "The footage confirms it."
+          "t": [31.3, 35.18],
+          "q": "This wasn't an accident. Isaac's death. You need to watch the tape."
         },
         {
-          "t": [
-            60.0,
-            62.0
-          ],
-          "q": "Drop your weapons. Nobody likes a sore loser."
+          "t": [44.08, 49.46],
+          "q": "The footage confirms it. Arthur and the brother turned off the trackers a couple of hours ago."
         }
       ],
       "features_digest": {
@@ -378,8 +431,92 @@
         "pause_p95_sec": 0.0,
         "pitch_mean_hz": 321.0,
         "pitch_std_hz": 300.3,
-        "flags": []
+        "fk_grade": 2.55,
+        "flesch_ease": 85.15,
+        "flags": [
+          "fragmented_contexts",
+          "investigation_revelation",
+          "natural_speech_patterns"
+        ]
+      }
+    },
+    {
+      "episode_id": "S01E08",
+      "title": "Impulse Control Problems",
+      "base_url": "https://kirshbot.banast.as/S01E08/",
+      "assets": {
+        "context_url": "https://kirshbot.banast.as/S01E08/analysis_context.json",
+        "features_url": "https://kirshbot.banast.as/S01E08/analysis_features.json",
+        "transcript_url": "https://kirshbot.banast.as/S01E08/analysis_transcript.txt",
+        "flags_url": "https://kirshbot.banast.as/S01E08/analysis_flags.txt",
+        "speech_analysis_url": "https://kirshbot.banast.as/S01E08/speech_analysis_report.md"
+      },
+      "themes": [
+        "technical operations status",
+        "xenomorph containment risks",
+        "ADHD medical assessment",
+        "impulse control diagnosis",
+        "John Henry folklore reference",
+        "crisis management commands",
+        "fragmented dialogue assembly"
+      ],
+      "quotes": [
+        {
+          "t": [0.0, 5.76],
+          "q": "Sir, we're on our own power supply down here. All lights green. I'm acclimating the new xenomorph."
+        },
+        {
+          "t": [19.94, 26.6],
+          "q": "Sir, a defining symptom of ADHD, as severe as yours, is impulse control problems."
+        },
+        {
+          "t": [34.64, 38.06],
+          "q": "Didn't John Henry die of exhaustion?"
+        },
+        {
+          "t": [43.86, 48.42],
+          "q": "Quick, before he comes through. What are you doing?"
+        }
+      ],
+      "features_digest": {
+        "duration_sec": 50.05,
+        "wpm_overall": 113.9,
+        "wpm_articulation": 113.9,
+        "fillers_per_min": 0.0,
+        "pause_count": 0,
+        "pause_p95_sec": 0.0,
+        "pitch_mean_hz": 496.9,
+        "pitch_std_hz": 550.7,
+        "fk_grade": 2.12,
+        "flesch_ease": 89.27,
+        "flags": [
+          "perfect_fluency",
+          "extreme_pitch_variability",
+          "context_fragmentation",
+          "possible_synthetic_speech"
+        ]
       }
     }
-  ]
+  ],
+  "series_statistics": {
+    "total_episodes": 7,
+    "total_duration_sec": 633.07,
+    "average_wpm": 117.11,
+    "reading_level_range": [1.96, 4.49],
+    "common_themes": [
+      "containment protocols",
+      "human vs artificial consciousness",
+      "authority hierarchies",
+      "biological/scientific exposition",
+      "philosophical questioning",
+      "crisis management",
+      "mortality and existentialism"
+    ],
+    "prosodic_characteristics": {
+      "pitch_range_hz": [282.0, 496.9],
+      "typical_filler_rate": 0.6,
+      "pause_patterns": "minimal to none",
+      "delivery_style": "controlled dramatic"
+    }
+  }
 }
