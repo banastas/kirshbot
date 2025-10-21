@@ -1,3 +1,9 @@
+[![Live on X](https://img.shields.io/badge/Live-@kirshbot-000000?style=for-the-badge&logo=x)](https://x.com/kirshbot)
+[![Powered by OpenAI](https://img.shields.io/badge/Powered%20by-OpenAI%20API-412991?style=for-the-badge&logo=openai)](https://openai.com)
+[![Automated with N8N](https://img.shields.io/badge/Automated%20with-N8N-FB6467?style=for-the-badge&logo=n8n)](https://n8n.io)
+[![Python](https://img.shields.io/badge/Python-3.x-3776ab?style=for-the-badge&logo=python)](https://www.python.org/)
+[![Speech Analysis](https://img.shields.io/badge/Speech-Analysis-00d9ff?style=for-the-badge)](https://github.com/banastas/kirshbot)
+
 # <a href="https://x.com/kirshbot">@kirshbot</a>
 
 <img src="https://github.com/banastas/kirshbot/blob/main/assets/hero-image.fill.size_1248x702.v1755690341.jpg?raw=true">
