@@ -1,6 +1,6 @@
 # <a href="https://x.com/kirshbot">@kirshbot</a>
 
-<img src="https://kirshbot.banast.as/assets/hero-image.fill.size_1248x702.v1755690341.jpg">
+<img src="https://github.com/banastas/kirshbot/blob/main/assets/hero-image.fill.size_1248x702.v1755690341.jpg?raw=true">
 
 ## Overview
 
@@ -25,7 +25,7 @@
 
 ## Technical Stack
 
-<img src="https://kirshbot.banast.as/assets/kirshbot.png">
+<img src="https://github.com/banastas/kirshbot/blob/main/assets/kirshbot.png?raw=true">
 
 ### N8N Workflow Components
 1. **Daily at 6am + 4pm PT** - Scheduled trigger
